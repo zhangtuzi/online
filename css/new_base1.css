@@ -63,10 +63,27 @@ body{
 .color666{
   color:#666;
 }
+.color999{
+  color:#999;
+}
 .bgFFF{
   background: #fff;
 }
-
+.bgff6000{
+  background: #ff6000;
+}
+.bg8ed351{
+  background: #8ed351;
+}
+.borderNone{
+  border:none!important;
+}
+.floor_tit{
+  font-size:28px;
+  color:#333;
+  font-weight: bold;
+  text-align: center;
+}
 .borderF{
   border:1px solid #fff;
 }
