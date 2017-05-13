@@ -494,11 +494,11 @@
 /*联通精选部分结束*/
 
 /*流量专区部分开始*/
-.traffic_div{
+.traffic_div,.G4_div{
   width:594px;
   height:520px;
 }
-.traffic_div_header,.broadband_div_header{
+.traffic_div_header,.broadband_div_header,.G4_div_header{
   padding-top:25px;
   line-height:38px;
 }
@@ -508,6 +508,7 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+  color:#666;
 }
 .floor_tit3_fg{
   display: inline-block;
@@ -529,24 +530,54 @@
   width:16px;
   height:16px;
 }
-.traffic_ul1{
+.traffic_ul1,.G4_ul1{
   margin-top:15px;
   height:162px;
 }
-.traffic_ul1 li{
+.traffic_ul1 li,.G4_ul1 li{
   float:left;
   width:290px;
   height:160px;
   border:1px solid #f3f3f3;
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.traffic_ul1 li:hover .traffic_ul1_libg{
+
+  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
+  top:-2%;
+  left:-2%;
+  width:104%;
+  height:104%;
+}
+.G4_ul1 li:hover .G4_ul1_libg{
+
+  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
+  top:-2%;
+  left:-2%;
+  width:104%;
+  height:104%;
 }
 .fr{
   float:right!important;
 }
-.traffic_ul1_libg{
+.traffic_ul1_libg,.G4_ul1_libg{
+  position: absolute;
+  top:0;
+  left:0;
   width:100%;
   height:160px;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+   -webkit-transition: -webkit-transform 1s;
+   transition: -webkit-transform 1s;
+   transition: transform 1s;
+   transition: transform 1s,-webkit-transform 1s;
 }
+
 .traffic_ul1_li_message_div{
   position:absolute;
   top:50%;
@@ -559,7 +590,7 @@
   text-align: center;
 }
 .traffic_ul1_li_message1{
-  font-size:18px;
+  font-size:16px;
   line-height: 38px;
   padding-top:2px;
   color: #555;
@@ -574,12 +605,12 @@
   color:#ff6000;
   font-size:14px;
 }
-.traffic_ul2,.broadband_ul2{
+.traffic_ul2,.broadband_ul2,.G4_ul2{
   margin-top:15px;
   height:245px;
 }
 
-.traffic_ul2>li,.broadband_ul2>li{
+.traffic_ul2>li,.broadband_ul2>li,.G4_ul2>li{
   position: relative;
   float:left;
   width:188px;
@@ -589,22 +620,32 @@
   background: #fff;
   margin-right:12px;
 }
-.traffic_ul2>li:last-child,.broadband_ul2>li:last-child{
+.traffic_ul2>li:last-child,.broadband_ul2>li:last-child,.G4_ul2>li:last-child{
   margin-right:0!important;
 }
-.traffic_ul2_message1{
+
+.traffic_ul2>li:hover{
+  -webkit-box-shadow: 0 15px 30px #ddd;
+  -moz-box-shadow: 0 15px 30px #ddd;
+  box-shadow: 0 15px 30px #ddd;
+  -webkit-transform: translate3d(0,-2px,0);
+  -moz-transform: translate3d(0,-2px,0);
+  transform: translate3d(0,-2px,0);
+}
+
+.traffic_ul2_message1,.G4_ul2_message1{
   font-size: 16px;
   color:#333;
   margin-top:30px;
 }
-.traffic_ul2_message2{
+.traffic_ul2_message2,.G4_ul2_message2{
   font-size:12px;
   color:#959595;
   line-height: 22px;
 }
 .img_div2{
   width:92px;
-  margin:55px auto 0;
+  margin:45px auto 0;
   position: relative;
 }
 .img_div2 .llb_icon{
@@ -674,4 +715,118 @@
 .broadband_ul2 .img_div2 .kdzq_pic{
   width:100%;
 }
+
+.broadband_ul2>li:hover{
+  -webkit-box-shadow: 0 15px 30px #ddd;
+  -moz-box-shadow: 0 15px 30px #ddd;
+  box-shadow: 0 15px 30px #ddd;
+  -webkit-transform: translate3d(0,-2px,0);
+  -moz-transform: translate3d(0,-2px,0);
+  transform: translate3d(0,-2px,0);
+}
 /*宽带专区部分结束*/
+
+/*4G套餐部分开始*/
+.G4_ul1_li_message_div1{
+  width:230px;
+  height: 101px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin:-50px -115px;
+}
+.G4_ul1_li1_div{
+  top:40px;
+  margin-top:0;
+}
+.G4_ul1_li_message_bg{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.G4_ul1_li_message_div2{
+  width:230px;
+  height: 101px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin:-50px -115px;
+}
+.G4_ul1_li_message1{
+  position: absolute;
+  top:8px;
+  width:100%;
+  font-size:16px;
+  line-height: 28px;
+  text-align: center;
+  color: #555;
+  font-weight: bold;
+}
+.top20{
+  top:20px;
+}
+.G4_ul1_li_message2{
+  position: absolute;
+  top:40px;
+  left:50%;
+  width:70px;
+  height:14px;
+  margin-left:-35px;
+  border:1px solid #ff6000;
+  border-radius:10px;
+  color:#ff6000;
+  font-size:12px;
+  line-height: 14px;
+  text-align: center;
+}
+.top51{
+  top:51px;
+}
+.img_div3{
+  width:139px;
+  height:82px;
+  border:1px solid #f3f3f3;
+  position:absolute;
+  top:105px;
+  left:50%;
+  margin-left:-70px;
+}
+.taocan_style2{
+  width:26px;
+  height:26px;
+  position:absolute;
+  bottom:10px;
+  right:10px;
+}
+.G4_ul2 .pro_style {
+    position: absolute;
+    left: 0;
+    bottom:15px;
+    width: 60px;
+    height: 17px;
+    line-height: 17px;
+    color: #fff;
+    font-size: 12px;
+}
+.img_div3_message1 {
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    font-size: 14px;
+    color: #333;
+}
+.img_div3_message2{
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  width: 90px;
+  height: 16px;
+  padding-left: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  background: #ff6600;
+}
+/*4G套餐部分结束*/
