@@ -1101,3 +1101,33 @@
   margin-top:20px;
 }
 /*生活服务部分结束*/
+
+/*底部部分开始*/
+.bottom_nav_div{
+  height:155px;
+  padding-top:45px;
+  border-top:1px solid #f3f3f3;
+  background:#fcfcfc;
+  margin-top:20px;
+}
+.nav_left{
+  height:132px;
+  border-right:1px solid #d3d3d3;
+}
+.nav_left>ul{
+  float:left;
+  width:165px;
+  font-size:12px;
+  line-height: 25px;
+}
+.nav_left>ul a{
+  color:#999;
+}
+.bottom_nav_tits{
+  font-size: 14px;
+  color:#666;
+  margin-bottom:15px;
+  line-height: 14px;
+}
+
+/*底部部分结束*/
