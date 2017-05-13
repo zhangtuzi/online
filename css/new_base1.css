@@ -10,7 +10,7 @@ body{
 .clr{
   clear: both;
 }
-.clrD{
+.clrDiv{
   clear: both;
   width:0;
   height:0;
@@ -67,7 +67,10 @@ body{
   color:#999;
 }
 .bgFFF{
-  background: #fff;
+  background: #fff!important;
+}
+.bgF5F5F5{
+  background:#f5f5f5!important;
 }
 .bgff6000{
   background: #ff6000;
@@ -90,4 +93,16 @@ body{
 .font20{
   font-size: 20px;
   margin:0 3px;
+}
+.traffic_div_header,.broadband_div_header,.G4_div_header,.mobileNumber_div_header{
+  padding-top:25px;
+  line-height:38px;
+}
+.floor_tit3_div{
+  width:100%;
+  height:24px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color:#666;
 }

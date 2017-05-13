@@ -498,18 +498,7 @@
   width:594px;
   height:520px;
 }
-.traffic_div_header,.broadband_div_header,.G4_div_header{
-  padding-top:25px;
-  line-height:38px;
-}
-.floor_tit3_div{
-  width:100%;
-  height:24px;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: center;
-  color:#666;
-}
+
 .floor_tit3_fg{
   display: inline-block;
   margin:0 20px;
@@ -606,7 +595,7 @@
   font-size:14px;
 }
 .traffic_ul2,.broadband_ul2,.G4_ul2{
-  margin-top:15px;
+  margin-top:10px;
   height:245px;
 }
 
@@ -677,7 +666,7 @@
 }
 .broadband_top{
   width:594px;
-  height:159px;
+  height:160px;
   border:1px solid #f3f3f3;
   position: relative;
   margin-top:15px;
@@ -706,9 +695,9 @@
   color:#ff6000;
   line-height: 24px;
 }
-.broadband_ul2{
-      margin-top: 17px;
-}
+/*.broadband_ul2{
+  margin-top: 12px;
+}*/
 .broadband_ul2 .img_div2{
   width:100%;
 }
@@ -800,7 +789,7 @@
   bottom:10px;
   right:10px;
 }
-.G4_ul2 .pro_style {
+.pro_style {
     position: absolute;
     left: 0;
     bottom:15px;
@@ -829,4 +818,286 @@
   color: #fff;
   background: #ff6600;
 }
+.G4_ul2>li:hover{
+  -webkit-box-shadow: 0 15px 30px #ddd;
+  -moz-box-shadow: 0 15px 30px #ddd;
+  box-shadow: 0 15px 30px #ddd;
+  -webkit-transform: translate3d(0,-2px,0);
+  -moz-transform: translate3d(0,-2px,0);
+  transform: translate3d(0,-2px,0);
+}
 /*4G套餐部分结束*/
+
+/*靓号专场部分开始*/
+.mobileNumber_div{
+  width:596px;
+}
+.mobileNumber_div_ul1{
+  width:594px;
+  height:388px;
+  margin-top:12px;
+  background: #fff;
+  border:1px solid #f3f3f3;
+  padding-top:30px;
+}
+.mobileNumber_div_ul1>li{
+  width:100%;
+  height:190px;
+  text-align: center;
+  position: relative;
+}
+.mobileNumber_banner_top_div{
+  width:559px;
+  margin:0 auto;
+}
+.mobileNumber_banner_top_txt{
+  font-size:16px;
+  color:#333;
+  line-height: 26px;
+}
+.mobileNumber_banner1_div,.mobileNumber_banner2_div{
+  width:524px;
+  height:96px;
+  margin:0 auto;
+  overflow: hidden;
+}
+.mobileNumber_banner1,.mobileNumber_banner2{
+  width:524px;
+  height:96px;
+  margin:0 auto;
+}
+.mobileNumber_banner1>li,.mobileNumber_banner2>li{
+  float:left;
+  height:96px;
+}
+.mobileNumber_banner_ul{
+  float:left;
+  width:216px;
+  height:96px;
+  padding:0 23px;
+  line-height: 32px;
+  font-size:16px;
+  color:#333;
+}
+.mobileNumber_banner_ul>li{
+  height:32px;
+}
+.numB_ycf{
+  font-size:14px;
+  color:#999;
+}
+.mobileNumber_banner1_index_ul,.mobileNumber_banner2_index_ul{
+  width:100%;
+  height:10px;
+  text-align: center;
+  margin-top:5px;
+}
+.mobileNumber_banner1_index_ul>li,.mobileNumber_banner2_index_ul>li{
+  width:8px;
+  height: 8px;
+  margin:0 7px;
+  border:1px solid #dfdfdf;
+  border-radius:50%;
+  display:inline-block;
+  cursor: pointer;
+}
+.index_select2{
+  background: #ff6000;
+  border:1px solid #ff6000!important;
+}
+.bannerCon{
+  width:36px;
+  height:50px;
+  position: absolute;
+  top:70px;
+  text-align: center;
+  cursor: pointer;
+}
+.bannerLeft1,.bannerLeft2{
+  left:0;
+}
+.bannerRight1,.bannerRight2{
+  right:0;
+}
+.bannerCon_pic{
+  margin:14px auto;
+}
+.bannerCon:hover{
+  background: #868686;
+}
+/*靓号专场部分结束*/
+
+/*手机配件部分开始*/
+
+.phoneAccessories_div_header{
+  margin-top:35px;
+}
+.phone_ul1{
+  height:352px;
+  margin-top:15px;
+}
+.phone_ul1>li{
+  float:left;
+  width:290px;
+  height:350px;
+  background: #fff;
+  border:1px solid #f3f3f3;
+  margin-right:10px;
+  text-align: center;
+}
+.phone_ul1>li:last-child{
+  float:right;
+  margin-right:0;
+}
+.phone_pj_pic{
+  width:210px;
+  height:210px;
+  margin:40px auto 0;
+}
+.phoneName1,.phoneName2{
+  font-size: 16px;
+  color:#333;
+  line-height: 26px;
+  margin-top:25px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.phone_yh1,.phone_yh2{
+  font-size: 12px;
+  line-height: 22px;
+  color:#999;
+  display:block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.phone_ul2>li{
+  width:100%;
+  height:169px;
+  background:#fff;
+  border:1px solid #f3f3f3;
+  position: relative;
+}
+.phone_ul2>li:last-child{
+  margin-top:10px;
+}
+.phoneName2,.phone_yh2{
+  width:120px;
+  padding-left:15px;
+  text-align: left;
+}
+.phone_pj_pic2{
+  float:right;
+  width:150px;
+  height:169px;
+  margin-top:-73px;
+}
+.accessories_ul{
+  margin-top:10px;
+  width:1202px;
+  height:97px;
+  background: #fff;
+  border:1px solid #f3f3f3;
+  margin-left:-2px;
+}
+.accessories_ul>li{
+  float:left;
+  width:200px;
+  text-align: center;
+}
+.accessories_pic{
+  width:97px;
+  height:97px;
+  margin:0 auto;
+}
+/*手机配件部分结束*/
+
+/*上网卡部分开始*/
+.InternetCard_div_header{
+  margin-top:30px;
+}
+.InternetCard_ul{
+  height:208px;
+  margin-top:15px;
+}
+.InternetCard_ul>li{
+  float:left;
+  width:290px;
+  height:100%;
+  background: #fff;
+  margin-right:10px;
+  border:1px solid #f3f3f3;
+  position:relative;
+}
+.InternetCard_ul>li:last-child{
+  float:right;
+  margin-right:0;
+}
+.img_div4{
+  width:139px;
+  height:82px;
+  margin:33px auto 28px;
+  position: relative;
+}
+.phoneCard_icon1{
+  width:100%;
+  height:100%;
+}
+.Internet_icon{
+  position: absolute;
+  bottom:10px;
+  right:10px;
+  width:29px;
+  height:28px;
+}
+.img_div4 .img_div3_message2{
+  width:80px;
+  padding-left:15px;
+}
+.InternetCard_message1{
+  font-size:16px;
+  line-height: 26px;
+  color:#333;
+  text-align: center;
+}
+.InternetCard_message2{
+  font-size:12px;
+  line-height: 22px;
+  color:#ff6000;
+  text-align: center;
+}
+
+/*上网卡部分结束*/
+
+/*生活服务部分开始*/
+.lifeService_div_header{
+  margin-top:30px;
+}
+
+.lifeService_ul{
+  margin-top:10px;
+  width:1202px;
+  height:188px;
+  background: #fff;
+  border:1px solid #f3f3f3;
+  margin-left:-2px;
+}
+.lifeService_ul li{
+  float:left;
+  width:20%;
+  text-align: center;
+}
+.lifeService_pic{
+  width:50px;
+  height:50px;
+  margin:45px auto 0;
+  cursor: pointer;
+}
+.lifeService_txt{
+  font-size: 16px;
+  color:#555;
+  margin-top:20px;
+}
+/*生活服务部分结束*/
