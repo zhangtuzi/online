@@ -58,7 +58,15 @@
 /*顶部导航部分结束*/
 
 /*logo部分开始*/
-
+.suspend_nav_div{
+  position: relative;
+}
+.suspend_nav_div_fixed{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 2;
+}
 .logo1{
   width:295px;
   height:57px;
@@ -945,6 +953,15 @@
   margin-right:10px;
   text-align: center;
 }
+
+.phone_ul1_li1:hover,.phone_ul2_li2:hover{
+  -webkit-box-shadow: 0 15px 30px #ddd;
+  -moz-box-shadow: 0 15px 30px #ddd;
+  box-shadow: 0 15px 30px #ddd;
+  -webkit-transform: translate3d(0,-2px,0);
+  -moz-transform: translate3d(0,-2px,0);
+  transform: translate3d(0,-2px,0);
+}
 .phone_ul1>li:last-child{
   float:right;
   margin-right:0;
@@ -1031,6 +1048,14 @@
   border:1px solid #f3f3f3;
   position:relative;
 }
+.InternetCard_ul>li:hover{
+  -webkit-box-shadow: 0 15px 30px #ddd;
+  -moz-box-shadow: 0 15px 30px #ddd;
+  box-shadow: 0 15px 30px #ddd;
+  -webkit-transform: translate3d(0,-2px,0);
+  -moz-transform: translate3d(0,-2px,0);
+  transform: translate3d(0,-2px,0);
+}
 .InternetCard_ul>li:last-child{
   float:right;
   margin-right:0;
@@ -1104,10 +1129,10 @@
 
 /*底部部分开始*/
 .bottom_nav_div{
-  height:155px;
+  height:195px;
   padding-top:45px;
   border-top:1px solid #f3f3f3;
-  background:#fcfcfc;
+  background:#ffffff;
   margin-top:20px;
 }
 .nav_left{
@@ -1129,5 +1154,148 @@
   margin-bottom:15px;
   line-height: 14px;
 }
-
+.appLoad_div>ul>li{
+  float:left;
+  text-align: center;
+  margin-right:20px;
+}
+.load_btn{
+  width:98px;
+  height:20px;
+  line-height: 20px;
+  text-align: center;
+  font-size:12px;
+  color:#515151;
+  border:1px solid #d6d6d6;
+  margin:14px auto 0;
+}
+.Android_load{
+  margin-top:50px;
+}
+.attentionUs{
+  width:95px;
+  text-align: center;
+}
+.WeChat_Sina_pic2{
+  width:30px;
+  height:30px;
+  margin-top:15px;
+  display:inline-block;
+}
 /*底部部分结束*/
+
+/*底部备案信息部分开始*/
+.reference_div{
+  height:200px;
+  background:#fcfcfc;
+  font-size:12px;
+  line-height: 12px;
+  color:#fbfbfb;
+  text-align: center;
+}
+.flinks{
+  display: inline-block;
+  padding:5px 0 10px;
+}
+.flinks li{
+  float:left;
+  height:12px;
+  padding:0 10px;
+  color:#bfbfbf;
+  border-right:1px solid #bfbfbf;
+}
+.width1005{
+  width:1005px;
+  margin:0 auto;
+}
+.CopyRight_div{
+  border-top:1px solid #f4f4f4;
+  padding-top:10px;
+  line-height: 20px;
+  color: #bfbfbf;
+}
+.copyright_pics{
+  margin-top:20px;
+}
+/*底部备案信息部分结束*/
+
+/*左侧导航部分开始*/
+
+.Left_win{
+  width:74px;
+  height:340px;
+  position: fixed;
+  top:50%;
+  left:10px;
+  margin-top: -170px;
+}
+.wo_icon1{
+  width:74px;
+  height:40px;
+}
+.Left_win1{
+  width:74px;
+  height:300px;
+  background: #fff;
+  box-shadow: 0 2px 2px #eeeeee;
+}
+.Left_Wul{
+  width:57px;
+  margin:0 auto;
+  text-align: center;
+}
+.Left_Wul>li{
+  height:59px;
+  line-height: 59px;
+  font-size: 12px;
+  color:#666;
+  border-bottom:1px solid #eee;
+  cursor: pointer;
+}
+.Left_Wul>li:hover{
+  color:#ff6000;
+}
+/*左侧导航部分结束*/
+
+/*右侧悬浮窗部分开始*/
+
+.Right_Win{
+  position: fixed;
+  top:50%;
+  right:10px;
+  margin-top:-113px;
+  width:66px;
+  height:225px;
+  background: #fff;
+  border:1px solid #dddddd;
+}
+
+.Right_Win>li{
+  height:60px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 12px;
+  color:#666;
+  border-bottom:1px solid #ddd;
+  cursor: pointer;
+}
+.backTop_btn{
+  height:43px;
+  border-bottom: none;
+  cursor: pointer;
+}
+.Right_Win>li:hover{
+  color:#ff6000;
+}
+
+.right_win_pic{
+  width:22px;
+  height:23px;
+  margin:8px auto 0;
+}
+.backTop_pic{
+  width:100%;
+  height:100%;
+}
+
+/*右侧悬浮窗部分结束*/

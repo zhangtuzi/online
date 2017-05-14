@@ -106,3 +106,6 @@ body{
   text-align: center;
   color:#666;
 }
+.textCenter{
+  text-align: center!important;
+}

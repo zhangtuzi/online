@@ -10,16 +10,23 @@ var Banner={
   banner_move:function(banner_ulClass,banner_index,banner_li_length,index_ulClass,moveWith,selectClass){
     //bannerul的class，目前banner的index，banner的长度，banner圆点外部ul的class，banner每次运行的宽度
     banner_index=banner_index;
-    console.log(banner_index)
-
     $('.'+index_ulClass+'>li').removeClass(''+selectClass+'');
     $('.'+index_ulClass+'>li').eq(banner_index).addClass(''+selectClass+'');
     $('.'+banner_ulClass+'').animate({'margin-left':-banner_index*moveWith},1000);
   },
-
-
-
 }
+
+// 悬浮导航
+
+$(window).scroll(function(){
+  var win_ScroTop=$(window).scrollTop();
+  if(win_ScroTop>180){
+    $('.suspend_nav_div').addClass('suspend_nav_div_fixed');
+  }else{
+    $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
+  }
+})
+
 
 
 // 轮播banner图部分
@@ -190,3 +197,15 @@ $('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
       $('.mobileNumber_banner2_index_ul>li').eq(Number_banner1).addClass('index_select2');
       Number_banner2_move();
     })
+
+// 右侧导购鼠标放上换图片
+$('.zxdg_w').mouseover(function(){
+  $(this).find('.right_win_pic').attr('src','images/online_dg_active.png');
+}).mouseout(function(){
+  $(this).find('.right_win_pic').attr('src','images/online_dg.png');
+})
+
+// 返回顶部
+$('.backTop_btn').click(function(){
+  $(window).scrollTop(0);
+})
