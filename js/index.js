@@ -1,3 +1,4 @@
+
 var Banner={
   //banner图数量圆点
   index_ul:function(index_ulClass,banner_li_length,selectClass){//圆点外部ul的class，banner的li的长度,圆点选中样式Classs
@@ -14,18 +15,92 @@ var Banner={
     $('.'+index_ulClass+'>li').eq(banner_index).addClass(''+selectClass+'');
     $('.'+banner_ulClass+'').animate({'margin-left':-banner_index*moveWith},1000);
   },
+  BigSmall:function(ll_bigNumber,ll_smallNumber,ll_Class){
+    var change_ll=parseInt((ll_bigNumber-ll_smallNumber)/108);
+    var change_i=0;
+    var changell=setInterval(function(){
+        // if(ll_bigNumber>ll_smallNumber&&yy_bigNumber>yy_smallNumber){
+        if(ll_bigNumber>ll_smallNumber&&change_i<108){
+          ll_bigNumber=ll_bigNumber-change_ll;
+          change_i++;
+          $('.'+ll_Class+'').text(Math.abs(ll_bigNumber));
+          // $('.'+yy_Class+'').text(Math.abs(yy_bigNumber));
+        }else{
+          ll_bigNumber=ll_smallNumber;
+          // ll_bigNumber=ll_smallNumber;
+          $('.'+ll_Class+'').text(Math.abs(ll_smallNumber));
+          // $('.'+yy_Class+'').text(Math.abs(yy_smallNumber));
+          clearInterval(changell);
+        }
+    },10)
+  }
 }
 
-// 悬浮导航
+// 剩余流量/语音倒数
+Banner.BigSmall(2048,1024,'sy_ll');
+//（流量总数、流量剩余数（超出为负数）、流量容器class）
+Banner.BigSmall(2100,230,'sy_yy');
+//语音总数、语音剩余数（超出为负数）、语音容器class
 
+//搜索框轮播
+var input_s_i=0;
+var search_ht=$('.search_input_ul').html();
+var input_s_lg=$('.search_input_ul>li').length;
+$('.search_input_ul').append(search_ht);
+var inputse;
+search_lbF();
+function search_lbF(){
+  inputse=setInterval(function(){
+    if(input_s_i<input_s_lg){
+      input_s_i=input_s_i;
+    }else{
+      input_s_i=0;
+      $('.search_input_ul').css({'margin-top':-(input_s_i*35)});
+    }
+    input_s_i++;
+    $('.search_input').val($('.search_input_ul>li').eq(input_s_i).text());
+    $('.search_input_ul').animate({'margin-top':-(input_s_i*35)},1000);
+  },3000)
+}
+
+
+$('.search_input_div').click(function(){
+  clearInterval(inputse);
+  $(this).hide();
+  $('.search_input').val('').focus();
+})
+$('.search_input').blur(function(){
+  var this_val=$(this).val();
+  if(this_val==''){
+    input_s_i=0;
+    $('.search_input').val($('.search_input_ul>li').eq(input_s_i).text());
+    $('.search_input_ul').css({'margin-top':-(input_s_i*35)});
+    search_lbF();
+    $('.search_input_div').show();
+  }
+});
+// 悬浮导航
 $(window).scroll(function(){
   var win_ScroTop=$(window).scrollTop();
+  var xfTop=$('.suspend_nav_div').css('top');
+  if(win_ScroTop<180&&win_ScroTop>-1){
+    $('.nav_indicate_div').css('top',160-win_ScroTop);
+  }
   if(win_ScroTop>180){
     $('.suspend_nav_div').addClass('suspend_nav_div_fixed');
+    $('.nav_indicate_div').addClass('nav_indicate_div_xf');
   }else{
     $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
+    $('.nav_indicate_div').removeClass('nav_indicate_div_xf');
+  }
+  if(win_ScroTop>600){
+    $('.Left_win').show();
+  }else{
+    $('.Left_win').hide();
   }
 })
+var win_width=$(window).width();
+$('.nav_indicate_div').width(win_width);
 
 
 
@@ -204,6 +279,9 @@ $('.zxdg_w').mouseover(function(){
 }).mouseout(function(){
   $(this).find('.right_win_pic').attr('src','images/online_dg.png');
 })
+
+
+
 
 // 返回顶部
 $('.backTop_btn').click(function(){

@@ -90,6 +90,7 @@
   margin-left:10px!important;
 }
 .search_div{
+  position: relative;
   margin-top:40px;
   width:371px;
   height:35px;
@@ -104,7 +105,20 @@
   font-size:14px;
   margin-left:25px;
 }
-
+.search_input_div{
+  position: absolute;
+  top:0;
+  left:25px;
+  width:310px;
+  height:35px;
+  background: #f7f7f7;
+  line-height: 35px;
+  font-size:14px;
+  overflow: hidden;
+}
+.search_input_ul{
+  position:absolute;
+}
 .search_btn{
   width:19px;
   height:19px;
@@ -125,6 +139,18 @@
   height:14px;
   border-right:1px solid #bbbbbb;
 }
+.width220{
+  width:220px;
+}
+.width460{
+  width:460px;
+}
+.width185{
+  width:185px;
+}
+.width148{
+  width:148px;
+}
 .suspend_nav1{
   height:14px;
   font-weight: bold;
@@ -134,12 +160,126 @@
   margin-right:36px;
   cursor:pointer;
   line-height: 14px;
+  position: relative;
 }
 .suspend_nav1>li:hover{
     color:#ff6000;
 }
+.suspend_nav1>li:hover div{
+  display:block;
+}
+
+.nav_indicate_div{
+  width:100px;
+  height:auto;
+  text-align: center;
+  position: fixed;
+  top:160px;
+  left:0;
+  background: #fff;
+  display:none;
+  z-index: 99;
+}
+.nav_indicate_div_xf{
+  top:123px!important;
+}
+.kd_nav_indicate{
+  position: absolute;
+  top:13px;
+  left:480px;
+  width:24px;
+  height:8px;
+}
+.nav_indicate_alls{
+  width:100%;
+  height:206px;
+  margin-top:20px;
+  background: #fcfcfc;
+  border-top:1px solid #d9d9d9;
+  border-bottom:1px solid #d9d9d9;
+  box-shadow: 0 0 3px #d9d9d9;
+  cursor: default;
+}
 
 /*悬浮导航部分结束*/
+
+/*宽带二级导航部分开始*/
+.kd_ul1,.recommendTC_div{
+  margin-top:30px;
+  margin-bottom:35px;
+  height:140px;
+}
+.kd_ul1>li{
+  float:left;
+  height:140px;
+  font-size: 12px;
+  line-height: 24px;
+  color:#666;
+  border-right:1px solid #eeeeee;
+  text-align: left;
+  padding:0 30px;
+}
+.kdTwoN_icon{
+  display: inline-block;
+  margin-right:10px;
+  width:18px;
+  height:18px;
+}
+.TwoN_t{
+  margin:0 auto 5px;
+  line-height: 14px;
+  font-size:14px;
+  color:#ff7744;
+}
+.TwoN_ul>li:hover{
+  color:#ff7744;
+  cursor: pointer;
+}
+.recommendPic{
+  margin:0 20px;
+}
+.recommendTC_div{
+    text-align:left;
+}
+.recommendTC_tit{
+  height:14px;
+  padding-left:10px;
+  font-size:14px;
+  line-height: 14px;
+  color:#000;
+  border-left:3px solid #ff7744;
+}
+.recommendTC_dec{
+  font-size:12px;
+  color:#666666;
+  padding:10px 0;
+}
+.recommendTC_price{
+  text-align: left;
+  font-size: 12px;
+  color:#ff7744;
+  padding:20px 0 15px 0;
+}
+.recommendTC_czBtn{
+  width:88px;
+  height:28px;
+  font-size: 12px;
+  color:#ff7744;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 15px;
+  border:1px solid #ff7744;
+  cursor: pointer;
+}
+/*宽带二级导航部分结束*/
+
+
+
+
+
+
+
+
 
 /*banner1部分开始*/
 .banner_div1{
@@ -313,9 +453,9 @@
 .user_message_div{
   height:165px;
   font-size:12px;
-  box-shadow: 0 0 0px 3px #f0f0f0;
-  -webkit-box-shadow: 0 0 0px 3px #f0f0f0;
-  -moz-box-shadow: 0 0 0px 3px #f0f0f0;
+  box-shadow: 0 0 0px 2px #f0f0f0;
+  -webkit-box-shadow: 0 0 0px23px #f0f0f0;
+  -moz-box-shadow: 0 0 0px 2px #f0f0f0;
 }
 .user_message_ul{
   height:49px;
@@ -346,6 +486,10 @@
   border:1px solid #ff6000;
   border-radius:9px;
   cursor: pointer;
+}
+.message1_btn:hover{
+  background:#ff6000;
+  color:#fff;
 }
 /*用户信息部分结束*/
 
@@ -561,7 +705,7 @@
 .fr{
   float:right!important;
 }
-.traffic_ul1_libg,.G4_ul1_libg{
+.traffic_ul1_libg,.G4_ul1_libg,.kdzq_bg1{
   position: absolute;
   top:0;
   left:0;
@@ -646,8 +790,8 @@
   position: relative;
 }
 .img_div2 .llb_icon{
-  width:100%;
-  height:100%;
+  width:92px;
+  height:68px;
 }
 .img_div2 .llb_style{
   position: absolute;
@@ -678,17 +822,38 @@
   border:1px solid #f3f3f3;
   position: relative;
   margin-top:15px;
+  overflow: hidden;
+  cursor: pointer;
 }
 .kdzq_bg1{
   width:100%;
   height:100%;
 }
+.broadband_fc{
+  position: absolute;
+  top:39px;
+  right:-11px;
+  width:331px;
+  height:80px;
+}
+.broadband_top:hover .kdzq_bg1{
+  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
+  top:-2%;
+  left:-2%;
+  width:104%;
+  height:104%;
+}
+.broadband_fc>img{
+  width:331px;
+  height:80px;
+}
 .broadband_top_mes{
   width:295px;
   height:auto;
   position:absolute;
-  top:45px;
-  right:10px;
+  top:7px;
+  left:15px;
 }
 .broadband_top_txt1{
   font-size:18px;
@@ -889,6 +1054,7 @@
 }
 .mobileNumber_banner_ul>li{
   height:32px;
+  cursor:pointer;
 }
 .numB_ycf{
   font-size:14px;
@@ -1222,12 +1388,14 @@
 /*左侧导航部分开始*/
 
 .Left_win{
+  display: none;
   width:74px;
   height:340px;
   position: fixed;
   top:50%;
   left:10px;
   margin-top: -170px;
+  z-index: 999;
 }
 .wo_icon1{
   width:74px;
@@ -1268,6 +1436,7 @@
   height:225px;
   background: #fff;
   border:1px solid #dddddd;
+  z-index: 999;
 }
 
 .Right_Win>li{

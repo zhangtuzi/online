@@ -25,7 +25,9 @@ body{
 }
 .width1200{
   width:1200px;
+  min-width:1200px;
   margin:0 auto;
+  position: relative;
 }
 .width100{
   width:100%;
