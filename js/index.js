@@ -115,6 +115,7 @@ var banner1_lb=setInterval(banner1,3000);
 
 // 轮播banner图下方圆点控制
 $('.banner_index_ul').delegate('li','click',function(){
+  $('.banner_ul1').stop();
   clearInterval(banner1_lb);
   var this_index=$(this).index();
   $('.banner_index_ul>li').removeClass('bgFFF');
@@ -190,6 +191,7 @@ function Number_banner1_move(){
 
 // 圆点控制1
 $('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
+  $('.mobileNumber_banner1').stop();
     clearInterval(Number_banner1_set);
     var this_index=$(this).index();
     $('.mobileNumber_banner1_index_ul>li').removeClass('index_select2');
@@ -200,6 +202,7 @@ $('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
 
   // 靓号专区第一banner左按钮
   $('.bannerLeft1').click(function(){
+    $('.mobileNumber_banner1').stop();
     clearInterval(Number_banner1_set);
     if(Number_banner1>0){
       Number_banner1--;
@@ -212,6 +215,7 @@ $('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
   })
   // 靓号专区第一banner右按钮
   $('.bannerRight1').click(function(){
+    $('.mobileNumber_banner1').stop();
     clearInterval(Number_banner1_set);
     if(Number_banner1<Number_banner1_li_lg-1){
       Number_banner1++;
@@ -240,6 +244,7 @@ $('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
 
   // 圆点控制2
   $('.mobileNumber_banner2_index_ul').delegate('li','click',function(){
+    $('.mobileNumber_banner2').stop();
       clearInterval(Number_banner2_set);
       var this_index=$(this).index();
       $('.mobileNumber_banner2_index_ul>li').removeClass('index_select2');
@@ -250,6 +255,7 @@ $('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
 
     // 靓号专区第二banner左按钮
     $('.bannerLeft2').click(function(){
+      $('.mobileNumber_banner2').stop();
       clearInterval(Number_banner2_set);
       if(Number_banner2>0){
         Number_banner2--;
@@ -262,6 +268,7 @@ $('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
     })
     // 靓号专区第二banner右按钮
     $('.bannerRight2').click(function(){
+      $('.mobileNumber_banner2').stop();
       clearInterval(Number_banner2_set);
       if(Number_banner2<Number_banner2_li_lg-1){
         Number_banner2++;
@@ -269,7 +276,7 @@ $('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
         Number_banner2=0;
       }
       $('.mobileNumber_banner2_index_ul>li').removeClass('index_select2');
-      $('.mobileNumber_banner2_index_ul>li').eq(Number_banner1).addClass('index_select2');
+      $('.mobileNumber_banner2_index_ul>li').eq(Number_banner2).addClass('index_select2');
       Number_banner2_move();
     })
 
@@ -279,8 +286,6 @@ $('.zxdg_w').mouseover(function(){
 }).mouseout(function(){
   $(this).find('.right_win_pic').attr('src','images/online_dg.png');
 })
-
-
 
 
 // 返回顶部

@@ -170,7 +170,6 @@
 }
 
 .nav_indicate_div{
-  width:100px;
   height:auto;
   text-align: center;
   position: fixed;
@@ -179,6 +178,7 @@
   background: #fff;
   display:none;
   z-index: 99;
+  cursor: default;
 }
 .nav_indicate_div_xf{
   top:123px!important;
@@ -198,7 +198,6 @@
   border-top:1px solid #d9d9d9;
   border-bottom:1px solid #d9d9d9;
   box-shadow: 0 0 3px #d9d9d9;
-  cursor: default;
 }
 
 /*悬浮导航部分结束*/
@@ -271,14 +270,11 @@
   border:1px solid #ff7744;
   cursor: pointer;
 }
+.recommendTC_czBtn:hover{
+  background:#ff7744;
+  color:#fff;
+}
 /*宽带二级导航部分结束*/
-
-
-
-
-
-
-
 
 
 /*banner1部分开始*/
@@ -590,8 +586,51 @@
   -moz-transform: translate3d(0,-2px,0);
   transform: translate3d(0,-2px,0);
 }
+.lx_jx_pro_ul>li:hover .lx_jx_pro_fc_div{
+  height:76px;
+}
+.lx_jx_pro_fc_div{
+  width:100%;
+  height:0;
+  position: absolute;
+  bottom:0;
+  left:0;
+  overflow: hidden;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
 
-
+.lx_jx_pro_fc_bg{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: #ff6000;
+  opacity: 0.8;
+}
+.lx_jx_pro_fc_nr{
+  position:relative;
+  padding-top:7px;
+  padding-left:20px;
+}
+.lx_jx_pro_fc_nr>li{
+  height:18px;
+  line-height: 18px;
+  font-size: 12px;
+  color:#fff;
+  text-align: left;
+}
+.round2{
+  float:left;
+  display: inline-block;
+  margin:6px 10px 0 0 ;
+  width:5px;
+  height:5px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
 
 .jx_tit{
   font-size: 16px;
@@ -1189,6 +1228,37 @@
   float:left;
   width:200px;
   text-align: center;
+  position: relative;
+}
+.accessories_ul>li:hover .accessories_fc_div{
+  height:97px;
+}
+.accessories_fc_div{
+  width:100%;
+  height:0;
+  position: absolute;
+  bottom:0;
+  left:0;
+  overflow: hidden;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.accessories_fc_bg{
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background: #ff6000;
+  opacity: 0.8;
+}
+.accessories_fc_nr{
+  position: relative;
+  padding-top: 33px;
+  /*padding-left: 20px;*/
+  font-size:12px;
+  line-height: 16px;
+  color:#fff;
 }
 .accessories_pic{
   width:97px;
