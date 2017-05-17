@@ -510,6 +510,9 @@
   display:inline-block;
   margin:21px auto;
 }
+.user_iperate_img>img:hover{
+  margin-top:18px;
+}
 
 .user_iperate_title{
   font-size:14px;
@@ -650,8 +653,11 @@
 /*联通精选部分结束*/
 
 /*流量专区部分开始*/
+.H1042{
+  height:1042px;
+}
 .traffic_div,.G4_div{
-  width:594px;
+  width:596px;
   height:520px;
 }
 

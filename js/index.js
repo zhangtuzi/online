@@ -160,6 +160,13 @@ $('.cz_phone').focus(function(){
   }
 })
 
+//联通精选部分切换按钮
+$('.lx_jx_sx_ul>li').click(function(){
+  $(this).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
+})
+
+
+
 
 // 靓号专区轮播图
 var Number_banner1_li_W=$('.mobileNumber_banner1>li').width();
@@ -292,3 +299,8 @@ $('.zxdg_w').mouseover(function(){
 $('.backTop_btn').click(function(){
   $(window).scrollTop(0);
 })
+
+$(function() {
+  $('#lx_jx_pro_ul,#Body').sortable();
+  // $('#lx_jx_pro_ul').disableSelection();
+});
