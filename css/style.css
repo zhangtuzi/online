@@ -129,41 +129,53 @@
 /*悬浮导航部分开始*/
 .suspend_nav{
   position: relative;
-  height:14px;
+  height:18px;
   padding-bottom:20px;
   font-size: 14px;
 }
 .suspend_nav>li{
   float:left;
-  padding:0 30px;
-  height:14px;
+  height:18px;
   border-right:1px solid #bbbbbb;
 }
-.width220{
-  width:220px;
+.width250{
+  width:250px;
 }
 .width460{
   width:460px;
 }
-.width185{
-  width:185px;
+.width205{
+  width:205px;
 }
-.width148{
-  width:148px;
+.width172{
+  width:172px;
 }
 .suspend_nav1{
-  height:14px;
+  height:18px;
   font-weight: bold;
 }
 .suspend_nav1>li{
   float:left;
-  margin-right:36px;
+  padding:0 15px;
   cursor:pointer;
-  line-height: 14px;
+  line-height: 18px;
   position: relative;
+  transition: all .2s ease-in-out;
 }
+
 .suspend_nav1>li:hover{
-    color:#ff6000;
+    background: #ff6600;
+    /*box-shadow:0 5px #ff6000;*/
+    color:#fff;
+    border-radius:8px;
+    /*-webkit-transform: translate3d(1px,0,0);
+    -moz-transform: translate3d(1px，0,0);
+    -ms-transform: translate3d(1px，0,0);
+    -o-transform: translate3d(1px，0,0);
+    transform: translate3d(1px，0,0);*/
+}
+.suspend_nav1>li:hover a{
+  color:#fff;
 }
 .suspend_nav1>li:hover div{
   display:block;
@@ -173,7 +185,7 @@
   height:auto;
   text-align: center;
   position: fixed;
-  top:160px;
+  top:166px;
   left:0;
   background: #fff;
   display:none;

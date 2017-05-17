@@ -44,8 +44,17 @@ body{
 .paddingL0{
   padding-left:0!important;
 }
+.paddingR0{
+  padding-left:0!important;
+}
 .paddingL30{
-  padding-left:30;
+  padding-left:30px;
+}
+.paddingL15{
+  padding-left:15px!important;
+}
+.paddingR15{
+  padding-right:15px!important;
 }
 .marginR0{
   margin-right:0px!important;
@@ -114,10 +123,6 @@ body{
 .textLeft{
   text-align: left!important;
 }
-
-
-
-
 
 
 /*橙色浮层样式*/

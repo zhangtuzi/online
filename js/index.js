@@ -84,7 +84,7 @@ $(window).scroll(function(){
   var win_ScroTop=$(window).scrollTop();
   var xfTop=$('.suspend_nav_div').css('top');
   if(win_ScroTop<180&&win_ScroTop>-1){
-    $('.nav_indicate_div').css('top',160-win_ScroTop);
+    $('.nav_indicate_div').css('top',166-win_ScroTop);
   }
   if(win_ScroTop>180){
     $('.suspend_nav_div').addClass('suspend_nav_div_fixed');
@@ -300,6 +300,7 @@ $('.backTop_btn').click(function(){
   $(window).scrollTop(0);
 })
 
+// 添加拖拽效果
 $(function() {
   $('#lx_jx_pro_ul,#Body').sortable();
   // $('#lx_jx_pro_ul').disableSelection();
