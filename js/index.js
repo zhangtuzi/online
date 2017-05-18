@@ -122,21 +122,30 @@ $('.nav_indicate_div').width(win_width);
 
 //开始选择地区
 $('.area_div').click(function(){
-  var now_area=$(this).text();
-  $('.downup2').addClass('downup2_tra');
-  $('.area_selectDiv').show();
-  $('.area_dq>li').each(function(){
-    var this_area=$(this).text();
-    this_area=this_area.substring(0,this_area.length-1);
-    if(this_area===now_area){
-      $('.area_dq>li').removeClass('colorff6000');
-      $(this).addClass('colorff6000');
-    }
-  })
+  if($('.area_selectDiv').hasClass('area_showing')){
+    $('.downup2').removeClass('downup2_tra');
+    $('.area_selectDiv').hide();
+    $('.area_selectDiv').removeClass('area_showing');
+  }else{
+    $('.area_selectDiv').addClass('area_showing');
+    var now_area=$(this).text();
+    $('.downup2').addClass('downup2_tra');
+    $('.area_selectDiv').show();
+    $('.area_dq>li').each(function(){
+      var this_area=$(this).text();
+      this_area=this_area.substring(0,this_area.length-1);
+      if(this_area===now_area){
+        $('.area_dq>li').removeClass('colorff6000');
+        $(this).addClass('colorff6000');
+      }
+    })
+  }
+
 })
 
 //选择地区
 $('.area_dq>li').click(function(event){
+  $('.area_selectDiv').removeClass('area_showing');
   $('.downup2').removeClass('downup2_tra');
   $('.area_selectDiv').hide();
   $('.area_dq>li').removeClass('colorff6000');
