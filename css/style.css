@@ -2,12 +2,44 @@
 .header1{
   height:40px;
   background: #333333;
-  color:#eee;
+  color:#aaaaaa;
   font-size: 12px!important;
   line-height: 40px;
 }
 .user_phone{
   margin:0 8px;
+  position: relative;
+}
+.user_phone:hover .user_phone_divs{
+  display: block;
+}
+.user_phone_divs p{
+  cursor:pointer;
+}
+.user_phone_divs{
+  position: absolute;
+  left:0;
+  top:40px;
+  width:85px;
+  height:44px;
+  padding:5px 0;
+  background: #f8f8f8;
+  text-align: center;
+  border:1px solid #dfdddd;
+  border-top:none;
+  box-shadow: 0px 0px 4px #dfdddd;
+  z-index: 999;
+  font-size: 12px;
+  color:#555;
+  line-height: 22px;
+  display: none;
+}
+.top_up_icon{
+  position: absolute;
+  top:-6px;
+  left:36px;
+  width:13px;
+  height:6px;
 }
 .down_up1{
   width:7px;
@@ -36,6 +68,33 @@
 .dh1_ul>li{
   float:left;
   padding:0 7px;
+  position: relative;
+}
+.dh1_ul>li:hover{
+  color:#fff;
+}
+.dh1_ul>li:hover .dh1_downDiv{
+  display: block;
+}
+.dh1_downDiv,.downErWM_div,.WeChatErWM_div{
+  position: absolute;
+  top:40px;
+  left:-10px;
+  width:85px;
+  padding:5px 0;
+  background: #f8f8f8;
+  text-align: center;
+  border:1px solid #dfdddd;
+  border-top:none;
+  box-shadow: 0px 0px 4px #dfdddd;
+  z-index: 999;
+  font-size: 12px;
+  color:#555;
+  line-height: 22px;
+  display: none;
+}
+.dh1_downDiv p{
+  cursor:pointer;
 }
 .icon1{
   width:21px;
@@ -47,13 +106,40 @@
   margin-right:15px;
 }
 .WeChat_icon1{
+  width:21px;
   margin-right:5px;
+  position: relative;
 }
+.WeChat_icon1:hover .WeChatErWM_div{
+  display: block;
+}
+
 .downApp{
   width:72px;
   height:16px;
-  margin:12px 35px 0 25px;
+  padding:12px 35px 12px 25px;
   line-height: 16px;
+  position: relative;
+}
+.downApp:hover .downErWM_div{
+  display: block;
+}
+.downErWM_div,.WeChatErWM_div{
+  width:140px;
+  height:160px;
+  left:-15px;
+}
+.downErWM_div>.top_up_icon,.WeChatErWM_div>.top_up_icon{
+  left:64px;
+}
+.downErWM_div>.download2_icon,.WeChatErWM_div>.download2_icon{
+  width:126px;
+  height:126px;
+  margin:7px;
+  margin-bottom:0;
+}
+.WeChatErWM_div{
+  left:-60px;
 }
 /*顶部导航部分结束*/
 
@@ -73,7 +159,7 @@
   margin:20px 0 30px;
 }
 .area_div{
-  width:107px;
+  width:120px;
   height:24px;
   margin-top: 38px;
   margin-left:15px;
@@ -81,13 +167,57 @@
   line-height: 24px;
   border:1px solid #ff7744;
   border-radius:12px;
+  position: relative;
 }
-.area_div img{
+.area_div>img{
   margin:5px 10px 0 15px;
 }
+.area_show{
+  width:45px;
+  display: inline-block;
+  text-align: center;
+}
+.area_selectDiv{
+  position: absolute;
+  top:40px;
+  left:0;
+  width:690px;
+  height:120px;
+  padding:10px;
+  background:#ffffff;
+  z-index: 99;
+  border:1px solid #c6c9cc;
+  display: none;
+}
+.area_selectDiv_rows{
+  clear:both;
+  height:28px;
+}
+.area_ABC_t{
+  float:left;
+  width:25px;
+  margin-left:15px;
+  text-align: left;
+  font-size:12px;
+  line-height: 28px;
+  color:#999;
+}
+.area_dq>li{
+  float:left;
+  width:50px;
+  margin-left:20px;
+  font-size: 12px;
+  line-height: 28px;
+  color:#333;
+  cursor: pointer;
+}
+
 .downup2{
   margin-top:10px!important;
   margin-left:10px!important;
+}
+.downup2_tra{
+  transform: rotate(180deg);
 }
 .search_div{
   position: relative;
@@ -350,11 +480,29 @@
   opacity: 0.3;
 }
 
-.cz_price{
+.cz_price,.otherP{
   margin:35px 15px 0;
   width:276px;
   height:35px;
 }
+.otherP{
+  margin-top:30px;
+  margin-bottom:8px;
+  display: none;
+}
+.czPSe_btn{
+  margin-top:4px;
+  width:52px;
+  height:18px;
+  line-height:18px;
+  font-size:12px;
+  color:#fff;
+  text-align:center;
+  border:1px solid #ddd;
+  border-radius:10px;
+  cursor:pointer;
+}
+
 .cz_price>li{
   float:left;
   width:46px;
@@ -389,7 +537,7 @@
     float: left;
     margin-left: 15px;
 }
-.cz_phone{
+.cz_input{
   width:198px;
   height:30px;
   padding-left:18px;
@@ -1470,11 +1618,40 @@
   width:95px;
   text-align: center;
 }
+.WeChat_Sina_pic_div{
+  position: relative;
+  width:30px;
+  height:35px;
+  margin-top:15px;
+  display:inline-block;
+}
+.WeChat_Sina_pic_div:hover .WX_Erm2_div{
+  display: block;
+}
 .WeChat_Sina_pic2{
   width:30px;
   height:30px;
-  margin-top:15px;
-  display:inline-block;
+}
+
+.WX_Erm2_div{
+  position: absolute;
+  top:33px;
+  left:-62px;
+  width:155px;
+  height:175px;
+  text-align: center;
+  display: none;
+}
+.WX_Erm2_div>img{
+  width:100%;
+  height:100%;
+}
+.WX_Erm2_txt{
+  position: absolute;
+  top:145px;
+  width:100%;
+  font-size:12px;
+  color:#555;
 }
 /*底部部分结束*/
 

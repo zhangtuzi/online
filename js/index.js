@@ -120,6 +120,34 @@ $(window).scroll(function(){
 var win_width=$(window).width();
 $('.nav_indicate_div').width(win_width);
 
+//开始选择地区
+$('.area_div').click(function(){
+  var now_area=$(this).text();
+  $('.downup2').addClass('downup2_tra');
+  $('.area_selectDiv').show();
+  $('.area_dq>li').each(function(){
+    var this_area=$(this).text();
+    this_area=this_area.substring(0,this_area.length-1);
+    if(this_area===now_area){
+      $('.area_dq>li').removeClass('colorff6000');
+      $(this).addClass('colorff6000');
+    }
+  })
+})
+
+//选择地区
+$('.area_dq>li').click(function(event){
+  $('.downup2').removeClass('downup2_tra');
+  $('.area_selectDiv').hide();
+  $('.area_dq>li').removeClass('colorff6000');
+  $(this).addClass('colorff6000');
+  var this_area=$(this).text();
+  this_area=this_area.substring(0,this_area.length-1);
+  $('.area_show').text(this_area);
+  event.stopPropagation();
+})
+
+
 
 
 // 轮播banner图部分
@@ -193,7 +221,28 @@ $('.cz_phone').focus(function(){
     $(this).val('输入手机号码').addClass('color666');
   }
 })
-
+$('.otherP_input').focus(function(){
+  var this_val=$(this).val();
+  if(this_val=='输入金额'){
+    $(this).val('').removeClass('color666');
+  }
+}).blur(function(){
+  var this_val=$(this).val();
+  if(this_val==''){
+    $(this).val('输入金额').addClass('color666');
+  }
+})
+$('.czPSe_btn').click(function(){
+  $('.zdy_btn').removeClass('select_span');
+  $('.cz_price>li').eq(0).find('span').addClass('select_span');
+  $('.cz_price>li').eq(0).find('img').removeClass('dn');
+  $('.otherP').hide();
+  $('.cz_price').show();
+})
+$('.zdy_btn').click(function(){
+  $('.otherP').show();
+  $('.cz_price').hide();
+})
 //联通精选部分切换按钮
 $('.lx_jx_sx_ul>li').click(function(){
   var this_index=$(this).index();
