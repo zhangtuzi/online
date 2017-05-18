@@ -593,10 +593,14 @@
   -o-transition: all .2s linear;
   transition: all .2s linear;
 }
-.lx_jx_pro_ul>li:last-child{
+.lx_jx_pro_ul>li:nth-child(4),.lx_jx_pro_ul>li:nth-child(8),.lx_jx_pro_ul>li:nth-child(12){
   float:right;
   margin-right:0;
 }
+.jx_cnxhLi,.jx_tszqLi{
+  display: none;
+}
+
 .lx_jx_pro_ul>li:hover{
   -webkit-box-shadow: 0 15px 30px #ddd;
   -moz-box-shadow: 0 15px 30px #ddd;
@@ -1556,8 +1560,8 @@
   top:50%;
   right:10px;
   margin-top:-113px;
-  width:66px;
-  height:225px;
+  width:55px;
+  height:224px;
   background: #fff;
   border:1px solid #dddddd;
   z-index: 999;
@@ -1573,7 +1577,7 @@
   cursor: pointer;
 }
 .backTop_btn{
-  height:43px;
+  height:42px;
   border-bottom: none;
   cursor: pointer;
 }

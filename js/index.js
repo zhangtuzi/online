@@ -196,6 +196,21 @@ $('.cz_phone').focus(function(){
 
 //联通精选部分切换按钮
 $('.lx_jx_sx_ul>li').click(function(){
+  var this_index=$(this).index();
+  switch(this_index){
+    case 0 :
+    $('.jx_rqtjLi').show();
+    $('.jx_cnxhLi,.jx_tszqLi').hide();
+    break;
+    case 1 :
+    $('.jx_tszqLi').show();
+    $('.jx_rqtjLi,.jx_cnxhLi').hide();
+    break;
+    case 2 :
+    $('.jx_cnxhLi').show();
+    $('.jx_rqtjLi,.jx_tszqLi').hide();
+    break;
+  }
   $(this).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
 })
 
@@ -371,8 +386,29 @@ $('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
   // 右侧导购鼠标放上换图片
   $('.zxdg_w').mouseover(function(){
     $(this).find('.right_win_pic').attr('src','images/online_dg_active.png');
+    $(this).find('.right_win_txt').addClass('colorff6000');
   }).mouseout(function(){
     $(this).find('.right_win_pic').attr('src','images/online_dg.png');
+    $(this).find('.right_win_txt').removeClass('colorff6000');
+  })
+  $('.zxkf_li').mouseover(function(){
+    $(this).find('.right_win_pic').attr('src','images/online_kf_active.png');
+    $(this).find('.right_win_txt').addClass('colorff6000');
+  }).mouseout(function(){
+    $(this).find('.right_win_pic').attr('src','images/online_kf.png');
+    $(this).find('.right_win_txt').removeClass('colorff6000');
+  })
+  $('.survey_quesLi').mouseover(function(){
+    $(this).find('.right_win_pic').attr('src','images/survey_ques_active.png');
+    $(this).find('.right_win_txt').addClass('colorff6000');
+  }).mouseout(function(){
+    $(this).find('.right_win_pic').attr('src','images/survey_ques.png');
+    $(this).find('.right_win_txt').removeClass('colorff6000');
+  })
+  $('.backTop_btn').mouseover(function(){
+    $(this).find('img').attr('src','images/back_top_active.png');
+  }).mouseout(function(){
+    $(this).find('img').attr('src','images/back_top.png');
   })
 
 
