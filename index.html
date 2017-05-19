@@ -13,14 +13,15 @@
     <header class="width100 header1">
       <div class="width1200">
           <div class="user_phone line_block cur_pointer fl">
-            <span>185****3456</span>
+            <span class="">185****3456</span>
+            <img src="images/downup_icon_zhl.png" class="down_up1 line_block cur_pointer">
             <div class="user_phone_divs">
               <img src="images/top_up_icon.png" class="top_up_icon">
-              <p>修改密码</p>
-              <p>退出登录</p>
+              <a href="###"><p>修改密码</p></a>
+              <a href="###"><p>退出登录</p></a>
             </div>
           </div>
-          <img src="images/downup_icon_zhl.png" class="down_up1 line_block cur_pointer fl">
+
           <span class="line_block user_stars fl">五星用户</span>
           <div class="line_block star_div fl">
             <img src="images/star_icon_zhl.png">
@@ -54,23 +55,30 @@
             </div>
           </div>
           <ul class="dh1_ul fr">
-            <li>
+            <li class="top_client">
               <span class="cur_pointer">客户服务</span>
               <img src="images/downup_icon_zhl.png" class="down_up1 line_block cur_pointer">
               <div class="dh1_downDiv">
                 <img src="images/top_up_icon.png" class="top_up_icon">
-                <p>在线客服</p>
-                <p>帮助中心</p>
-                <p>沃知道</p>
-                <p>常见问题</p>
-                <p>问卷调查</p>
-                <p>历史投诉</p>
-                <p>黑卡举报</p>
+                <a href="###"><p>在线客服</p></a>
+                <a href="###"><p>帮助中心</p></a>
+                <a href="###"><p>沃知道</p></a>
+                <a href="###"><p>常见问题</p></a>
+                <a href="###"><p>问卷调查</p></a>
+                <a href="###"><p>历史投诉</p></a>
+                <a href="###"><p>黑卡举报</p></a>
               </div>
             </li>
-            <li>
+            <li class="top_moreServer">
               <span class="cur_pointer">更多电子服务</span>
               <img src="images/downup_icon_zhl.png" class="down_up1 line_block cur_pointer">
+              <div class="dh1_downDiv Left0">
+                <img src="images/top_up_icon.png" class="top_up_icon">
+                <a href="###"><p>手机营业厅</p></a>
+                <a href="###"><p>短信营业厅</p></a>
+                <a href="###"><p>微信营业厅</p></a>
+                <a href="###"><p>手机商城</p></a>
+              </div>
             </li>
             <li>
               <span>企业门户</span>
@@ -85,16 +93,17 @@
     <div class="width1200 ">
       <!-- logo部分开始 -->
       <img src="images/logo_1.png" class="logo1">
-      <div class="area_div line_block">
-        <img src="images/dingwei_icon_zhl.png" alt="">
-        <span class="area_show cur_pointer">北京</span>
-        <img src="images/downup_icon2_zhl.png" class="downup2 fr">
-
+      <div class="area_divs line_block">
+        <div class="area_div line_block">
+          <img src="images/dingwei_icon_zhl.png" alt="">
+          <span class="area_show colorff6600 cur_pointer">北京</span>
+          <img src="images/downup_icon2_zhl.png" class="downup2 fr">
+        </div>
         <div class="area_selectDiv">
           <div class="area_selectDiv_rows">
             <div class="area_ABC_t">A-G</div>
             <ul class="area_dq fl">
-              <li class="colorff6000">北京></li>
+              <li>北京></li>
               <li>安徽></li>
               <li>重庆></li>
               <li>福建></li>
@@ -145,6 +154,7 @@
           </div>
         </div>
       </div>
+
 
       <div class="search_div fr">
         <input type="text" value="4G手机免息分期" class="search_input coloraaa">
@@ -271,12 +281,9 @@
       </ul>
 
       <ul class="banner_index_ul">
-        <!-- <li class="bgFFF"></li>
-        <li></li> -->
       </ul>
       <!-- banner1部分结束 -->
 
-      <div class="width1200 banner1_center">
         <div class="banner_right_bg"></div>
         <div class="banner_right_div">
           <ul class="cz_price">
@@ -306,7 +313,7 @@
           </ul>
           <div class="otherP">
               <input type="text" name="" value="输入金额" class="otherP_input cz_input color666 fl">
-              <div class="czPSe_btn fr">选金额</div>
+              <div class="czPSe_btn borderF fr">选金额</div>
           </div>
           <div class="cz_div">
             <input type="text" class="color666 cz_phone cz_input fl" value="输入手机号码">
@@ -326,7 +333,6 @@
             </ul>
           </div>
         </div>
-      </div>
     </div>
 
     <!-- 用户信息部分开始 -->
@@ -337,7 +343,7 @@
             <span>剩余话费：</span>
             <span class="sy_hf font20">199.60</span>
             <span>元</span>
-            <span class="cz_btn1 message1_btn">充值</span>
+            <span class="cz_btn1 message1_btn user_CZBtn">充值</span>
           </p>
 
         </li>
@@ -346,7 +352,7 @@
             <span>剩余流量：</span>
             <span class="sy_ll font20">1024</span>
             <span>MB </span>
-            <span class="cz_btn1 message1_btn">充流量</span>
+            <span class="cz_btn1 message1_btn user_CZBtn">充流量</span>
           </p>
         </li>
         <li>
@@ -354,7 +360,7 @@
             <span>可用语音：</span>
             <span class="sy_yy font20">146</span>
             <span>分钟</span>
-            <span class="cz_btn1 message1_btn">换套餐</span>
+            <span class="cz_btn1 message1_btn user_CZBtn">换套餐</span>
           </p>
         </li>
         <li>
@@ -362,7 +368,7 @@
             <span>可用积分：</span>
             <span class="sy_hf font20">1596</span>
             <span>元</span>
-            <span class="cz_btn1 message1_btn">积分商城</span>
+            <span class="cz_btn1 message1_btn user_CZBtn">积分商城</span>
           </p>
         </li>
       </ul>
@@ -672,7 +678,7 @@
               <a href="###">
                 <div class="more_div fr">
                   更多
-                  <img src="images/more_icon.png" class="more_icon fr">
+                  <div class="more_icon fr"></div>
                 </div>
               </a>
             </div>
@@ -773,7 +779,7 @@
                 <a href="###">
                   <div class="more_div fr">
                     更多
-                    <img src="images/more_icon.png" class="more_icon fr">
+                    <div class="more_icon fr"></div>
                   </div>
                 </a>
               </div>
@@ -861,7 +867,7 @@
               <a href="###">
                 <div class="more_div fr">
                   更多
-                  <img src="images/more_icon.png" class="more_icon fr">
+                  <div class="more_icon fr"></div>
                 </div>
               </a>
             </div>
@@ -977,7 +983,7 @@
               <a href="###">
                 <div class="more_div fr">
                   更多
-                  <img src="images/more_icon.png" class="more_icon fr">
+                  <div class="more_icon fr"></div>
                 </div>
               </a>
             </div>
@@ -1230,12 +1236,12 @@
         <a href="###">
           <div class="more_div fr">
             更多
-            <img src="images/more_icon.png" class="more_icon fr">
+            <div class="more_icon fr"></div>
           </div>
         </a>
       </div>
       <ul class="phone_ul1">
-        <li class="phone_ul1_li1">
+        <li class="phone_ul1_li1 transAni">
           <img src="images/phone_pj_pic1.jpg" class="phone_pj_pic">
           <p class="phoneName1">iPhone 6s</p>
           <p class="phone_yh1">24个月存费送机</p>
@@ -1253,7 +1259,7 @@
         </li>
         <li class="bgF5F5F5 borderNone">
           <ul class="phone_ul2">
-            <li class="phone_ul2_li2">
+            <li class="phone_ul2_li2 transAni">
               <p class="phoneName2">iPhone 7/7Plus</p>
               <p class="phone_yh2">存0元即送240元</p>
               <p class="phone_price2">￥1288</p>
@@ -1270,7 +1276,7 @@
               </div>
               <!-- 橙色浮层部分结束 -->
             </li>
-            <li class="phone_ul2_li2">
+            <li class="phone_ul2_li2 transAni">
               <p class="phoneName2">冰激凌套餐</p>
               <p class="phone_yh2">流量语音多人共享</p>
               <p class="phone_price2">￥1288</p>
@@ -1289,7 +1295,7 @@
             </li>
           </ul>
         </li>
-        <li class="phone_ul1_li1">
+        <li class="phone_ul1_li1 transAni">
           <img src="images/phone_pj_pic2.jpg" class="phone_pj_pic">
           <p class="phoneName1">华为荣耀8</p>
           <p class="phone_yh1">一人付费，全家共享</p>
@@ -1403,7 +1409,7 @@
         <a href="###">
           <div class="more_div fr">
             更多
-            <img src="images/more_icon.png" class="more_icon fr">
+            <div class="more_icon fr"></div>
           </div>
         </a>
       </div>
@@ -1650,11 +1656,11 @@
       <img src="images/wo_icon_zhl.png" class="wo_icon1">
       <div class="Left_win1">
         <ul class="Left_Wul">
-          <li><a href="#traffic_div">流量/宽带</a></li>
-          <li><a href="#G4_div">套餐/靓号</a></li>
-          <li><a href="#phoneAccessories">手机/配件</a></li>
-          <li><a href="#InternetCard">上网卡</a></li>
-          <li><a href="#lifeService">生活服务</a></li>
+          <li><a href="javascript:FloorGo('traffic_div');">流量/宽带</a></li>
+          <li><a href="javascript:FloorGo('G4_div');">套餐/靓号</a></li>
+          <li><a href="javascript:FloorGo('phoneAccessories');">手机/配件</a></li>
+          <li><a href="javascript:FloorGo('InternetCard');">上网卡</a></li>
+          <li><a href="javascript:FloorGo('lifeService');">生活服务</a></li>
         </ul>
       </div>
     </div>
