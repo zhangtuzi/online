@@ -169,12 +169,14 @@
 .suspend_nav_div{
   position: relative;
 }
-.suspend_nav_div_fixed{
+.suspend_nav_div2{
+  display: none;
   position: fixed;
   top:0;
   left:0;
   z-index: 12;
 }
+
 .logo1{
   width:295px;
   height:57px;
@@ -410,6 +412,12 @@
 .czk_nav_indicate{
   left:692px;
 }
+.tszq_nav_indicate{
+  left:860px;
+}
+.th_nav_indicate{
+  left:935px;
+}
 .myWo_nav_indicate{
   left:1125px;
 }
@@ -455,6 +463,22 @@
   text-align: left;
   padding:0 30px;
 }
+.Two_nav_ul2{
+  margin-top:30px;
+  margin-bottom:35px;
+}
+.Two_nav_ul2>li{
+  float:left;
+  width:365px;
+  font-size: 12px;
+  line-height: 24px;
+  color:#666;
+  border-right:1px solid #eeeeee;
+  text-align: left;
+  padding-right:10px;
+  margin-right:30px;
+}
+
 .jf_Two_navUl>li{
   float:left;
   padding-right:30px;
@@ -499,6 +523,9 @@
 .phone_Tnav_ul1>li{
   height:220px;
 }
+.llb_Tnav_ul1>li{
+  height:165px;
+}
 .myWo_ul1>li{
   height:115px;
 }
@@ -526,8 +553,18 @@
 .recommendPic1{
   margin:0;
 }
+.recommendPic2{
+  width:135px;
+  height:135px;
+  display: inline-block;
+  margin-right:30px;
+}
 .recommendTC_div{
     text-align:left;
+}
+.recommendTC_div1{
+  width:200px;
+  display: inline-block;
 }
 .recommendTC_tit{
   height:14px;
@@ -542,11 +579,23 @@
   color:#666666;
   padding:10px 0;
 }
+.recommendTC_dec1{
+  font-size:12px;
+  color:#666666;
+  padding:4px 0;
+  line-height: 16px;
+}
 .recommendTC_price{
   text-align: left;
   font-size: 12px;
   color:#ff7744;
   padding:20px 0 10px 0;
+}
+.recommendTC_price1{
+  text-align: left;
+  font-size: 12px;
+  color:#ff7744;
+  padding:25px 0 10px 0;
 }
 .recommendTC_czBtn{
   width:88px;
@@ -567,6 +616,17 @@
 .recommendTC_czBtn:hover{
   background:#ff7744;
   color:#fff;
+}
+.marginB7{
+  margin-bottom:7px;
+}
+.llz_span{
+  width:55px;
+  display: inline-block;
+}
+.llprice_span{
+  width:45px;
+  display: inline-block;
 }
 /*宽带二级导航部分结束*/
 

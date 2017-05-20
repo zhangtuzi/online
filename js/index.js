@@ -50,6 +50,25 @@ var Banner={
           clearInterval(changell);
         }
     },10)
+  },
+  ArrayPx:function(array){
+    var array2=[];
+    for(var i=0;i<array.length;i++){
+      array2.push(array[i].top);
+      array2.sort();
+    }
+    var array3=array;
+    for(var j=0;j<array.length;j++){
+      var arrayTop=array[j].top;
+      for(var z=0;z<array2.length;z++){
+        if(arrayTop===array2[z]){
+          array3[z]=array[j];
+          array3[z].class1=array[j].class1+'_f';
+          array3[z].top=array[j].top-190;
+        }
+      }
+    }
+    return array3;
   }
 }
 
@@ -96,27 +115,68 @@ $('.search_input').blur(function(){
     $('.search_input_div').show();
   }
 });
-// 悬浮导航
+
+$('.suspend_nav_div2').append($('.suspend_nav_div').html());
+
+// 悬浮导航以及左侧浮层的楼层变色等
 $(window).scroll(function(){
   var win_ScroTop=$(window).scrollTop();
-  console.log(win_ScroTop)
-  var xfTop=$('.suspend_nav_div').css('top');
-  if(win_ScroTop<180&&win_ScroTop>-1){
+  //获取各个楼层距离页面顶部的top值
+  var T_traffic_div_top1=parseInt($('#traffic_div').offset().top);
+  var T_G4_div_top1=parseInt($('#G4_div').offset().top);
+  var T_phoneAccessories_top1=parseInt($('#phoneAccessories').offset().top);
+  var T_InternetCard_top1=parseInt($('#InternetCard').offset().top);
+  var T_lifeService_top1=parseInt($('#lifeService').offset().top);
+  //将各个楼层的id和距离页面顶部top值放入数组TopArray
+  var TopArray=[
+    {class1:'traffic_div',top:T_traffic_div_top1},
+    {class1:'G4_div',top:T_G4_div_top1},
+    {class1:'phoneAccessories',top:T_phoneAccessories_top1},
+    {class1:'InternetCard',top:T_InternetCard_top1},
+    {class1:'lifeService',top:T_lifeService_top1},
+  ];
+
+  //将从小到大排序后的各个楼层的id和距离页面顶部top值放入数组TopArra2
+  var TopArray2=Banner.ArrayPx(TopArray);
+
+  if(win_ScroTop<140){
     $('.nav_indicate_div').css('top',164-win_ScroTop);
-  }
-  if(win_ScroTop>180){
-    $('.suspend_nav_div').addClass('suspend_nav_div_fixed');
-    $('.nav_indicate_div').addClass('nav_indicate_div_xf');
+    $('.suspend_nav_div2').hide();
+  }else if(win_ScroTop>140){
+    $('.suspend_nav_div2').slideDown(200);
+    $('.suspend_nav_div2 .nav_indicate_div').addClass('nav_indicate_div_xf');
   }else{
-    $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
-    $('.nav_indicate_div').removeClass('nav_indicate_div_xf');
+    $('.suspend_nav_div2 .nav_indicate_div').removeClass('nav_indicate_div_xf');
   }
+
+  // 左侧楼层浮层显示判断
   if(win_ScroTop>400){
     $('.Left_win').show();
   }else{
     $('.Left_win').hide();
   }
+
+  // 左侧楼层颜色判断
+  if(win_ScroTop>TopArray2[0].top&&win_ScroTop<TopArray2[1].top-1){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[0].class1+'').find('a').addClass('colorff6600');
+  }else if(win_ScroTop>TopArray2[1].top&&win_ScroTop<TopArray2[2].top-1){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[1].class1+'').find('a').addClass('colorff6600');
+  }
+  else if(win_ScroTop>TopArray2[2].top&&win_ScroTop<TopArray2[3].top-1){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[2].class1+'').find('a').addClass('colorff6600');
+  }
+  else if(win_ScroTop>TopArray2[3].top&&win_ScroTop<TopArray2[4].top-1){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[3].class1+'').find('a').addClass('colorff6600');
+  }else if(win_ScroTop>TopArray2[4].top){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[4].class1+'').find('a').addClass('colorff6600');
+  }
 })
+
 var win_width=$(window).width();
 $('.nav_indicate_div').width(win_width).css('margin-left',-(win_width)/2+'px');
 
