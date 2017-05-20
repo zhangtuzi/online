@@ -173,7 +173,7 @@
   position: fixed;
   top:0;
   left:0;
-  z-index: 2;
+  z-index: 12;
 }
 .logo1{
   width:295px;
@@ -306,6 +306,16 @@
   height:18px;
   border-right:1px solid #bbbbbb;
 }
+
+.hot_icon{
+  position: absolute;
+  width: 30px;
+  display: inline-block;
+  top: -16px;
+  left: 50%;
+  margin-left: -15px;
+}
+
 .width250{
   width:250px;
 }
@@ -356,8 +366,8 @@
   height:auto;
   text-align: center;
   position: fixed;
-  top:166px;
-  left:0;
+  top:164px;
+  left:50%;
   background: #fff;
   display:none;
   z-index: 99;
@@ -366,16 +376,47 @@
 .nav_indicate_div_xf{
   top:126px!important;
 }
-.kd_nav_indicate{
+.Two_nav_indicate{
   position: absolute;
   top:13px;
-  left:480px;
   width:24px;
   height:8px;
 }
+.cx_nav_indicate{
+  left:90px;
+}
+.bl_nav_indicate{
+  left:145px;
+}
+.jf_nav_indicate{
+  left:205px;
+}
+
+.phone_nav_indicate{
+  left:405px;
+}
+.phoneNumber_nav_indicate{
+  left:315px;
+}
+.kd_nav_indicate{
+  left:480px;
+}
+.swk_nav_indicate{
+  left:550px;
+}
+.llb_nav_indicate{
+  left:620px;
+}
+.czk_nav_indicate{
+  left:692px;
+}
+.myWo_nav_indicate{
+  left:1125px;
+}
+
 .nav_indicate_alls{
   width:100%;
-  height:206px;
+  /*height:206px;*/
   margin-top:20px;
   background: #fcfcfc;
   border-top:1px solid #d9d9d9;
@@ -390,14 +431,23 @@
 /*悬浮导航部分结束*/
 
 /*宽带二级导航部分开始*/
-.kd_ul1,.recommendTC_div{
+.Two_nav_ul1,.recommendTC_div{
   margin-top:30px;
   margin-bottom:35px;
-  height:140px;
+  /*height:140px;*/
 }
-.kd_ul1>li{
+
+.czk_ul1{
+    margin: 30px auto;
+    width: 600px;
+    height: 20px;
+    padding-bottom: 35px;
+}
+.czk_ul1>li{
+  height:14px;
+}
+.Two_nav_ul1>li{
   float:left;
-  height:140px;
   font-size: 12px;
   line-height: 24px;
   color:#666;
@@ -405,6 +455,58 @@
   text-align: left;
   padding:0 30px;
 }
+.jf_Two_navUl>li{
+  float:left;
+  padding-right:30px;
+}
+
+.myWo_ul1 .jf_Two_navUl>li{
+  width:100px;
+}
+.llb_Tnav_ul1 .jf_Two_navUl>li{
+  width:120px;
+}
+.TwoN_ul>li>a,.jf_Two_navUl>li>a{
+  background:#fff!important;
+  color:#555!important;
+}
+.TwoN_ul>li>a:hover,.jf_Two_navUl>li>a:hover{
+  color:#ff7744!important;
+  cursor: pointer;
+}
+.czk_link{
+  background:#fff!important;
+  color:#ff7744!important;
+}
+.cx_ul1>li{
+  height:235px;
+}
+.bl_ul1>li{
+  height:260px;
+}
+.jf_ul1>li{
+    height:45px;
+}
+.kd_ul1>li{
+    height:140px;
+}
+.swk_Tnav_ul1>li{
+  height:130px;
+}
+.phoneNumber_Tnav_ul1>li{
+  height:140px;
+}
+.phone_Tnav_ul1>li{
+  height:220px;
+}
+.myWo_ul1>li{
+  height:115px;
+}
+.phone_Tnav_ppli>a{
+  width:45px;
+  display: inline-block;
+}
+
 .kdTwoN_icon{
   display: inline-block;
   margin-right:10px;
@@ -417,12 +519,12 @@
   font-size:14px;
   color:#ff7744;
 }
-.TwoN_ul>li:hover{
-  color:#ff7744;
-  cursor: pointer;
-}
+
 .recommendPic{
   margin:0 20px;
+}
+.recommendPic1{
+  margin:0;
 }
 .recommendTC_div{
     text-align:left;
@@ -444,7 +546,7 @@
   text-align: left;
   font-size: 12px;
   color:#ff7744;
-  padding:20px 0 15px 0;
+  padding:20px 0 10px 0;
 }
 .recommendTC_czBtn{
   width:88px;
@@ -456,6 +558,11 @@
   border-radius: 15px;
   border:1px solid #ff7744;
   cursor: pointer;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
 }
 .recommendTC_czBtn:hover{
   background:#ff7744;
@@ -1787,10 +1894,10 @@
 /*左侧导航部分开始*/
 @media screen and (max-width: 1400px) {
     .Left_win {
-      left:10px;
+      left:0px;
     }
     .Right_Win {
-      right:10px;
+      right:0px;
     }
 }
 @media screen and (min-width: 1401px) {

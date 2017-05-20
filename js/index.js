@@ -102,7 +102,7 @@ $(window).scroll(function(){
   console.log(win_ScroTop)
   var xfTop=$('.suspend_nav_div').css('top');
   if(win_ScroTop<180&&win_ScroTop>-1){
-    $('.nav_indicate_div').css('top',166-win_ScroTop);
+    $('.nav_indicate_div').css('top',164-win_ScroTop);
   }
   if(win_ScroTop>180){
     $('.suspend_nav_div').addClass('suspend_nav_div_fixed');
@@ -118,7 +118,7 @@ $(window).scroll(function(){
   }
 })
 var win_width=$(window).width();
-$('.nav_indicate_div').width(win_width);
+$('.nav_indicate_div').width(win_width).css('margin-left',-(win_width)/2+'px');
 
 //开始选择地区
 $('.area_div').click(function(){
