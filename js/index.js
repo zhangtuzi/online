@@ -56,6 +56,7 @@ var Banner={
     for(var i=0;i<array.length;i++){
       array2.push(array[i].top);
       array2.sort();
+
     }
     var array3=array;
     for(var j=0;j<array.length;j++){
@@ -64,11 +65,19 @@ var Banner={
         if(arrayTop===array2[z]){
           array3[z]=array[j];
           array3[z].class1=array[j].class1+'_f';
-          array3[z].top=array[j].top-190;
+          array3[z].top=array[j].top-380;
+
         }
       }
     }
+    console.log(array2);
+    console.log(array3[0].top)
+    console.log(array3[1].top)
+    console.log(array3[2].top)
+    console.log(array3[3].top)
+    console.log(array3[4].top)
     return array3;
+
   }
 }
 
@@ -116,26 +125,29 @@ $('.search_input').blur(function(){
   }
 });
 
+//获取各个楼层距离页面顶部的top值
+var T_traffic_div_top1=parseInt($('#traffic_div').offset().top);
+var T_G4_div_top1=parseInt($('#G4_div').offset().top);
+var T_phoneAccessories_top1=parseInt($('#phoneAccessories').offset().top);
+var T_InternetCard_top1=parseInt($('#InternetCard').offset().top);
+var T_lifeService_top1=parseInt($('#lifeService').offset().top);
+//将各个楼层的id和距离页面顶部top值放入数组TopArray
+var TopArray=[
+  {class1:'traffic_div',top:T_traffic_div_top1},
+  {class1:'G4_div',top:T_G4_div_top1},
+  {class1:'phoneAccessories',top:T_phoneAccessories_top1},
+  {class1:'InternetCard',top:T_InternetCard_top1},
+  {class1:'lifeService',top:T_lifeService_top1},
+];
+
+//将从小到大排序后的各个楼层的id和距离页面顶部top值放入数组TopArra2
+var TopArray2=Banner.ArrayPx(TopArray);
+
+
 // 悬浮导航以及左侧浮层的楼层变色等
 $(window).scroll(function(){
   var win_ScroTop=$(window).scrollTop();
-  //获取各个楼层距离页面顶部的top值
-  var T_traffic_div_top1=parseInt($('#traffic_div').offset().top);
-  var T_G4_div_top1=parseInt($('#G4_div').offset().top);
-  var T_phoneAccessories_top1=parseInt($('#phoneAccessories').offset().top);
-  var T_InternetCard_top1=parseInt($('#InternetCard').offset().top);
-  var T_lifeService_top1=parseInt($('#lifeService').offset().top);
-  //将各个楼层的id和距离页面顶部top值放入数组TopArray
-  var TopArray=[
-    {class1:'traffic_div',top:T_traffic_div_top1},
-    {class1:'G4_div',top:T_G4_div_top1},
-    {class1:'phoneAccessories',top:T_phoneAccessories_top1},
-    {class1:'InternetCard',top:T_InternetCard_top1},
-    {class1:'lifeService',top:T_lifeService_top1},
-  ];
 
-  //将从小到大排序后的各个楼层的id和距离页面顶部top值放入数组TopArra2
-  var TopArray2=Banner.ArrayPx(TopArray);
 
   if(win_ScroTop<140){
     $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',164-win_ScroTop);
