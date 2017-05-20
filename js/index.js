@@ -116,8 +116,6 @@ $('.search_input').blur(function(){
   }
 });
 
-$('.suspend_nav_div2').append($('.suspend_nav_div').html());
-
 // 悬浮导航以及左侧浮层的楼层变色等
 $(window).scroll(function(){
   var win_ScroTop=$(window).scrollTop();
@@ -140,15 +138,14 @@ $(window).scroll(function(){
   var TopArray2=Banner.ArrayPx(TopArray);
 
   if(win_ScroTop<140){
-    $('.nav_indicate_div').css('top',164-win_ScroTop);
-    $('.suspend_nav_div2').hide();
+    $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',164-win_ScroTop);
+    $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
   }else if(win_ScroTop>140){
-    $('.suspend_nav_div2').slideDown(200);
-    $('.suspend_nav_div2 .nav_indicate_div').addClass('nav_indicate_div_xf');
-  }else{
-    $('.suspend_nav_div2 .nav_indicate_div').removeClass('nav_indicate_div_xf');
+    if(!$('.suspend_nav_div').hasClass('suspend_nav_div_fixed')){
+      $('.suspend_nav_div').addClass('suspend_nav_div_fixed').height(0).animate({'height':'145px'},100);
+      $('.nav_indicate_div').addClass('nav_indicate_div_xf');
+    }
   }
-
   // 左侧楼层浮层显示判断
   if(win_ScroTop>400){
     $('.Left_win').show();

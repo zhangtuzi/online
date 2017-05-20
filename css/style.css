@@ -168,10 +168,16 @@
 /*logo部分开始*/
 .suspend_nav_div{
   position: relative;
+  box-shadow: 0 2px 3px #ddd;
+  -webkit-box-shadow: 0 2px 3px #ddd;
+  -moz-box-shadow: 0 2px 3px #ddd;
+  -ms-box-shadow: 0 2px 3px #ddd;
+  -o-box-shadow: 0 2px 3px #ddd;
 }
-.suspend_nav_div2{
-  display: none;
+
+.suspend_nav_div_fixed{
   position: fixed;
+  height:0;
   top:0;
   left:0;
   z-index: 12;
@@ -303,6 +309,7 @@
   padding-bottom:20px;
   font-size: 14px;
 }
+
 .suspend_nav>li{
   float:left;
   height:18px;
