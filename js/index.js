@@ -187,7 +187,7 @@ $(window).scroll(function(){
 })
 
 var win_width=$(window).width();
-$('.nav_indicate_div').width(win_width).css('margin-left',-(win_width)/2+'px');
+$('.nav_indicate_div').width(win_width);
 
 //开始选择地区
 $('.area_div').click(function(){
