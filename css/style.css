@@ -78,6 +78,7 @@
   line-height:15px;
   margin-top:10px;
   margin-left:30px;
+  cursor: pointer;
 }
 
 .dh1_ul>li{
@@ -130,6 +131,7 @@
 }
 .Sina_icon1{
   margin-right:15px;
+  cursor: pointer;
 }
 .WeChat_icon1{
   width:22px;
@@ -1104,13 +1106,14 @@
 }
 .more_div{
   width:50px;
-  height:16px;
-  line-height: 16px;
+  height:17px;
+  line-height: 17px;
   margin-top: -20px;
   font-size: 14px;
   color: #999;
 }
 .more_icon{
+  margin-top:1px;
   width:15px;
   height:15px;
   background:url('images/more_icon.png') no-repeat;
@@ -2060,7 +2063,7 @@
 
 .right_win_pic{
   width:22px;
-  height:23px;
+  height:22px;
   margin:8px auto 0;
 }
 .backTop_pic{
