@@ -8,6 +8,7 @@
 }
 .user_phone{
   margin:0 8px;
+  margin-left:0;
   position: relative;
 }
 .user_phone:hover .user_phone_divs{
@@ -75,6 +76,7 @@
 .message_div1{
   position:relative;
   height:15px;
+  color: #aaaaaa;
   line-height:15px;
   margin-top:10px;
   margin-left:30px;
@@ -130,7 +132,7 @@
   margin-top:6px;
 }
 .Sina_icon1{
-  margin-right:15px;
+  /*margin-right:15px;*/
   cursor: pointer;
 }
 .WeChat_icon1{
@@ -206,8 +208,9 @@
   height:24px;
   font-size:14px;
   line-height: 24px;
+  *line-height: 24px;
   line-height: 20px\9;
-  border:1px solid #ff7744;
+  border:1px solid #ff6600;
   border-radius:12px;
 }
 .area_div>img{
@@ -358,6 +361,7 @@
 .suspend_nav1>li>a{
   height:18px;
   line-height: 18px;
+  *line-height: 18px;
   line-height: 14px\9;
   padding:0 15px;
   border-radius:10px;
@@ -445,6 +449,7 @@
 .nav_indicate_alls{
   width:100%;
   position: relative;
+  font-weight: normal;
   margin-top:20px;
   background: #fcfcfc;
   border-top:1px solid #d9d9d9;
@@ -471,7 +476,7 @@
 }
 
 .czk_ul1{
-    margin: 30px auto;
+    margin: 30px auto 0;
     width: 600px;
     height: 20px;
     padding-bottom: 35px;
@@ -519,16 +524,16 @@
   width:120px;
 }
 .TwoN_ul>li>a,.jf_Two_navUl>li>a{
-  background:#fff!important;
+  background:#fcfcfc!important;
   color:#555!important;
 }
 .TwoN_ul>li>a:hover,.jf_Two_navUl>li>a:hover{
-  color:#ff7744!important;
+  color:#ff6600!important;
   cursor: pointer;
 }
 .czk_link{
   background:#fff!important;
-  color:#ff7744!important;
+  color:#ff6600!important;
 }
 .cx_ul1>li{
   height:235px;
@@ -572,13 +577,13 @@
   margin:0 auto 5px;
   line-height: 14px;
   font-size:14px;
-  color:#ff7744;
+  color:#ff6600;
 }
 
 .recommendPic{
   width:134px;
   height:134px;
-  border: 1px solid #f9f9f9;
+  border: 1px solid #eee;
 }
 .recommendPic1{
   margin:0;
@@ -587,7 +592,7 @@
   width:134px;
   height:134px;
   display: inline-block;
-  border: 1px solid #f9f9f9;
+  border: 1px solid #eee;
   margin-right:30px;
 }
 .recommendTC_div{
@@ -603,7 +608,7 @@
   font-size:14px;
   line-height: 14px;
   color:#000;
-  border-left:3px solid #ff7744;
+  border-left:3px solid #ff6600;
 }
 .recommendTC_dec{
   font-size:12px;
@@ -619,24 +624,24 @@
 .recommendTC_price{
   text-align: left;
   font-size: 12px;
-  color:#ff7744;
+  color:#ff6600;
   padding:20px 0 10px 0;
 }
 .recommendTC_price1{
   text-align: left;
   font-size: 12px;
-  color:#ff7744;
+  color:#ff6600;
   padding:25px 0 10px 0;
 }
 .recommendTC_czBtn{
   width:88px;
   height:28px;
   font-size: 12px;
-  color:#ff7744;
+  color:#ff6600;
   line-height: 28px;
   text-align: center;
   border-radius: 15px;
-  border:1px solid #ff7744;
+  border:1px solid #ff6600;
   cursor: pointer;
   transition: all .2s linear;
   -webkit-transition: all .2s linear;
@@ -645,7 +650,7 @@
   -o-transition: all .2s linear;
 }
 .recommendTC_czBtn:hover{
-  background:#ff7744;
+  background:#ff6600;
   color:#fff;
 }
 .marginB7{
@@ -691,18 +696,18 @@
   display: block;
   position: relative;
   left:-50%;
-  -webkit-transition: all .2s linear;
-  -moz-transition: all .2s linear;
-  -ms-transition: all .2s linear;
-  -o-transition: all .2s linear;
+  /*-webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;*/
 }
-.banner_div1:hover .banner1_pic{
+/*.banner_div1:hover .banner1_pic{
   top:-2px;
   -webkit-transform:scale(1.02);
   -moz-transform:scale(1.02);
   -ms-transform: scale(1.02);
   -o-transform: scale(1.02);
-}
+}*/
 
 .banner_index_ul{
   position:absolute;
@@ -745,7 +750,7 @@
 .cz_price,.otherP{
   margin:25px 15px 0;
   width:276px;
-  height:35px;
+  height:37px;
 }
 .cz_price{
   margin-left:5px;
@@ -777,7 +782,7 @@
 .cz_price>li>span{
   display: inline-block;
   width:40px;
-  height:17px;
+  height:19px;
   line-height: 19px;
   color:#fff;
   border-radius:8px;
@@ -790,6 +795,7 @@
   border:1px solid #da2627;
 }
 .zdy_btn{
+  height: 17px!important;
   line-height: 17px!important;
   width:50px!important;
   margin-left: 2px;
@@ -994,6 +1000,7 @@
   height:22px;
   color:#ff6600;
   line-height: 22px;
+  *line-height: 22px;
   line-height: 19px\9;
   border:1px solid #ff6600;
   border-radius:11px;
@@ -1844,6 +1851,7 @@
   width:20%;
   height:188px;
   text-align: center;
+  position: relative;
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
@@ -1861,6 +1869,23 @@
   -ms-transform: translate3d(0,-2px,0);
   -o-transform: translate3d(0,-2px,0);
   transform: translate3d(0,-2px,0);
+}
+.life_upEwm{
+  width:130px;
+  height:130px;
+  position: absolute;
+  top:29px;
+  left:50%;
+  opacity: 0;
+  margin-left:-65px;
+  /*-webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;*/
+}
+.lifeService_ul li:hover .life_upEwm{
+  opacity: 1;
 }
 .lifeService_pic{
   width:50px;

@@ -280,13 +280,13 @@ $('.cz_price>li>span').click(function(){
 // 充值金额输入框
 $('.cz_phone').focus(function(){
   var this_val=$(this).val();
-  if(this_val=='输入手机号码'){
+  if(this_val=='输入手机/固话号码'){
     $(this).val('').removeClass('color666');
   }
 }).blur(function(){
   var this_val=$(this).val();
   if(this_val==''){
-    $(this).val('输入手机号码').addClass('color666');
+    $(this).val('输入手机/固话号码').addClass('color666');
   }
 })
 $('.otherP_input').focus(function(){
