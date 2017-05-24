@@ -409,41 +409,41 @@
   height:8px;
 }
 .cx_nav_indicate{
-  left:90px;
+  left:75px;
 }
 .bl_nav_indicate{
-  left:145px;
+  left:130px;
 }
 .jf_nav_indicate{
-  left:205px;
+  left:190px;
 }
 
 .phone_nav_indicate{
-  left:405px;
+  left:390px;
 }
 .phoneNumber_nav_indicate{
-  left:315px;
+  left:300px;
 }
 .kd_nav_indicate{
-  left:480px;
+  left:465px;
 }
 .swk_nav_indicate{
-  left:550px;
+  left:535px;
 }
 .llb_nav_indicate{
-  left:620px;
+  left:605px;
 }
 .czk_nav_indicate{
-  left:692px;
+  left:677px;
 }
 .tszq_nav_indicate{
-  left:860px;
+  left:845px;
 }
 .th_nav_indicate{
-  left:935px;
+  left:920px;
 }
 .myWo_nav_indicate{
-  left:1125px;
+  left:1110px;
 }
 
 .nav_indicate_alls{
@@ -808,10 +808,12 @@
 }
 .cz_div{
     width: 276px;
-    margin: 0 auto;
+    margin: 0px auto 0;
     float: left;
     margin-left: 15px;
+
 }
+
 .cz_input{
   width:198px;
   height:33px;
@@ -1521,8 +1523,8 @@
 }
 .mobileNumber_div_ul1{
   width:594px;
-  height:388px;
-  margin-top:12px;
+  height:385px;
+  margin-top:15px;
   background: #fff;
   border:1px solid #f3f3f3;
   padding-top:30px;
@@ -1870,21 +1872,29 @@
   -o-transform: translate3d(0,-2px,0);
   transform: translate3d(0,-2px,0);
 }
-.life_upEwm{
-  width:130px;
-  height:130px;
+.life_upEwm_div{
   position: absolute;
-  top:29px;
-  left:50%;
+  top: 20px;
+  left: 50%;
+  margin-left: -65px;
+  height:168px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 32px;
+  color:#999;
   opacity: 0;
-  margin-left:-65px;
   /*-webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;*/
 }
-.lifeService_ul li:hover .life_upEwm{
+.life_upEwm{
+  margin:0 auto;
+  width:130px;
+  height:130px;
+}
+.lifeService_ul li:hover .life_upEwm_div{
   opacity: 1;
 }
 .lifeService_pic{
@@ -1997,7 +2007,7 @@
 }
 .flinks{
   display: inline-block;
-  padding:5px 0 10px;
+  padding:20px 0 10px;
 }
 .flinks li{
   float:left;
@@ -2119,3 +2129,23 @@
 }
 
 /*右侧悬浮窗部分结束*/
+
+
+/*火狐浏览器兼容模块*/
+@-moz-document url-prefix(){
+  .cz_div{
+    margin-top:-1px;
+  }
+  .lx_jx_sx_ul > li{
+    line-height: 19px!important;
+  }
+  .traffic_ul1_li_message2{
+    line-height: 18px!important;
+  }
+  .message1_btn{
+    line-height: 17px!important;
+  }
+  .more_icon{
+    margin-top:2px!important;
+  }
+}

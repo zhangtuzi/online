@@ -180,7 +180,7 @@ $(window).scroll(function(){
 })
 
 var win_width=$(window).width();
-$('.nav_indicate_div').width(win_width);
+// $('.nav_indicate_div').width(win_width);
 
 //开始选择地区
 $('.area_div').click(function(){
