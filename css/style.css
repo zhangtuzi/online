@@ -208,7 +208,7 @@
   height:24px;
   font-size:14px;
   line-height: 24px;
-  *line-height: 24px;
+  *line-height: 20px;
   line-height: 20px\9;
   border:1px solid #ff6600;
   border-radius:12px;
@@ -361,7 +361,7 @@
 .suspend_nav1>li>a{
   height:18px;
   line-height: 18px;
-  *line-height: 18px;
+  *line-height: 14px;
   line-height: 14px\9;
   padding:0 15px;
   border-radius:10px;
@@ -808,7 +808,7 @@
 }
 .cz_div{
     width: 276px;
-    margin: 0px auto 0;
+    margin: -1px auto 0;
     float: left;
     margin-left: 15px;
 
@@ -985,9 +985,11 @@
 /*联通精选部分开始*/
 .lx_jx_header{
   width:100%;
-  line-height: 25px;
   text-align:center;
   padding-top:35px;
+}
+.lx_jx_header .floor_tit{
+  line-height: 25px;
 }
 .lx_jx_sx_ul{
   width:348px;
@@ -1002,8 +1004,8 @@
   height:22px;
   color:#ff6600;
   line-height: 22px;
-  *line-height: 22px;
-  line-height: 19px\9;
+  *line-height: 20px;
+  line-height: 20px\9;
   border:1px solid #ff6600;
   border-radius:11px;
   margin:0 8px;
@@ -1112,6 +1114,8 @@
   height:15px;
   font-size:12px;
   line-height: 15px;
+  *line-height: 13px;
+  line-height: 13px\9;
   color:#fff;
   background:url('images/orageBG.png') no-repeat;
 }
@@ -1233,6 +1237,7 @@
 .traffic_ul1_li_message2{
   width:130px;
   height:20px;
+  line-height: 20px;
   margin:0 auto;
   border:1px solid #ff6600;
   border-radius:10px;
@@ -1500,6 +1505,8 @@
   height:15px;
   font-size:12px;
   line-height: 15px;
+  *line-height: 13px;
+  line-height: 13px\9;
   color:#fff;
   background:url('images/orageBG.png') no-repeat;
 }
@@ -1818,7 +1825,8 @@
 }
 .img_div4 .img_div3_message2{
   width:80px;
-  padding-left:15px;
+  padding:0 15px;
+  background-size:110px 15px;
 }
 .InternetCard_message1{
   font-size:16px;
@@ -2147,5 +2155,11 @@
   }
   .more_icon{
     margin-top:2px!important;
+  }
+  .suspend_nav1 > li > a{
+    line-height: 14px;
+  }
+  .lx_jx_sx_ul>li{
+    line-height: 20px;
   }
 }
