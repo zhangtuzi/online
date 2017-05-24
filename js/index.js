@@ -56,7 +56,6 @@ var Banner={
     for(var i=0;i<array.length;i++){
       array2.push(array[i].top);
       array2.sort();
-
     }
     var array3=array;
     for(var j=0;j<array.length;j++){
@@ -70,12 +69,6 @@ var Banner={
         }
       }
     }
-    console.log(array2);
-    console.log(array3[0].top)
-    console.log(array3[1].top)
-    console.log(array3[2].top)
-    console.log(array3[3].top)
-    console.log(array3[4].top)
     return array3;
 
   }

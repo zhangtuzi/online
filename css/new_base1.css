@@ -144,7 +144,7 @@ body{
 .lx_jx_pro_ul>li:hover .orage_fc_div,.traffic_ul2>li:hover .orage_fc_div,
 .broadband_ul2>li:hover .orage_fc_div,.G4_ul2>li:hover .orage_fc_div,.phone_ul1_li1:hover .orage_fc_div,
 .phone_ul2_li2:hover .orage_fc_div,.InternetCard_ul>li:hover .orage_fc_div{
-  height:70px;
+  height:69px;
 }
 .orage_fc_div{
   width:100%;
@@ -183,9 +183,9 @@ body{
 .round2{
   float:left;
   display: inline-block;
-  margin:6px 10px 0 0 ;
-  width:5px;
-  height:5px;
+  margin:7px 10px 0 0 ;
+  width:4px;
+  height:4px;
   border-radius: 50%;
   overflow: hidden;
   background: #fff;
