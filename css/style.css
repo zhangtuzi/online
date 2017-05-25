@@ -417,38 +417,38 @@
   left:75px;
 }
 .bl_nav_indicate{
-  left:130px;
+  left:135px;
 }
 .jf_nav_indicate{
-  left:190px;
+  left:195px;
 }
 
 .phone_nav_indicate{
-  left:390px;
+  left:400px;
 }
 .phoneNumber_nav_indicate{
-  left:300px;
+  left:305px;
 }
 .kd_nav_indicate{
-  left:465px;
+  left:478px;
 }
 .swk_nav_indicate{
-  left:535px;
+  left:543px;
 }
 .llb_nav_indicate{
-  left:605px;
+  left:618px;
 }
 .czk_nav_indicate{
-  left:677px;
+  left:692px;
 }
 .tszq_nav_indicate{
-  left:845px;
+  left:865px;
 }
 .th_nav_indicate{
-  left:920px;
+  left:940px;
 }
 .myWo_nav_indicate{
-  left:1110px;
+  left:1140px;
 }
 
 .nav_indicate_alls{
@@ -1154,6 +1154,7 @@
 }
 .more_icon{
   margin-top:1px;
+  *margin-top:2px;
   width:15px;
   height:15px;
   background:url('images/more_icon.png') no-repeat;
@@ -2149,9 +2150,7 @@
   .cz_div{
     margin-top:-1px;
   }
-  .lx_jx_sx_ul > li{
-    line-height: 19px!important;
-  }
+
   .traffic_ul1_li_message2{
     line-height: 18px!important;
   }
@@ -2162,10 +2161,13 @@
     margin-top:2px!important;
   }
   .suspend_nav1 > li > a{
-    line-height: 14px;
+    line-height: 16px;
   }
   .lx_jx_sx_ul>li{
     line-height: 20px;
+  }
+  .otherP{
+    height:39px;
   }
 }
 
@@ -2176,5 +2178,22 @@
   .suspend_nav1>li>a{
     [;padding:0 14px;]
   }
-
+  .width182 .suspend_nav1>li>a{
+    [;padding:0 15px;]
+  }
+}
+/*适用于IE11*/
+@media all and (-ms-high-contrast:none){
+  *::-ms-backdrop,.suspend_nav1>li>a{
+    line-height: 16px;
+  }
+  *::-ms-backdrop,.img_div3_message2{
+    line-height:13px;
+  }
+  *::-ms-backdrop,.lx_jx_pro_txt2{
+    line-height:13px;
+  }
+  *::-ms-backdrop,.lx_jx_sx_ul>li{
+    line-height:20px;
+  }
 }

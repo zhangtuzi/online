@@ -1,4 +1,4 @@
-// 
+//
 // $(function(){
 //   $('.banner1_pic').onload=function(){
 //     $(this).prev().remove();
@@ -7,6 +7,23 @@
 //   }
 // })
 
+var isSupport = function() {
+    var isName = window.navigator.appName;
+    if (isName != "Netscape") {
+        //isIE
+        if (isName.indexOf("Microsoft") == 0) {
+            var isIE = window.navigator.appVersion.split(";");
+            var IeNumber = isIE[1].split('.')[0].toString().substr(5);
+            if (IeNumber < 9) {
+                alert("很遗憾您的浏览器过低")
+                //window.location.href="http://www.baidu.com";
+            }
+
+        }
+    }
+
+}
+isSupport();
 
 
 var Banner={
