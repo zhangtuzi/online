@@ -1,3 +1,13 @@
+// 
+// $(function(){
+//   $('.banner1_pic').onload=function(){
+//     $(this).prev().remove();
+//     $(this).css('display','block');
+//     console.log('111')
+//   }
+// })
+
+
 
 var Banner={
   //banner图数量圆点
