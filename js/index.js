@@ -1,11 +1,8 @@
-//
-// $(function(){
-//   $('.banner1_pic').onload=function(){
-//     $(this).prev().remove();
-//     $(this).css('display','block');
-//     console.log('111')
-//   }
-// })
+$(function(){
+  var win_scTop=$(window).scrollTop();
+  Banner.XfNav(win_scTop);
+})
+
 
 var isSupport = function() {
     var isName = window.navigator.appName;
@@ -97,7 +94,17 @@ var Banner={
       }
     }
     return array3;
-
+  },
+  XfNav:function(win_ScroTop){
+    if(win_ScroTop<140){
+      $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',164-win_ScroTop);
+      $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
+    }else if(win_ScroTop>140){
+      if(!$('.suspend_nav_div').hasClass('suspend_nav_div_fixed')){
+        $('.suspend_nav_div').addClass('suspend_nav_div_fixed').height(0).animate({'height':'145px'},100);
+        $('.nav_indicate_div').addClass('nav_indicate_div_xf');
+      }
+    }
   }
 }
 
@@ -167,8 +174,6 @@ var TopArray2=Banner.ArrayPx(TopArray);
 // 悬浮导航以及左侧浮层的楼层变色等
 $(window).scroll(function(){
   var win_ScroTop=$(window).scrollTop();
-
-
   if(win_ScroTop<140){
     $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',164-win_ScroTop);
     $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
