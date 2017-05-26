@@ -2096,6 +2096,9 @@
   border-bottom:1px solid #eee;
   cursor: pointer;
 }
+.Left_Wul>li>a{
+  display:block;
+}
 .Left_Wul>li>a:hover{
   color:#ff6600!important;
 }

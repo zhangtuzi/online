@@ -15,10 +15,8 @@ var isSupport = function() {
                 alert("很遗憾您的浏览器过低")
                 //window.location.href="http://www.baidu.com";
             }
-
         }
     }
-
 }
 isSupport();
 
@@ -631,9 +629,9 @@ $(function() {
 function FloorGo(domId){//传入目标的id
   var scroChange;
   clearInterval(scroChange);
-　var scrollHeight = $(document).height();//获取滚动条可以滚动的所有距离
-　var windowHeight = $(window).height();//获取屏幕高度
-  var domIdTop=$('#'+domId+'').offset().top-150;//获取目标的滚动条高度
+　var scrollHeight = $(document).height();
+　var windowHeight = $(window).height();
+  var domIdTop=$('#'+domId+'').offset().top-140;//获取目标的滚动条高度
   scroChange=setInterval(function(){
     var win_scT=$(window).scrollTop();//获取当前滚动条高度
     var scT_pc=domIdTop-win_scT;//获取目标与当前滚动条的差值
@@ -643,18 +641,18 @@ function FloorGo(domId){//传入目标的id
       var pcz=Math.abs(win_scT-scT_change1-domIdTop);
       // console.log(pcz);
       //如果目前的高度和目标的高度在两个像素以内则停止滚动
-      if(pcz<3){
+      if(pcz<5){
         clearInterval(scroChange);
       }
     }else{//如果差值不小于0；表示目标在目前滚动条的下方
-      if(win_scT + windowHeight > scrollHeight-10){//如果滚动滚动到页面最底部10像素以内，停止滚动
+      if(win_scT + windowHeight > scrollHeight-10){
 　　　　clearInterval(scroChange);
 　　  }
       var scT_change1=Math.abs(scT_pc/3);
       $(window).scrollTop(win_scT+scT_change1);
       var pcz=Math.abs(win_scT+scT_change1-domIdTop);
       //如果目前的高度和目标的高度在两个像素以内则停止滚动
-      if(pcz<3){
+      if(pcz<5){
         clearInterval(scroChange);
       }
     }
