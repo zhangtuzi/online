@@ -1579,6 +1579,7 @@
 }
 .mobileNumber_ul2{
   height:230px;
+  display:none;
 }
 .mobileNumber_ul2>li{
   float:left;
@@ -1613,8 +1614,23 @@
   padding:3px;
   border:1px solid #fe7845;
 }
+.Number_indexUl{
+  margin-top:15px;
+  height:18px;
+  text-align: center;
+  display:none;
+}
+.Number_indexUl>li{
+  margin:0 3px;
+  display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  border:1px solid #ff6600;
+  cursor: pointer;
+}
 .numberChangeBtn{
-  margin:40px auto 0;
+  margin:20px auto 0;
   width:99px;
   height:25px;
   font-size: 15px;
@@ -1622,6 +1638,7 @@
   text-align: center;
   border:1px solid #ff6600;
   border-radius:13px;
+  cursor:pointer;
 }
 .change_icon{
   width:14px;
@@ -1629,6 +1646,9 @@
   margin-top:5px;
   margin-right:8px;
   display: inline;
+}
+.mobileNumber_ul2Show,.Number_indexUlShow{
+  display: block;
 }
 /*靓号专场部分结束*/
 
