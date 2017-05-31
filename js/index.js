@@ -627,9 +627,9 @@ $(function() {
   // $('#lx_jx_pro_ul').disableSelection();
 });
 
+var scroChange;
 //楼层跳转
 function FloorGo(domId){//传入目标的id
-  var scroChange;
   clearInterval(scroChange);
 　var scrollHeight = $(document).height();//获取滚动条可以滚动的所有距离
 　var windowHeight = $(window).height();//获取屏幕高度
@@ -658,6 +658,6 @@ function FloorGo(domId){//传入目标的id
         clearInterval(scroChange);
       }
     }
-  },30)
+  },10)
 
 }
