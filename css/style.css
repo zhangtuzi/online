@@ -192,9 +192,11 @@
 }
 
 .logo1{
+  float:left;
   width:295px;
   height:57px;
   margin:20px 0 30px;
+  display: inline-block;
 }
 .area_divs{
   width:122px;
@@ -693,8 +695,11 @@
 
 }
 .banner1_a{
+  width:1920px;
+  height:375px;
   position: absolute;
   left:50%;
+  display: block;
 }
 .banner1_pic{
   max-width:none;
@@ -751,6 +756,7 @@
 .banner_right_bg{
   background: #000;
   opacity: 0.4;
+  filter: alpha(opacity=40);
 }
 
 .cz_price,.otherP{
@@ -823,6 +829,7 @@
 .cz_input{
   width:198px;
   height:33px;
+  line-height: 33px;
   padding-left:18px;
   background:#fff;
 }
@@ -849,6 +856,7 @@
 .notice_bg{
   background: #000;
   opacity:0.1;
+  filter: alpha(opacity=10);
 }
 .notice_div{
   width:270px;
@@ -1761,6 +1769,7 @@
   left:0;
   background: #ff6600;
   opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 .accessories_fc_nr{
   position: relative;
@@ -1898,6 +1907,7 @@
   line-height: 32px;
   color:#999;
   opacity: 0;
+  filter: alpha(opacity=0);
   /*-webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
@@ -1911,6 +1921,7 @@
 }
 .lifeService_ul li:hover .life_upEwm_div{
   opacity: 1;
+  filter: alpha(opacity=100);
 }
 .lifeService_pic{
   width:50px;
@@ -2047,6 +2058,28 @@
 /*底部备案信息部分结束*/
 
 /*左侧导航部分开始*/
+
+.Left_win{
+  display: none;
+  width:74px;
+  height:340px;
+  position: fixed;
+  top:50%;
+  margin-top: -170px;
+  z-index: 999;
+}
+.Left_win {
+  left:0px;
+}
+.Right_Win {
+  right:0px;
+}
+.wo_icon1{
+  width:65px!important;
+}
+.Left_win1{
+  width:65px!important;
+}
 @media screen and (max-width: 1400px) {
     .Left_win {
       left:0px;
@@ -2070,15 +2103,6 @@
       right:50%;
       margin-right:-700px;
     }
-}
-.Left_win{
-  display: none;
-  width:74px;
-  height:340px;
-  position: fixed;
-  top:50%;
-  margin-top: -170px;
-  z-index: 999;
 }
 .wo_icon1{
   width:74px;
