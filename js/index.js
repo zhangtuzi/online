@@ -15,7 +15,6 @@ var isSupport = function() {
                 alert("很遗憾您的浏览器过低")
                 //window.location.href="http://www.baidu.com";
             }
-
         }
     }
 
@@ -96,7 +95,7 @@ var Banner={
   },
   XfNav:function(win_ScroTop){
     if(win_ScroTop<140){
-      $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',164-win_ScroTop);
+      $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',163-win_ScroTop);
       $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
     }else if(win_ScroTop>140){
       if(!$('.suspend_nav_div').hasClass('suspend_nav_div_fixed')){
@@ -105,6 +104,12 @@ var Banner={
       }
     }
   }
+}
+
+function array1(class2,top1)
+{
+this.class1=class2;
+this.top=top1;
 }
 
 // 剩余流量/语音倒数
@@ -151,64 +156,6 @@ $('.search_input').blur(function(){
   }
 });
 
-//获取各个楼层距离页面顶部的top值
-var T_traffic_div_top1=parseInt($('#traffic_div').offset().top);
-var T_G4_div_top1=parseInt($('#G4_div').offset().top);
-var T_phoneAccessories_top1=parseInt($('#phoneAccessories').offset().top);
-var T_InternetCard_top1=parseInt($('#InternetCard').offset().top);
-var T_lifeService_top1=parseInt($('#lifeService').offset().top);
-//将各个楼层的id和距离页面顶部top值放入数组TopArray
-var TopArray=[
-  {class1:'traffic_div',top:T_traffic_div_top1},
-  {class1:'G4_div',top:T_G4_div_top1},
-  {class1:'phoneAccessories',top:T_phoneAccessories_top1},
-  {class1:'InternetCard',top:T_InternetCard_top1},
-  {class1:'lifeService',top:T_lifeService_top1},
-];
-
-//将从小到大排序后的各个楼层的id和距离页面顶部top值放入数组TopArra2
-var TopArray2=Banner.ArrayPx(TopArray);
-
-
-// 悬浮导航以及左侧浮层的楼层变色等
-$(window).scroll(function(){
-  var win_ScroTop=$(window).scrollTop();
-  if(win_ScroTop<140){
-    $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',164-win_ScroTop);
-    $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
-  }else if(win_ScroTop>140){
-    if(!$('.suspend_nav_div').hasClass('suspend_nav_div_fixed')){
-      $('.suspend_nav_div').addClass('suspend_nav_div_fixed').height(0).animate({'height':'145px'},100);
-      $('.nav_indicate_div').addClass('nav_indicate_div_xf');
-    }
-  }
-  // 左侧楼层浮层显示判断
-  if(win_ScroTop>400){
-    $('.Left_win').show();
-  }else{
-    $('.Left_win').hide();
-  }
-
-  // 左侧楼层颜色判断
-  if(win_ScroTop>TopArray2[0].top&&win_ScroTop<TopArray2[1].top-1){
-    $('.Left_Wul>li>a').removeClass('colorff6600');
-    $('.'+TopArray2[0].class1+'').find('a').addClass('colorff6600');
-  }else if(win_ScroTop>TopArray2[1].top&&win_ScroTop<TopArray2[2].top-1){
-    $('.Left_Wul>li>a').removeClass('colorff6600');
-    $('.'+TopArray2[1].class1+'').find('a').addClass('colorff6600');
-  }
-  else if(win_ScroTop>TopArray2[2].top&&win_ScroTop<TopArray2[3].top-1){
-    $('.Left_Wul>li>a').removeClass('colorff6600');
-    $('.'+TopArray2[2].class1+'').find('a').addClass('colorff6600');
-  }
-  else if(win_ScroTop>TopArray2[3].top&&win_ScroTop<TopArray2[4].top-1){
-    $('.Left_Wul>li>a').removeClass('colorff6600');
-    $('.'+TopArray2[3].class1+'').find('a').addClass('colorff6600');
-  }else if(win_ScroTop>TopArray2[4].top){
-    $('.Left_Wul>li>a').removeClass('colorff6600');
-    $('.'+TopArray2[4].class1+'').find('a').addClass('colorff6600');
-  }
-})
 
 var win_width=$(window).width();
 // $('.nav_indicate_div').width(win_width);
@@ -661,3 +608,71 @@ function FloorGo(domId){//传入目标的id
   },10)
 
 }
+
+
+//获取各个楼层距离页面顶部的top值
+var T_traffic_div_top1=parseInt($('#traffic_div').offset().top);
+var T_G4_div_top1=parseInt($('#G4_div').offset().top);
+var T_phoneAccessories_top1=parseInt($('#phoneAccessories').offset().top);
+var T_InternetCard_top1=parseInt($('#InternetCard').offset().top);
+var T_lifeService_top1=parseInt($('#lifeService').offset().top);
+//将各个楼层的id和距离页面顶部top值放入数组TopArray
+var TopArray=[
+  {class1:'traffic_div',top:T_traffic_div_top1},
+  {class1:'G4_div',top:T_G4_div_top1},
+  {class1:'phoneAccessories',top:T_phoneAccessories_top1},
+  {class1:'InternetCard',top:T_InternetCard_top1},
+  {class1:'lifeService',top:T_lifeService_top1},
+];
+var Toparray3=[];
+for(var aii=0;aii<TopArray.length;aii++){
+  Toparray3[aii] = new array1("sadf","dsaf");
+  Toparray3[aii].class1=TopArray[aii].class1;
+  Toparray3[aii].top=TopArray[aii].top;
+}
+
+console.log(Toparray3[4].top)
+
+//将从小到大排序后的各个楼层的id和距离页面顶部top值放入数组TopArra2
+var TopArray2=Banner.ArrayPx(Toparray3);
+
+
+// 悬浮导航以及左侧浮层的楼层变色等
+$(window).scroll(function(){
+  var win_ScroTop=$(window).scrollTop();
+  if(win_ScroTop<140){
+    $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',163-win_ScroTop);
+    $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
+  }else if(win_ScroTop>140){
+    if(!$('.suspend_nav_div').hasClass('suspend_nav_div_fixed')){
+      $('.suspend_nav_div').addClass('suspend_nav_div_fixed').height(0).animate({'height':'145px'},100);
+      $('.nav_indicate_div').addClass('nav_indicate_div_xf');
+    }
+  }
+  // 左侧楼层浮层显示判断
+  if(win_ScroTop>400){
+    $('.Left_win').show();
+  }else{
+    $('.Left_win').hide();
+  }
+
+  // 左侧楼层颜色判断
+  if(win_ScroTop>TopArray2[0].top&&win_ScroTop<TopArray2[1].top-1){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[0].class1+'').find('a').addClass('colorff6600');
+  }else if(win_ScroTop>TopArray2[1].top&&win_ScroTop<TopArray2[2].top-1){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[1].class1+'').find('a').addClass('colorff6600');
+  }
+  else if(win_ScroTop>TopArray2[2].top&&win_ScroTop<TopArray2[3].top-1){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[2].class1+'').find('a').addClass('colorff6600');
+  }
+  else if(win_ScroTop>TopArray2[3].top&&win_ScroTop<TopArray2[4].top-1){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[3].class1+'').find('a').addClass('colorff6600');
+  }else if(win_ScroTop>TopArray2[4].top){
+    $('.Left_Wul>li>a').removeClass('colorff6600');
+    $('.'+TopArray2[4].class1+'').find('a').addClass('colorff6600');
+  }
+})
