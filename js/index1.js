@@ -39,7 +39,9 @@ var Banner={
     }
     $('.'+index_ulClass+'>li').eq(0).addClass(''+selectClass+'');//默认第一个圆点选中
   },
+  // 个人信息部分数字的变动动画
   BigSmall:function(ll_bigNumber,ll_smallNumber,ll_Class){
+    //（总数、剩余数（超出为负数）、容器class）
     var change_ll=parseInt((ll_bigNumber-ll_smallNumber)/108);
     var change_i=0;
     var changell=setInterval(function(){
@@ -58,6 +60,7 @@ var Banner={
         }
     },10)
   },
+  // 数组排序1
   ArrayPx1:function(array){
     var array2=[];
     for(var i=0;i<array.length;i++){
@@ -77,6 +80,7 @@ var Banner={
     }
     return array3;
   },
+  // 判断是否数组排序，ie9以下不进行排序
   ArrayPx:function(array){
     if (isName != "Netscape") {
         //isIE
@@ -92,9 +96,11 @@ var Banner={
       return  Banner.ArrayPx1(array);
     }
   },
+
+  // 悬浮导航定位
   XfNav:function(win_ScroTop){
     if(win_ScroTop<140){
-      $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',164-win_ScroTop);
+      $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',163-win_ScroTop);
       $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
     }else if(win_ScroTop>140){
       if(!$('.suspend_nav_div').hasClass('suspend_nav_div_fixed')){
@@ -698,15 +704,7 @@ var TopArray2=Banner.ArrayPx(TopArray);
 // 悬浮导航以及左侧浮层的楼层变色等
 $(window).scroll(function(){
   var win_ScroTop=$(window).scrollTop();
-  if(win_ScroTop<140){
-    $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',164-win_ScroTop);
-    $('.suspend_nav_div').removeClass('suspend_nav_div_fixed');
-  }else if(win_ScroTop>140){
-    if(!$('.suspend_nav_div').hasClass('suspend_nav_div_fixed')){
-      $('.suspend_nav_div').addClass('suspend_nav_div_fixed').height(0).animate({'height':'145px'},100);
-      $('.nav_indicate_div').addClass('nav_indicate_div_xf');
-    }
-  }
+  Banner.XfNav(win_ScroTop);
   // 左侧楼层浮层显示判断
   if(win_ScroTop>400){
     $('.Left_win').show();
