@@ -3,21 +3,29 @@ $(function(){
   Banner.XfNav(win_scTop);
 })
 
-
+var isName = window.navigator.appName;
 var isSupport = function() {
-    var isName = window.navigator.appName;
+    if (isName != "Netscape") {
+        //isIE
+        if (isName.indexOf("Microsoft") == 0) {
+            var isIE = window.navigator.appVersion.split(";");
+            var IeNumber = isIE[1].split('.')[0].toString().substr(5);
+            if (IeNumber < 8) {
+                alert("很遗憾您的浏览器过低")
+                //window.location.href="http://www.baidu.com";
+            }
+        }
+    }
     if (isName != "Netscape") {
         //isIE
         if (isName.indexOf("Microsoft") == 0) {
             var isIE = window.navigator.appVersion.split(";");
             var IeNumber = isIE[1].split('.')[0].toString().substr(5);
             if (IeNumber < 9) {
-                alert("很遗憾您的浏览器过低")
-                //window.location.href="http://www.baidu.com";
+                $('.Left_win').css('display','block');
             }
         }
     }
-
 }
 isSupport();
 
@@ -74,7 +82,7 @@ var Banner={
         }
     },10)
   },
-  ArrayPx:function(array){
+  ArrayPx1:function(array){
     var array2=[];
     for(var i=0;i<array.length;i++){
       array2.push(array[i].top);
@@ -92,6 +100,21 @@ var Banner={
       }
     }
     return array3;
+  },
+  ArrayPx:function(array){
+    if (isName != "Netscape") {
+        //isIE
+        if (isName.indexOf("Microsoft") == 0) {
+            var isIE = window.navigator.appVersion.split(";");
+            var IeNumber = isIE[1].split('.')[0].toString().substr(5);
+            if (IeNumber > 8) {
+              return  Banner.ArrayPx1(array);
+            }
+        }
+    }else{
+      //非ie
+      return  Banner.ArrayPx1(array);
+    }
   },
   XfNav:function(win_ScroTop){
     if(win_ScroTop<140){
@@ -610,31 +633,28 @@ function FloorGo(domId){//传入目标的id
 }
 
 
+
+
 //获取各个楼层距离页面顶部的top值
-var T_traffic_div_top1=parseInt($('#traffic_div').offset().top);
-var T_G4_div_top1=parseInt($('#G4_div').offset().top);
-var T_phoneAccessories_top1=parseInt($('#phoneAccessories').offset().top);
-var T_InternetCard_top1=parseInt($('#InternetCard').offset().top);
-var T_lifeService_top1=parseInt($('#lifeService').offset().top);
+var T_traffic_div_top1=$('#traffic_div').offset()?parseInt($('#traffic_div').offset().top):0;
+
+var T_G4_div_top1=$('#G4_div').offset()?parseInt($('#G4_div').offset().top):0;
+var T_phoneAccessories_top1=$('#phoneAccessories').offset()?parseInt($('#phoneAccessories').offset().top):0;
+var T_InternetCard_top1=$('#InternetCard').offset()?parseInt($('#InternetCard').offset().top):0;
+var T_lifeService_top1=$('#lifeService').offset()?parseInt($('#lifeService').offset().top):0;
 //将各个楼层的id和距离页面顶部top值放入数组TopArray
 var TopArray=[
   {class1:'traffic_div',top:T_traffic_div_top1},
   {class1:'G4_div',top:T_G4_div_top1},
   {class1:'phoneAccessories',top:T_phoneAccessories_top1},
   {class1:'InternetCard',top:T_InternetCard_top1},
-  {class1:'lifeService',top:T_lifeService_top1},
+  {class1:'lifeService',top:T_lifeService_top1}
 ];
-var Toparray3=[];
-for(var aii=0;aii<TopArray.length;aii++){
-  Toparray3[aii] = new array1("sadf","dsaf");
-  Toparray3[aii].class1=TopArray[aii].class1;
-  Toparray3[aii].top=TopArray[aii].top;
-}
-
-console.log(Toparray3[4].top)
 
 //将从小到大排序后的各个楼层的id和距离页面顶部top值放入数组TopArra2
-var TopArray2=Banner.ArrayPx(Toparray3);
+var TopArray2=Banner.ArrayPx(TopArray);
+
+
 
 
 // 悬浮导航以及左侧浮层的楼层变色等

@@ -269,9 +269,21 @@
 .area_divs:hover .area_selectDiv{
   display: block;
 }
+.area_div:hover .downup2{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
 .downup2{
   margin-top:10px!important;
   margin-left:10px!important;
+  transition: .5s 0s all;
+  -webkit-transition: .5s 0s all;
+  -moz-transition: .5s 0s all;
+  -ms-transition: .5s 0s all;
+  -o-transition: .5s 0s all;
 }
 .downup2_tra{
   transform: rotate(180deg);
