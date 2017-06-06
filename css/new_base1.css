@@ -153,7 +153,7 @@ body{
 .lx_jx_pro_ul>li:hover .orage_fc_div,.traffic_ul2>li:hover .orage_fc_div,
 .broadband_ul2>li:hover .orage_fc_div,.G4_ul2>li:hover .orage_fc_div,.phone_ul1_li1:hover .orage_fc_div,
 .phone_ul2_li2:hover .orage_fc_div,.InternetCard_ul>li:hover .orage_fc_div{
-  height:69px;
+  height:100px;
 }
 .orage_fc_div{
   width:100%;
@@ -176,6 +176,47 @@ body{
   height:100%;
   background: #ff6600;
   opacity: 0.8;
+}
+.collectDiv{
+  position: relative;
+  height:29px;
+  padding:0 15px;
+  border-bottom:1px solid #fda970;
+}
+.collect_icon1,.shoppingCar2{
+  height:17px;
+  margin-top:7px;
+}
+.collect_icon2{
+  position: absolute;
+  bottom:5px;
+  left:15px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+   -webkit-transition: -webkit-transform 1s;
+   transition: -webkit-transform 1s;
+   transition: transform 1s;
+   transition: transform 1s,-webkit-transform 1s;
+}
+.shoppingCar3{
+  position: absolute;
+  bottom:5px;
+  right:15px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+   -webkit-transition: -webkit-transform 1s;
+   transition: -webkit-transform 1s;
+   transition: transform 1s;
+   transition: transform 1s,-webkit-transform 1s;
+}
+.traffic_ul1 li:hover .collect_icon2,.broadband_top:hover .collect_icon2,.G4_ul1>li:hover .collect_icon2
+,.G4_ul1>li:hover .shoppingCar3{
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 .orage_fc_nr{
   position:relative;

@@ -333,16 +333,19 @@ function lt_jx_SFun(lt_jx_S_i){
     switch(lt_jx_S_i){
       case 0 :
       $('.jx_rqtjLi').show();
-      $('.jx_cnxhLi,.jx_tszqLi').hide();
+      $('.jx_cnxhLi,.jx_tszqLi,.jx_xsgLi').hide();
       break;
       case 1 :
       $('.jx_tszqLi').show();
-      $('.jx_rqtjLi,.jx_cnxhLi').hide();
+      $('.jx_rqtjLi,.jx_cnxhLi,.jx_xsgLi').hide();
       break;
       case 2 :
       $('.jx_cnxhLi').show();
-      $('.jx_rqtjLi,.jx_tszqLi').hide();
+      $('.jx_rqtjLi,.jx_tszqLi,.jx_xsgLi').hide();
       break;
+      default:
+      $('.jx_xsgLi').show();
+      $('.jx_rqtjLi,.jx_tszqLi,.jx_cnxhLi').hide();
     }
     $('.lx_jx_sx_ul>li').eq(lt_jx_S_i).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
   },5000)
@@ -356,16 +359,19 @@ $('.lx_jx_sx_ul>li').mouseover(function(){
   switch(this_index){
     case 0 :
     $('.jx_rqtjLi').show();
-    $('.jx_cnxhLi,.jx_tszqLi').hide();
+    $('.jx_cnxhLi,.jx_tszqLi,.jx_xsgLi').hide();
     break;
     case 1 :
     $('.jx_tszqLi').show();
-    $('.jx_rqtjLi,.jx_cnxhLi').hide();
+    $('.jx_rqtjLi,.jx_cnxhLi,.jx_xsgLi').hide();
     break;
     case 2 :
     $('.jx_cnxhLi').show();
-    $('.jx_rqtjLi,.jx_tszqLi').hide();
+    $('.jx_rqtjLi,.jx_tszqLi,.jx_xsgLi').hide();
     break;
+    default:
+    $('.jx_xsgLi').show();
+    $('.jx_rqtjLi,.jx_tszqLi,.jx_cnxhLi').hide();
   }
   $(this).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
 }).mouseout(function(){
