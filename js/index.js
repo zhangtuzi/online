@@ -322,7 +322,7 @@ $('.zdy_btn').click(function(){
 //联通精选部分自动切换
 var lt_jx_S_i=0;
 var lt_jx_S;
-lt_jx_SFun(lt_jx_S_i);
+// lt_jx_SFun(lt_jx_S_i);
 function lt_jx_SFun(lt_jx_S_i){
   lt_jx_S=setInterval(function(){
     if(lt_jx_S_i<$('.lx_jx_sx_ul>li').length-1){
@@ -379,6 +379,11 @@ $('.lx_jx_sx_ul>li').mouseover(function(){
 })
 
 
+$('.lx_jx_pro_ul>li').mouseover(function(){
+  clearInterval(lt_jx_S);
+}).mouseout(function(){
+  lt_jx_SFun(lt_jx_S_i);
+})
 
 
 
@@ -697,5 +702,16 @@ $(window).scroll(function(){
   }else if(win_ScroTop>TopArray2[4].top){
     $('.Left_Wul>li>a').removeClass('colorff6600');
     $('.'+TopArray2[4].class1+'').find('a').addClass('colorff6600');
+  }
+})
+
+
+$('.collect_icon1,.collect_icon2').click(function(){
+  if($(this).hasClass('ysc')){
+    $(this).removeClass('ysc');
+    $(this).attr('src','images/collect_icon1_zhl.png');
+  }else{
+    $(this).addClass('ysc');
+    $(this).attr('src','images/collect_icon2_zhl.png');
   }
 })
