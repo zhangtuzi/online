@@ -287,33 +287,6 @@
 .downup2_tra{
   transform: rotate(180deg);
 }
-
-.shoppingCarDiv{
-  width:35px;
-  height:35px;
-  margin-left:15px;
-  margin-top:33px;
-  position: relative;
-}
-.shoppingCar_icon{
-  width:20px;
-  height:20px;
-  margin-top:7px;
-}
-.productNum{
-  position: absolute;
-  top:-5px;
-  right:5px;
-  width:20px;
-  height:20px;
-  background: #ff6600;
-  font-size: 12px;
-  color:#fff;
-  line-height: 20px;
-  text-align: center;
-  border-radius: 50%;
-  overflow: hidden;
-}
 .search_div{
   position: relative;
   margin-top:33px;
@@ -437,7 +410,7 @@
   height:auto;
   text-align: center;
   position: fixed;
-  top:163px;
+  top:164px;
   left:0;
   background: #fff;
   display:none;
@@ -1125,6 +1098,7 @@
   transform: translate3d(0,-2px,0);
 }
 
+
 .lx_jx_pro_ul>.jx_xsgLi{
   display: none;
   float:left;
@@ -1731,102 +1705,130 @@
 .mobileNumber_div{
   width:596px;
 }
-.mobileNumber_div_ul1{
+.mobileNumber_div2{
   width:594px;
-  height:385px;
+  height:415px;
   margin-top:15px;
   background: #fff;
   border:1px solid #f3f3f3;
-  padding-top:30px;
 }
-.mobileNumber_div_ul1>li{
+.mobileNumber_ul1{
   width:100%;
-  height:190px;
+  height:45px;
+  background: #d3d3d3;
+}
+.mobileNumber_ul1>li{
+  float:left;
+  width:197px;
+  height:44px;
+  font-size: 16px;
+  color:#fff;
+  line-height: 45px;
   text-align: center;
-  position: relative;
-}
-.mobileNumber_banner_top_div{
-  width:559px;
-  margin:0 auto;
-}
-.mobileNumber_banner_top_txt{
-  font-size:16px;
-  color:#333;
-  line-height: 26px;
-}
-.mobileNumber_banner1_div,.mobileNumber_banner2_div{
-  width:524px;
-  height:96px;
-  margin:0 auto;
-  overflow: hidden;
-}
-.mobileNumber_banner1,.mobileNumber_banner2{
-  width:524px;
-  height:96px;
-  margin:0 auto;
-}
-.mobileNumber_banner1>li,.mobileNumber_banner2>li{
-  float:left;
-  height:96px;
-}
-.mobileNumber_banner_ul{
-  float:left;
-  width:206px;
-  height:96px;
-  padding:0 28px;
-  line-height: 32px;
-  font-size:16px;
-  color:#333;
-}
-.mobileNumber_banner_ul>li{
-  height:32px;
+  border-left:1px solid #fff;
   cursor:pointer;
 }
-.numB_ycf{
-  font-size:14px;
-  color:#999;
+.mobileNumber_ul1>li:first-child{
+  border-right:none;
 }
-.mobileNumber_banner1_index_ul,.mobileNumber_banner2_index_ul{
-  width:100%;
-  height:10px;
+.mobileN_Style_pic{
+  display: inline;
+  margin-top:10px;
+  margin-right:20px;
+}
+.mobileNum_U1_LSe{
+  background: #fff;
+  color:#ff6600!important;
+  border-bottom:1px solid #ff6600;
+}
+.mobileNumber_div3{
+  /*margin:40px 20px 0;
+  width:554px;*/
+  margin-top:40px;
+  width:594px;
+  height:230px;
+  overflow: hidden;
+}
+.mobileNumber_ul2{
+  height:220px;
+  display:none;
+  margin-top:10px;
+}
+.mobileNumber_ul2>li{
+  float:left;
+  width:594px;
+  height:220px;
+}
+.mobileNumber_ul2>li>.mobileNumber_ul3:last-child{
+  border-right:none;
+}
+.numberFg_icon{
+  width:2px;
+  height:220px;
+  margin:0 5px;
+}
+.mobileNumber_ul3{
+  float:left;
+  width:220px;
+  height:220px;
+  padding-left:50px;
+  padding-right:20px;
+}
+.mobileNumber_ul3>li{
+  font-size:18px;
+  line-height: 22px;
+  height:44px;
+}
+.mobileNumber_ul3>li:first-child{
+  margin-top:10px;
+}
+.mobileNumber_ul3>li .numb_pro{
+  margin-top:-2px;
+  margin-left:13px;
+  height:22px;
+  font-size: 14px;
+  line-height: 22px;
+  line-height: 20px\9;
+  color:#fe7845;
+  padding:0 7px;
+  border:1px solid #fe7845;
+  border-radius:10px;
+}
+.Number_indexUl{
+  margin-top:15px;
+  height:18px;
   text-align: center;
-  margin-top:5px;
-}
-.mobileNumber_banner1_index_ul>li,.mobileNumber_banner2_index_ul>li{
-  width:8px;
-  height: 8px;
-  margin:0 7px;
-  border:1px solid #dfdfdf;
-  border-radius:50%;
-  display:inline-block;
-  cursor: pointer;
-}
-.index_select2{
-  background: #ff6600;
-  border:1px solid #ff6600!important;
-}
-.bannerCon{
-  width:36px;
-  height:50px;
-  position: absolute;
-  top:70px;
-  text-align: center;
-  cursor: pointer;
-}
-.bannerLeft1,.bannerLeft2{
-  border-radius:0 3px 3px 0;
-  left:0;
   display:none;
 }
-.bannerRight1,.bannerRight2{
-  border-radius:3px 0 0 3px;
-  right:0;
+.Number_indexUl>li{
+  margin:0 3px;
+  display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  border:1px solid #ff6600;
+  cursor: pointer;
 }
-.bannerCon_pic{
-  margin:14px auto;
+.numberChangeBtn{
+  margin:20px auto 0;
+  width:99px;
+  height:25px;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  border:1px solid #ff6600;
+  border-radius:13px;
+  cursor:pointer;
 }
-.bannerCon:hover{
-  background: #868686;
+.change_icon{
+  width:14px;
+  height:14px;
+  margin-top:5px;
+  margin-right:8px;
+  display: inline;
+}
+.mobileNumber_ul2Show,.Number_indexUlShow{
+  display: block;
 }
 /*靓号专场部分结束*/
 
@@ -1899,8 +1901,8 @@
   display: inline-block;
 }
 .phone_ul2>li{
-  width:290px;
-  height:168px;
+  width:100%;
+  height:169px;
   background:#fff;
   border:1px solid #f3f3f3;
   position: relative;
@@ -1916,7 +1918,7 @@
 .phone_pj_pic2{
   float:right;
   width:150px;
-  height:168px;
+  height:169px;
   margin-top:-73px;
 }
 .accessories_ul{
@@ -2292,6 +2294,15 @@
       margin-right:-700px;
     }
 }
+.Left_win{
+  display: none;
+  width:74px;
+  height:340px;
+  position: fixed;
+  top:50%;
+  margin-top: -170px;
+  z-index: 999;
+}
 .wo_icon1{
   width:74px;
 }
@@ -2396,6 +2407,9 @@
   .width181 .suspend_nav1>li>a{
     padding:0 16px;
   }
+  .mobileNumber_ul3>li .numb_pro{
+    line-height: 20px;
+  }
 }
 
 
@@ -2405,7 +2419,7 @@
   .suspend_nav1>li>a{
     [;padding:0 14px;]
   }
-  .width181 .suspend_nav1>li>a{
+  .width182 .suspend_nav1>li>a{
     [;padding:0 15px;]
   }
 }

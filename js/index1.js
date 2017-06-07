@@ -119,6 +119,9 @@ var Banner={
       $('.'+banner_index_ul+'>li').eq(banner_index).addClass(''+bgClass+'');
     }
     $('.'+banner_ul+'').animate({'margin-left':-banner_index*move_width},1000);
+    if(banner_index===banner_length){
+      $('.'+banner_ul+'').css({'margin-left':'0'},1000);
+    }
   },
   //轮播图构造方法
   bannerGz:function(bannerstyle,bannerUl,banner_indexUL){
@@ -421,18 +424,18 @@ function tsMove(tsIndex,tsLiLength,banner_ul,banner_index_ul){
 function srMove(srIndex,srLiLength,banner_ul,banner_index_ul){
   //生日靓号轮播下标，生日靓号轮播长度、生日靓号轮播ul的class，圆点控制的ul的class
   sr_setI=setInterval(function(){
-    console.log(srLiLength+'.....1')
+    // console.log(srLiLength+'.....1')
     if(srIndex<srLiLength){
       srIndex==srIndex;
     }else{
       srIndex=0;
-      $('.tsNumber').css('margin-left','0');
+      $('.srNumber').css('margin-left','0');
     }
-    srIndex++;
-    console.log(srIndex+'.....2')
+    srIndex++
     Banner.banner_move(srIndex,srLiLength,Lh_width,banner_ul,banner_index_ul,'bgff6600');
       //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
       //下方圆点控制的ul的class，下方圆点控制变化的class
+
   },5000)
 }
 function jnrMove(jnrIndex,jnrLiLength,banner_ul,banner_index_ul){
@@ -474,6 +477,24 @@ $('.tsNumber_indexUl>li').mouseover(function(){
   },5000)
 })
 
+// 特色靓号区域鼠标移入暂停，移出继续
+$('.tsNumber').mouseover(function(){
+  $('.mobileNumber_ul2').stop(true,true);
+  clearInterval(ts_setI);
+}).mouseout(function(){
+  ts_setI=setInterval(function(){
+    if(tsIndex<tsLiLength){
+      tsIndex==tsIndex;
+    }else{
+      tsIndex=0;
+      $('.tsNumber').css('margin-left','0');
+    }
+    tsIndex++;
+    Banner.banner_move(tsIndex,tsLiLength,Lh_width,'tsNumber','tsNumber_indexUl','bgff6600')
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+})
 // 生日靓号圆点控制
 $('.srNumber_indexUl>li').mouseover(function(){
   $('.mobileNumber_ul2').stop(true,true);
@@ -497,6 +518,25 @@ $('.srNumber_indexUl>li').mouseover(function(){
   },5000)
 })
 
+// 生日靓号区域鼠标移入暂停，移出继续
+$('.tsNumber').mouseover(function(){
+  $('.mobileNumber_ul2').stop(true,true);
+  clearInterval(sr_setI);
+}).mouseout(function(){
+  sr_setI=setInterval(function(){
+    if(srIndex<srLiLength){
+      srIndex==srIndex;
+    }else{
+      srIndex=0;
+      $('.srNumber').css('margin-left','0');
+    }
+    srIndex++;
+    Banner.banner_move(srIndex,srLiLength,Lh_width,'srNumber','srNumber_indexUl','bgff6600')
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+})
+
 // 纪念日靓号圆点控制
 $('.jnrNumber_indexUl>li').mouseover(function(){
   $('.mobileNumber_ul2').stop(true,true);
@@ -505,6 +545,25 @@ $('.jnrNumber_indexUl>li').mouseover(function(){
   $('.jnrNumber_indexUl>li').removeClass('bgff6600');
   $('.jnrNumber_indexUl>li').eq(jnrIndex).addClass('bgff6600');
   $('.jnrNumber').animate({'margin-left':-jnrIndex*Lh_width},1000);
+}).mouseout(function(){
+  jnr_setI=setInterval(function(){
+    if(jnrIndex<jnrLiLength){
+      jnrIndex==jnrIndex;
+    }else{
+      jnrIndex=0;
+      $('.jnrNumber').css('margin-left','0');
+    }
+    srIndex++;
+    Banner.banner_move(jnrIndex,jnrLiLength,Lh_width,'jnrNumber','jnrNumber_indexUl','bgff6600')
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+})
+
+// 纪念日靓号区域鼠标移入暂停，移出继续
+$('.tsNumber').mouseover(function(){
+  $('.mobileNumber_ul2').stop(true,true);
+  clearInterval(jnr_setI);
 }).mouseout(function(){
   jnr_setI=setInterval(function(){
     if(jnrIndex<jnrLiLength){

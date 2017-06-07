@@ -385,6 +385,12 @@
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
+.suspend_nav1>li>a>span{
+  float:left;
+}
+.suspend_nav1>li>a>span:hover{
+  text-decoration: underline;
+}
 .width181 .suspend_nav1>li>a{
   padding:0 17px;
 }
@@ -841,6 +847,7 @@
 .cz_input{
   width:198px;
   height:33px;
+  line-height: 33px;
   padding-left:18px;
   background:#fff;
 }
