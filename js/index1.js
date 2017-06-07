@@ -335,16 +335,19 @@ function lt_jx_SFun(lt_jx_S_i){
     switch(lt_jx_S_i){
       case 0 :
       $('.jx_rqtjLi').show();
-      $('.jx_cnxhLi,.jx_tszqLi').hide();
+      $('.jx_cnxhLi,.jx_tszqLi,.jx_xsgLi').hide();
       break;
       case 1 :
       $('.jx_tszqLi').show();
-      $('.jx_rqtjLi,.jx_cnxhLi').hide();
+      $('.jx_rqtjLi,.jx_cnxhLi,.jx_xsgLi').hide();
       break;
       case 2 :
       $('.jx_cnxhLi').show();
-      $('.jx_rqtjLi,.jx_tszqLi').hide();
+      $('.jx_rqtjLi,.jx_tszqLi,.jx_xsgLi').hide();
       break;
+      default:
+      $('.jx_xsgLi').show();
+      $('.jx_rqtjLi,.jx_tszqLi,.jx_cnxhLi').hide();
     }
     $('.lx_jx_sx_ul>li').eq(lt_jx_S_i).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
   },5000)
@@ -358,18 +361,28 @@ $('.lx_jx_sx_ul>li').mouseover(function(){
   switch(this_index){
     case 0 :
     $('.jx_rqtjLi').show();
-    $('.jx_cnxhLi,.jx_tszqLi').hide();
+    $('.jx_cnxhLi,.jx_tszqLi,.jx_xsgLi').hide();
     break;
     case 1 :
     $('.jx_tszqLi').show();
-    $('.jx_rqtjLi,.jx_cnxhLi').hide();
+    $('.jx_rqtjLi,.jx_cnxhLi,.jx_xsgLi').hide();
     break;
     case 2 :
     $('.jx_cnxhLi').show();
-    $('.jx_rqtjLi,.jx_tszqLi').hide();
+    $('.jx_rqtjLi,.jx_tszqLi,.jx_xsgLi').hide();
     break;
+    default:
+    $('.jx_xsgLi').show();
+    $('.jx_rqtjLi,.jx_tszqLi,.jx_cnxhLi').hide();
   }
   $(this).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
+}).mouseout(function(){
+  lt_jx_SFun(lt_jx_S_i);
+})
+
+
+$('.lx_jx_pro_ul>li').mouseover(function(){
+  clearInterval(lt_jx_S);
 }).mouseout(function(){
   lt_jx_SFun(lt_jx_S_i);
 })
@@ -731,4 +744,32 @@ $(window).scroll(function(){
     $('.Left_Wul>li>a').removeClass('colorff6600');
     $('.'+TopArray2[4].class1+'').find('a').addClass('colorff6600');
   }
+})
+
+
+// 收藏按钮事件
+$('.collect_icon1,.collect_icon2').click(function(){
+  if($(this).hasClass('ysc')){
+    $(this).removeClass('ysc');
+    $(this).attr('src','images/collect_icon1_zhl.png');
+  }else{
+    $(this).addClass('ysc');
+    $(this).attr('src','images/collect_icon2_zhl.png');
+  }
+})
+
+// 购物车点击跳动事件
+$('.shoppingCar3').click(function(){
+  $(this).addClass('spCclick');
+  $(this).css('bottom','7px');
+  setTimeout(function(){
+    $('.spCclick').css('bottom','5px').removeClass('sp3click');;
+  },100)
+})
+$('.shoppingCar2').click(function(){
+  $(this).addClass('spCclick');
+  $(this).css('margin-top','5px');
+  setTimeout(function(){
+    $('.spCclick').css('margin-top','7px').removeClass('sp3click');;
+  },100)
 })

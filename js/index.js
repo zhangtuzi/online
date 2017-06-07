@@ -322,7 +322,7 @@ $('.zdy_btn').click(function(){
 //联通精选部分自动切换
 var lt_jx_S_i=0;
 var lt_jx_S;
-// lt_jx_SFun(lt_jx_S_i);
+lt_jx_SFun(lt_jx_S_i);
 function lt_jx_SFun(lt_jx_S_i){
   lt_jx_S=setInterval(function(){
     if(lt_jx_S_i<$('.lx_jx_sx_ul>li').length-1){
@@ -705,7 +705,7 @@ $(window).scroll(function(){
   }
 })
 
-
+// 收藏按钮事件
 $('.collect_icon1,.collect_icon2').click(function(){
   if($(this).hasClass('ysc')){
     $(this).removeClass('ysc');
@@ -714,4 +714,19 @@ $('.collect_icon1,.collect_icon2').click(function(){
     $(this).addClass('ysc');
     $(this).attr('src','images/collect_icon2_zhl.png');
   }
+})
+// 购物车点击跳动事件
+$('.shoppingCar3').click(function(){
+  $(this).addClass('spCclick');
+  $(this).css('bottom','7px');
+  setTimeout(function(){
+    $('.spCclick').css('bottom','5px').removeClass('sp3click');;
+  },100)
+})
+$('.shoppingCar2').click(function(){
+  $(this).addClass('spCclick');
+  $(this).css('margin-top','5px');
+  setTimeout(function(){
+    $('.spCclick').css('margin-top','7px').removeClass('sp3click');;
+  },100)
 })
