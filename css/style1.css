@@ -287,6 +287,33 @@
 .downup2_tra{
   transform: rotate(180deg);
 }
+
+.shoppingCarDiv{
+  width:35px;
+  height:35px;
+  margin-left:15px;
+  margin-top:33px;
+  position: relative;
+}
+.shoppingCar_icon{
+  width:20px;
+  height:20px;
+  margin-top:7px;
+}
+.productNum{
+  position: absolute;
+  top:-5px;
+  right:5px;
+  width:20px;
+  height:20px;
+  background: #ff6600;
+  font-size: 12px;
+  color:#fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .search_div{
   position: relative;
   margin-top:33px;
@@ -1742,47 +1769,57 @@
   border-bottom:1px solid #ff6600;
 }
 .mobileNumber_div3{
-  margin:40px 20px 0;
-  width:554px;
+  /*margin:40px 20px 0;
+  width:554px;*/
+  margin-top:40px;
+  width:594px;
   height:230px;
   overflow: hidden;
 }
 .mobileNumber_ul2{
-  height:230px;
+  height:220px;
   display:none;
+  margin-top:10px;
 }
 .mobileNumber_ul2>li{
   float:left;
-  width:554px;
-  height:230px;
+  width:594px;
+  height:220px;
 }
 .mobileNumber_ul2>li>.mobileNumber_ul3:last-child{
   border-right:none;
 }
+.numberFg_icon{
+  width:2px;
+  height:220px;
+  margin:0 5px;
+}
 .mobileNumber_ul3{
   float:left;
-  width:132px;
-  height:230px;
-  padding:0 26px;
-  border-right:1px dashed #efefef;
+  width:240px;
+  height:220px;
+  padding-left:50px;
+  /*padding-right:20px;*/
 }
 .mobileNumber_ul3>li{
   font-size:18px;
   line-height: 22px;
-  height:50px;
-  margin-top:10px;
+  height:44px;
 }
 .mobileNumber_ul3>li:first-child{
-  margin-top:0;
+  margin-top:10px;
 }
 .mobileNumber_ul3>li .numb_pro{
-  float: right;
-  margin-top:5px;
+  margin-top:-2px;
+  margin-left:9px;
+  height:22px;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 22px;
+  line-height: 20px\9;
   color:#fe7845;
-  padding:3px;
+  padding:0 7px;
   border:1px solid #fe7845;
+  border-radius:10px;
 }
 .Number_indexUl{
   margin-top:15px;
@@ -2397,6 +2434,9 @@
   .width181 .suspend_nav1>li>a{
     padding:0 16px;
   }
+  .mobileNumber_ul3>li .numb_pro{
+    line-height: 20px;
+  }
 }
 
 
@@ -2406,7 +2446,7 @@
   .suspend_nav1>li>a{
     [;padding:0 14px;]
   }
-  .width182 .suspend_nav1>li>a{
+  .width181 .suspend_nav1>li>a{
     [;padding:0 15px;]
   }
 }
