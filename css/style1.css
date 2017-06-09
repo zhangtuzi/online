@@ -873,16 +873,18 @@
 
 .cz_input{
   width:198px;
-  height:33px;
-  line-height: 33px;
+  height:12px;
+  font-size:12px;
+  line-height: 12px;
+  padding:10px 0;
   padding-left:18px;
   background:#fff;
 }
 .cz_btn{
   display: inline-block;
   width:60px;
-  height:33px;
-  line-height: 33px;
+  height:32px;
+  line-height: 32px;
   text-align: center;
   background:#da2627;
   color:#fff;
@@ -1761,7 +1763,7 @@
 .mobileN_Style_pic{
   display: inline;
   margin-top:10px;
-  margin-right:20px;
+  margin-right:5px;
 }
 .mobileNum_U1_LSe{
   background: #fff;
@@ -1802,8 +1804,9 @@
   /*padding-right:20px;*/
 }
 .mobileNumber_ul3>li{
-  font-size:18px;
-  line-height: 22px;
+  font-size:16px;
+  color:#333332;
+  line-height: 20px;
   height:44px;
 }
 .mobileNumber_ul3>li:first-child{
@@ -1811,14 +1814,14 @@
 }
 .mobileNumber_ul3>li .numb_pro{
   margin-top:-2px;
-  margin-left:9px;
-  height:22px;
+  margin-left:5px;
+  height:20px;
   font-size: 14px;
-  line-height: 22px;
-  line-height: 20px\9;
-  color:#fe7845;
+  line-height: 20px;
+  line-height: 18px\9;
+  color:#ff6600;
   padding:0 7px;
-  border:1px solid #fe7845;
+  border:1px solid #ff6600;
   border-radius:10px;
 }
 .Number_indexUl{
@@ -1851,7 +1854,7 @@
   width:14px;
   height:14px;
   margin-top:5px;
-  margin-right:8px;
+  /*margin-right:8px;*/
   display: inline;
 }
 .mobileNumber_ul2Show,.Number_indexUlShow{
@@ -2435,7 +2438,7 @@
     padding:0 16px;
   }
   .mobileNumber_ul3>li .numb_pro{
-    line-height: 20px;
+    line-height: 18px;
   }
 }
 
@@ -2444,12 +2447,22 @@
 /*safari浏览器兼容*/
 @media screen and (-webkit-min-device-pixel-ratio:0){
   .suspend_nav1>li>a{
+    padding:0 14px
+  }
+  .width181 .suspend_nav1>li>a{
+    padding:0 15px;
+  }
+  .suspend_nav1>li>a{
     [;padding:0 14px;]
   }
   .width181 .suspend_nav1>li>a{
     [;padding:0 15px;]
   }
+
 }
+
+
+
 /*适用于IE11*/
 @media all and (-ms-high-contrast:none){
   *::-ms-backdrop,.suspend_nav1>li>a{

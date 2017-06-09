@@ -173,12 +173,16 @@ function search_lbF(){
 }
 
 
-$('.search_input_div').click(function(){
+setTimeout(function(){
+  $('.search_input_div').click(function(){
   clearInterval(inputse);
   $(this).hide();
   $('.search_input').val('').focus();
 })
-$('.search_input').blur(function(){
+},0)
+
+setTimeout(function(){
+  $('.search_input').blur(function(){
   var this_val=$(this).val();
   if(this_val==''){
     input_s_i=0;
@@ -188,7 +192,7 @@ $('.search_input').blur(function(){
     $('.search_input_div').show();
   }
 });
-
+},0)
 
 var win_width=$(window).width();
 // $('.nav_indicate_div').width(win_width);

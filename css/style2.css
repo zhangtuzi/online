@@ -873,16 +873,18 @@
 
 .cz_input{
   width:198px;
-  height:33px;
-  line-height: 33px;
+  height:12px;
+  font-size:12px;
+  line-height: 12px;
+  padding:10px 0;
   padding-left:18px;
   background:#fff;
 }
 .cz_btn{
   display: inline-block;
   width:60px;
-  height:33px;
-  line-height: 33px;
+  height:32px;
+  line-height: 32px;
   text-align: center;
   background:#da2627;
   color:#fff;
@@ -2431,11 +2433,18 @@
 /*safari浏览器兼容*/
 @media screen and (-webkit-min-device-pixel-ratio:0){
   .suspend_nav1>li>a{
+    padding:0 14px
+  }
+  .width181 .suspend_nav1>li>a{
+    padding:0 15px;
+  }
+  .suspend_nav1>li>a{
     [;padding:0 14px;]
   }
   .width181 .suspend_nav1>li>a{
     [;padding:0 15px;]
   }
+
 }
 /*适用于IE11*/
 @media all and (-ms-high-contrast:none){
