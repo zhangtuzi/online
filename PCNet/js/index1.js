@@ -26,6 +26,7 @@ var isSupport = function() {
             }
         }
     }
+
 }
 isSupport();
 
@@ -37,31 +38,6 @@ var Banner={
       $('.'+index_ulClass+'').append('<li></li>');
     }
     $('.'+index_ulClass+'>li').eq(0).addClass(''+selectClass+'');//默认第一个圆点选中
-  },
-  //banner运行
-  banner_move:function(banner_ulClass,banner_index,banner_li_length,
-    index_ulClass,moveWith,selectClass,bannerLeft,bannerRight){
-    //bannerul的class，目前banner的index，banner的长度，
-    //banner圆点外部ul的class，banner每次运行的宽度,banner左控制按钮class，banner右控制按钮class
-    banner_index=banner_index;
-    if(banner_index==0||banner_index===banner_li_length){
-      $('.'+bannerLeft+'').hide();
-    }else{
-      $('.'+bannerLeft+'').show();
-    }
-    if(banner_index===banner_li_length-1){
-      $('.'+bannerRight+'').hide();
-    }else{
-      $('.'+bannerRight+'').show();
-    }
-    $('.'+index_ulClass+'>li').removeClass(''+selectClass+'');
-    if(banner_index===banner_li_length){
-      $('.'+index_ulClass+'>li').eq(banner_index-banner_li_length).addClass(''+selectClass+'');
-    }else{
-      $('.'+index_ulClass+'>li').eq(banner_index).addClass(''+selectClass+'');
-    }
-
-    $('.'+banner_ulClass+'').animate({'margin-left':-banner_index*moveWith},1000);
   },
   // 个人信息部分数字的变动动画
   BigSmall:function(ll_bigNumber,ll_smallNumber,ll_Class){
@@ -120,6 +96,7 @@ var Banner={
       return  Banner.ArrayPx1(array);
     }
   },
+
   // 悬浮导航定位
   XfNav:function(win_ScroTop){
     if(win_ScroTop<140){
@@ -131,13 +108,41 @@ var Banner={
         $('.nav_indicate_div').addClass('nav_indicate_div_xf');
       }
     }
-  }
-}
+  },
+  // 轮播图运行方法
+  banner_move:function(banner_index,banner_length,move_width,banner_ul,banner_index_ul,bgClass){
+    if(banner_index===banner_length){
+      $('.'+banner_index_ul+'>li').removeClass(''+bgClass+'');
+      $('.'+banner_index_ul+'>li').eq(0).addClass(''+bgClass+'');
+    }else{
+      $('.'+banner_index_ul+'>li').removeClass(''+bgClass+'');
+      $('.'+banner_index_ul+'>li').eq(banner_index).addClass(''+bgClass+'');
+    }
+    $('.'+banner_ul+'').animate({'margin-left':-banner_index*move_width},1000);
+    if(banner_index===banner_length){
+      $('.'+banner_ul+'').css({'margin-left':'0'},1000);
+    }
+  },
+  //轮播图构造方法
+  bannerGz:function(bannerstyle,bannerUl,banner_indexUL){
+    //靓号专区banner类型('ts','sr','jnr'),bannerul的class，banner下方圆点控制的ul的class
+    $('.'+bannerUl+'').append($('.'+bannerUl+'').html());//将轮播图部分的li复制一份后追加到ul中
+    tsLiLength=$('.'+bannerUl+'>li').length;//获取轮播图部分的2倍li的长度
+    $('.'+bannerUl+'').width(tsLiLength*Lh_width);//给轮播图的ul赋值
+    tsLiLength=tsLiLength/2;//获取轮播图的原始li的长度
+    for(var i=0;i<tsLiLength;i++){
+      $('.'+banner_indexUL+'').append('<li></li>');
+    }
+    $('.'+banner_indexUL+'>li').eq(0).addClass('bgff6600');
+    if(bannerstyle=='ts'){//特色靓号
+      tsLiLength=tsLiLength;
+    }else if(bannerstyle=='sr'){//生日靓号
+      srLiLength=tsLiLength;
+    }else if(bannerstyle=='jnr'){//纪念日靓号
+      jnrLiLength=tsLiLength;
+    }
+  },
 
-function array1(class2,top1)
-{
-this.class1=class2;
-this.top=top1;
 }
 
 // 剩余流量/语音倒数
@@ -167,6 +172,7 @@ function search_lbF(){
   },2000)
 }
 
+
 setTimeout(function(){
   $('.search_input_div').click(function(){
   clearInterval(inputse);
@@ -187,10 +193,6 @@ setTimeout(function(){
   }
 });
 },0)
-
-
-
-
 
 var win_width=$(window).width();
 // $('.nav_indicate_div').width(win_width);
@@ -392,181 +394,282 @@ $('.lx_jx_pro_ul>li').mouseover(function(){
   lt_jx_SFun(lt_jx_S_i);
 })
 
+// 靓号专区轮播图部分开始
+var tsLiLength,srLiLength,jnrLiLength;Lh_width;
+var Lh_width=$('.tsNumber>li').width();//获取轮播图的li的宽度
+
+Banner.bannerGz('ts','tsNumber','tsNumber_indexUl');
+//靓号专区banner类型('ts','sr','jnr'),bannerul的class，banner下方圆点控制的ul的class
+Banner.bannerGz('sr','srNumber','srNumber_indexUl');
+//靓号专区banner类型('ts','sr','jnr'),bannerul的class，banner下方圆点控制的ul的class
+Banner.bannerGz('jnr','jnrNumber','jnrNumber_indexUl');
+//靓号专区banner类型('ts','sr','jnr'),bannerul的class，banner下方圆点控制的ul的class
+var tsIndex=0,srIndex=0,jnrIndex=0;
+var ts_setI,sr_setI,jnr_setI;
 
 
-
-
-
-// 靓号专区轮播图
-var Number_banner1_li_W=$('.mobileNumber_banner1>li').width();
-var Number_banner1_li_lg=$('.mobileNumber_banner1>li').length;
-$('.mobileNumber_banner1').width(Number_banner1_li_lg*Number_banner1_li_W*2);
-var Number_banner2_li_W=$('.mobileNumber_banner2>li').width();
-var Number_banner2_li_lg=$('.mobileNumber_banner2>li').length;
-$('.mobileNumber_banner2').width(Number_banner2_li_lg*Number_banner2_li_W*2);
-Banner.index_ul('mobileNumber_banner1_index_ul',Number_banner1_li_lg,'index_select2');
-Banner.index_ul('mobileNumber_banner2_index_ul',Number_banner2_li_lg,'index_select2');
-$('.mobileNumber_banner1').append($('.mobileNumber_banner1').html());
-$('.mobileNumber_banner2').append($('.mobileNumber_banner2').html());
-var Number_banner1=0;
-var Number_banner2=0;
-var Number_banner1_set,Number_banner2_set;
-Number_banner1_move();
-Number_banner2_move();
-
-
-// 靓号专区第一个轮播图运行
-
-function Number_banner1_move(){
-  $('.mobileNumber_banner1').animate({'margin-left':-Number_banner1*Number_banner1_li_W},1000);
-  Number_banner1_set=setInterval(function(){
-      if(Number_banner1<Number_banner1_li_lg){
-        Number_banner1==Number_banner1;
-      }else{
-        Number_banner1=0;
-        $('.mobileNumber_banner1').css('margin-left','0');
-      }
-      Number_banner1++;
-      Banner.banner_move('mobileNumber_banner1',Number_banner1,Number_banner1_li_lg,
-      'mobileNumber_banner1_index_ul',Number_banner1_li_W,'index_select2','bannerLeft1','bannerRight1');
-  },5000);
+tsMove(tsIndex,tsLiLength,'tsNumber','Number_indexUlShow');
+function tsMove(tsIndex,tsLiLength,banner_ul,banner_index_ul){
+  //特色靓号轮播下标，特色靓号轮播长度、特色靓号轮播ul的class，圆点控制的ul的class
+  ts_setI=setInterval(function(){
+    if(tsIndex<tsLiLength){
+      tsIndex==tsIndex;
+    }else{
+      tsIndex=0;
+      $('.tsNumber').css('margin-left','0');
+    }
+    tsIndex++;
+    Banner.banner_move(tsIndex,tsLiLength,Lh_width,banner_ul,banner_index_ul,'bgff6600');
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
 }
 
-// 圆点控制1
-$('.mobileNumber_banner1_index_ul').delegate('li','click',function(){
-  $('.mobileNumber_banner1').stop();
-    clearInterval(Number_banner1_set);
-    var this_index=$(this).index();
-    if(this_index==0){
-      $('.bannerLeft1').hide();
-      $('.bannerRight1').show();
-    }else if(this_index===Number_banner1_li_lg-1){
-      $('.bannerLeft1').show();
-      $('.bannerRight1').hide();
+function srMove(srIndex,srLiLength,banner_ul,banner_index_ul){
+  //生日靓号轮播下标，生日靓号轮播长度、生日靓号轮播ul的class，圆点控制的ul的class
+  sr_setI=setInterval(function(){
+    // console.log(srLiLength+'.....1')
+    if(srIndex<srLiLength){
+      srIndex==srIndex;
     }else{
-      $('.bannerLeft1,.bannerRight1').show();
+      srIndex=0;
+      $('.srNumber').css('margin-left','0');
     }
-    $('.mobileNumber_banner1_index_ul>li').removeClass('index_select2');
-    $('.mobileNumber_banner1_index_ul>li').eq(this_index).addClass('index_select2');
-    Number_banner1=this_index;
-    Number_banner1_move();
-  })
+    srIndex++
+    Banner.banner_move(srIndex,srLiLength,Lh_width,banner_ul,banner_index_ul,'bgff6600');
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
 
-
-  // // 靓号专区banner鼠标移入暂停，移出轮播
-  // $('.mobileNumber_banner1_div .mobileNumber_banner_ul').mouseover(function(){
-  //   clearInterval(Number_banner1_set);
-  // }).mouseout(function(){
-  //   Number_banner1_move();
-  // })
-  // $('.mobileNumber_banner2_div  .mobileNumber_banner_ul').mouseover(function(){
-  //   clearInterval(Number_banner2_set);
-  // }).mouseout(function(){
-  //   Number_banner2_move();
-  // })
-
-
-
-
-
-  // 靓号专区第一banner左按钮
-  $('.bannerLeft1').click(function(){
-    $('.mobileNumber_banner1').stop();
-    clearInterval(Number_banner1_set);
-    if(Number_banner1>0){
-      Number_banner1--;
-      $('.bannerRight1').show();
+  },5000)
+}
+function jnrMove(jnrIndex,jnrLiLength,banner_ul,banner_index_ul){
+  //纪念日靓号轮播下标，纪念日靓号轮播长度、纪念日靓号轮播ul的class，圆点控制的ul的class
+  jnr_setI=setInterval(function(){
+    if(jnrIndex<jnrLiLength){
+      jnrIndex==jnrIndex;
+    }else{
+      jnrIndex=0;
+      $('.jnrNumber').css('margin-left','0');
     }
-    if(Number_banner1==0){
-      $(this).hide();
-    }
-    $('.mobileNumber_banner1_index_ul>li').removeClass('index_select2');
-    $('.mobileNumber_banner1_index_ul>li').eq(Number_banner1).addClass('index_select2');
-    Number_banner1_move();
-  })
-  // 靓号专区第一banner右按钮
-  $('.bannerRight1').click(function(){
-    $('.mobileNumber_banner1').stop();
-    clearInterval(Number_banner1_set);
-    if(Number_banner1<Number_banner1_li_lg-1){
-      Number_banner1++;
-      $('.bannerLeft1').show();
-    }
-    if(Number_banner1===Number_banner1_li_lg-1){
-      $(this).hide();
-    }
-    $('.mobileNumber_banner1_index_ul>li').removeClass('index_select2');
-    $('.mobileNumber_banner1_index_ul>li').eq(Number_banner1).addClass('index_select2');
-    Number_banner1_move();
-  })
+    jnrIndex++;
+    Banner.banner_move(jnrIndex,jnrLiLength,Lh_width,banner_ul,banner_index_ul,'bgff6600');
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+}
 
+// 特色靓号圆点控制
+$('.tsNumber_indexUl>li').mouseover(function(){
+  $('.mobileNumber_ul2').stop(true,true);
+  clearInterval(ts_setI);
+  tsIndex=$(this).index();
+  $('.tsNumber_indexUl>li').removeClass('bgff6600');
+  $('.tsNumber_indexUl>li').eq(tsIndex).addClass('bgff6600');
+  $('.tsNumber').animate({'margin-left':-tsIndex*Lh_width},1000);
+}).mouseout(function(){
+  ts_setI=setInterval(function(){
+    if(tsIndex<tsLiLength){
+      tsIndex==tsIndex;
+    }else{
+      tsIndex=0;
+      $('.tsNumber').css('margin-left','0');
+    }
+    tsIndex++;
+    Banner.banner_move(tsIndex,tsLiLength,Lh_width,'tsNumber','tsNumber_indexUl','bgff6600')
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+})
 
-  // 靓号专区第二个轮播图运行
-  function Number_banner2_move(){
-    $('.mobileNumber_banner2').animate({'margin-left':-Number_banner2*Number_banner2_li_W},1000);
-    Number_banner2_set=setInterval(function(){
-      if(Number_banner2<Number_banner2_li_lg){
-        Number_banner2==Number_banner2;
-      }else{
-        Number_banner2=0;
-        $('.mobileNumber_banner2').css('margin-left','0');
-      }
-      Number_banner2++;
-        Banner.banner_move('mobileNumber_banner2',Number_banner2,Number_banner2_li_lg,
-        'mobileNumber_banner2_index_ul',Number_banner2_li_W,'index_select2','bannerLeft2','bannerRight2');
-    },5000);
+// 特色靓号区域鼠标移入暂停，移出继续
+$('.tsNumber').mouseover(function(){
+  $('.mobileNumber_ul2').stop(true,true);
+  clearInterval(ts_setI);
+}).mouseout(function(){
+  ts_setI=setInterval(function(){
+    if(tsIndex<tsLiLength){
+      tsIndex==tsIndex;
+    }else{
+      tsIndex=0;
+      $('.tsNumber').css('margin-left','0');
+    }
+    tsIndex++;
+    Banner.banner_move(tsIndex,tsLiLength,Lh_width,'tsNumber','tsNumber_indexUl','bgff6600')
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+})
+// 生日靓号圆点控制
+$('.srNumber_indexUl>li').mouseover(function(){
+  $('.mobileNumber_ul2').stop(true,true);
+  clearInterval(sr_setI);
+  srIndex=$(this).index();
+  $('.srNumber_indexUl>li').removeClass('bgff6600');
+  $('.srNumber_indexUl>li').eq(srIndex).addClass('bgff6600');
+  $('.srNumber').animate({'margin-left':-srIndex*Lh_width},1000);
+}).mouseout(function(){
+  sr_setI=setInterval(function(){
+    if(srIndex<srLiLength){
+      srIndex==srIndex;
+    }else{
+      srIndex=0;
+      $('.srNumber').css('margin-left','0');
+    }
+    srIndex++;
+    Banner.banner_move(srIndex,srLiLength,Lh_width,'srNumber','srNumber_indexUl','bgff6600')
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+})
+
+// 生日靓号区域鼠标移入暂停，移出继续
+$('.tsNumber').mouseover(function(){
+  $('.mobileNumber_ul2').stop(true,true);
+  clearInterval(sr_setI);
+}).mouseout(function(){
+  sr_setI=setInterval(function(){
+    if(srIndex<srLiLength){
+      srIndex==srIndex;
+    }else{
+      srIndex=0;
+      $('.srNumber').css('margin-left','0');
+    }
+    srIndex++;
+    Banner.banner_move(srIndex,srLiLength,Lh_width,'srNumber','srNumber_indexUl','bgff6600')
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+})
+
+// 纪念日靓号圆点控制
+$('.jnrNumber_indexUl>li').mouseover(function(){
+  $('.mobileNumber_ul2').stop(true,true);
+  clearInterval(jnr_setI);
+  jnrIndex=$(this).index();
+  $('.jnrNumber_indexUl>li').removeClass('bgff6600');
+  $('.jnrNumber_indexUl>li').eq(jnrIndex).addClass('bgff6600');
+  $('.jnrNumber').animate({'margin-left':-jnrIndex*Lh_width},1000);
+}).mouseout(function(){
+  jnr_setI=setInterval(function(){
+    if(jnrIndex<jnrLiLength){
+      jnrIndex==jnrIndex;
+    }else{
+      jnrIndex=0;
+      $('.jnrNumber').css('margin-left','0');
+    }
+    srIndex++;
+    Banner.banner_move(jnrIndex,jnrLiLength,Lh_width,'jnrNumber','jnrNumber_indexUl','bgff6600')
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+})
+
+// 纪念日靓号区域鼠标移入暂停，移出继续
+$('.tsNumber').mouseover(function(){
+  $('.mobileNumber_ul2').stop(true,true);
+  clearInterval(jnr_setI);
+}).mouseout(function(){
+  jnr_setI=setInterval(function(){
+    if(jnrIndex<jnrLiLength){
+      jnrIndex==jnrIndex;
+    }else{
+      jnrIndex=0;
+      $('.jnrNumber').css('margin-left','0');
+    }
+    srIndex++;
+    Banner.banner_move(jnrIndex,jnrLiLength,Lh_width,'jnrNumber','jnrNumber_indexUl','bgff6600')
+      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
+      //下方圆点控制的ul的class，下方圆点控制变化的class
+  },5000)
+})
+
+//换一换按钮
+$('.numberChangeBtn').click(function(){
+  $('.mobileNumber_ul2Show').stop(true,true);
+  clearInterval(ts_setI);
+  clearInterval(sr_setI);
+  clearInterval(jnr_setI);
+  var showul2Width=$('.mobileNumber_ul2Show').width();
+  var inD_Left=$('.mobileNumber_ul2Show').css('margin-left');
+  inD_Left=parseInt(inD_Left.substring(0,inD_Left.length-2));
+  if(inD_Left>-(showul2Width)/2+Lh_width){
+    $('.Number_indexUlShow>li').removeClass('bgff6600');
+    $('.Number_indexUlShow>li').eq(-inD_Left/Lh_width+1).addClass('bgff6600');
+    $('.mobileNumber_ul2Show').animate({'margin-left':inD_Left-Lh_width},1000);
+  }else if(inD_Left==-(showul2Width)/2+Lh_width){
+    $('.Number_indexUlShow>li').removeClass('bgff6600');
+    $('.Number_indexUlShow>li').eq(0).addClass('bgff6600');
+    $('.mobileNumber_ul2Show').animate({'margin-left':0},1000);
+  }else if(inD_Left==-(showul2Width)/2){
+    $('.mobileNumber_ul2Show').animate({'margin-left':0},1000);
+    $('.Number_indexUlShow>li').removeClass('bgff6600');
+    $('.Number_indexUlShow>li').eq(1).addClass('bgff6600');
+    $('.mobileNumber_ul2Show').animate({'margin-left':-Lh_width},1000);
+    // $('.mobileNumber_ul2Show').css('margin-left','0');
   }
+})
 
-  // 圆点控制2
-  $('.mobileNumber_banner2_index_ul').delegate('li','click',function(){
-    $('.mobileNumber_banner2').stop();
-      clearInterval(Number_banner2_set);
-      var this_index=$(this).index();
-      if(this_index==0){
-        $('.bannerLeft2').hide();
-        $('.bannerRight2').show();
-      }else if(this_index===Number_banner1_li_lg-1){
-        $('.bannerLeft2').show();
-        $('.bannerRight2').hide();
-      }else{
-        $('.bannerLeft2,.bannerRight2').show();
-      }
-      $('.mobileNumber_banner2_index_ul>li').removeClass('index_select2');
-      $('.mobileNumber_banner2_index_ul>li').eq(this_index).addClass('index_select2');
-      Number_banner2=this_index;
-      Number_banner2_move();
-    })
+// 靓号专区切换
+$('.mobileNumber_ul1>li').click(function(){
+  var this_index=$(this).index();
+  $('.mobileNumber_ul1>li').removeClass('mobileNum_U1_LSe');
+  $('.mobileNumber_ul1>li').eq(this_index).addClass('mobileNum_U1_LSe');
+  $('.Number_indexUl').removeClass('Number_indexUlShow');
+  switch(this_index){
+    //特色靓号
+    case 0:
+    $('.mobileNumber_ul2Show').stop(true,true);
+      clearInterval(ts_setI);
+      clearInterval(sr_setI);
+      clearInterval(jnr_setI);
+      $('.mobileN_Style_pic').eq(0).attr('src','images/wjx_active.png');
+      $('.mobileN_Style_pic').eq(1).attr('src','images/heart_icon1.png');
+      $('.mobileN_Style_pic').eq(2).attr('src','images/date_icon.png');
+      $('.mobileNumber_ul2').removeClass('mobileNumber_ul2Show');
+      $('.tsNumber').addClass('mobileNumber_ul2Show');
+      tsIndex=0;
+      $('.Number_indexUl').eq(0).addClass('Number_indexUlShow');
+      $('.Number_indexUlShow>li').removeClass('bgff6600').eq(0).addClass('bgff6600');
+      tsMove(tsIndex,tsLiLength,'tsNumber','Number_indexUlShow');
+      break;
+    //生日靓号
+    case 1:
+      $('.mobileNumber_ul2Show').stop(true,true);
+      clearInterval(ts_setI);
+      clearInterval(sr_setI);
+      clearInterval(jnr_setI);
+      $('.mobileN_Style_pic').eq(0).attr('src','images/wjx_icon1.png');
+      $('.mobileN_Style_pic').eq(1).attr('src','images/heart_active.png');
+      $('.mobileN_Style_pic').eq(2).attr('src','images/date_icon.png');
+      $('.mobileNumber_ul2').removeClass('mobileNumber_ul2Show');
+      $('.srNumber').addClass('mobileNumber_ul2Show');
+      srIndex=0;
+      $('.Number_indexUl').eq(1).addClass('Number_indexUlShow');
+      $('.Number_indexUlShow>li').removeClass('bgff6600').eq(0).addClass('bgff6600');
+      srMove(srIndex,srLiLength,'srNumber','Number_indexUlShow');
+      break;
+    //纪念日靓号
+    case 2:
+    $('.mobileNumber_ul2Show').stop(true,true);
+      clearInterval(ts_setI);
+      clearInterval(sr_setI);
+      clearInterval(jnr_setI);
+      $('.mobileN_Style_pic').eq(0).attr('src','images/wjx_icon1.png');
+      $('.mobileN_Style_pic').eq(1).attr('src','images/heart_icon1.png');
+      $('.mobileN_Style_pic').eq(2).attr('src','images/date_active.png');
+      $('.mobileNumber_ul2').removeClass('mobileNumber_ul2Show');
+      $('.jnrNumber').addClass('mobileNumber_ul2Show');
+      jnrIndex=0;
+      $('.Number_indexUl').eq(2).addClass('Number_indexUlShow');
+      $('.Number_indexUlShow>li').removeClass('bgff6600').eq(0).addClass('bgff6600');
+      jnrMove(jnrIndex,jnrLiLength,'jnrNumber','Number_indexUlShow');
+      break;
+  }
+})
 
-    // 靓号专区第二banner左按钮
-    $('.bannerLeft2').click(function(){
-      $('.mobileNumber_banner2').stop();
-      clearInterval(Number_banner2_set);
-      if(Number_banner2>0){
-        Number_banner2--;
-        $('.bannerRight2').show();
-      }
-      if(Number_banner2==0){
-        $(this).hide();
-      }
-      $('.mobileNumber_banner2_index_ul>li').removeClass('index_select2');
-      $('.mobileNumber_banner2_index_ul>li').eq(Number_banner2).addClass('index_select2');
-      Number_banner2_move();
-    })
-    // 靓号专区第二banner右按钮
-    $('.bannerRight2').click(function(){
-      $('.mobileNumber_banner2').stop();
-      clearInterval(Number_banner2_set);
-      if(Number_banner2<Number_banner2_li_lg-1){
-        Number_banner2++;
-        $('.bannerLeft2').show();
-      }
-      if(Number_banner2===Number_banner2_li_lg-1){
-        $(this).hide();
-      }
-      $('.mobileNumber_banner2_index_ul>li').removeClass('index_select2');
-      $('.mobileNumber_banner2_index_ul>li').eq(Number_banner2).addClass('index_select2');
-      Number_banner2_move();
-    })
+
+// 靓号专区轮播图部分结束
+
 
   // 右侧导购鼠标放上换图片
   $('.zxdg_w').mouseover(function(){
@@ -620,7 +723,7 @@ $(function() {
   // $('#lx_jx_pro_ul').disableSelection();
 });
 
-var scroChange;
+  var scroChange;
 //楼层跳转
 function FloorGo(domId){//传入目标的id
   clearInterval(scroChange);
@@ -654,13 +757,8 @@ function FloorGo(domId){//传入目标的id
   },10)
 
 }
-
-
-
-
 //获取各个楼层距离页面顶部的top值
 var T_traffic_div_top1=$('#traffic_div').offset()?parseInt($('#traffic_div').offset().top):0;
-
 var T_G4_div_top1=$('#G4_div').offset()?parseInt($('#G4_div').offset().top):0;
 var T_phoneAccessories_top1=$('#phoneAccessories').offset()?parseInt($('#phoneAccessories').offset().top):0;
 var T_InternetCard_top1=$('#InternetCard').offset()?parseInt($('#InternetCard').offset().top):0;
@@ -676,7 +774,6 @@ var TopArray=[
 
 //将从小到大排序后的各个楼层的id和距离页面顶部top值放入数组TopArra2
 var TopArray2=Banner.ArrayPx(TopArray);
-
 
 
 
@@ -712,6 +809,7 @@ $(window).scroll(function(){
   }
 })
 
+
 // 收藏按钮事件
 $('.collect_icon1,.collect_icon2').click(function(){
   if($(this).hasClass('ysc')){
@@ -722,6 +820,7 @@ $('.collect_icon1,.collect_icon2').click(function(){
     $(this).attr('src','images/collect_icon2_zhl.png');
   }
 })
+
 // 购物车点击跳动事件
 $('.shoppingCar3').click(function(){
   $(this).addClass('spCclick');

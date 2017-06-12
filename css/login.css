@@ -1,0 +1,529 @@
+/*顶部导航部分开始*/
+.header1{
+  height:36px;
+  background: #333333;
+  color:#aaaaaa;
+  font-size: 12px!important;
+  line-height: 36px;
+}
+.user_phone{
+  margin:0 8px;
+  margin-left:0;
+  position: relative;
+}
+.user_phone:hover .user_phone_divs{
+  display: block;
+}
+.user_phone:hover .down_up1{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.user_phone_divs p{
+  cursor:pointer;
+}
+.user_phone_divs p:hover{
+  color:#ff6600;
+}
+.user_phone_divs{
+  position: absolute;
+  left:0;
+  top:36px;
+  width:85px;
+  height:44px;
+  padding:5px 0;
+  background: #f8f8f8;
+  text-align: center;
+  border:1px solid #dfdddd;
+  border-top:none;
+  box-shadow: 0px 0px 4px #dfdddd;
+  z-index: 999;
+  font-size: 12px;
+  color:#555;
+  line-height: 22px;
+  display: none;
+}
+.top_up_icon{
+  position: absolute;
+  top:-6px;
+  left:36px;
+  width:13px;
+  height:6px;
+}
+.down_up1{
+  width:7px;
+  height:5px;
+  margin-top:17px;
+  transition: .5s 0s all;
+  -webkit-transition: .5s 0s all;
+  -moz-transition: .5s 0s all;
+  -ms-transition: .5s 0s all;
+  -o-transition: .5s 0s all;
+}
+.user_stars{
+  margin:0 3px 0 20px;
+}
+.star_div{
+  height:14px;
+  margin-top:11px;
+}
+.star_div img{
+  float:left;
+  display: inline-block;
+}
+.message_div1{
+  height:15px;
+  color: #aaaaaa;
+  line-height:15px;
+  margin-top:10px;
+  margin-left:30px;
+  cursor: pointer;
+}
+
+.dh1_ul>li{
+  float:left;
+  padding:0 7px;
+  position: relative;
+}
+.dh1_ul>li:hover{
+  color:#fff;
+}
+.dh1_ul>li:hover .dh1_downDiv{
+  display: block;
+}
+.dh1_ul>li:hover .down_up1{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.dh1_downDiv,.downErWM_div,.WeChatErWM_div{
+  position: absolute;
+  top:36px;
+  left:-10px;
+  width:85px;
+  padding:5px 0;
+  background: #f8f8f8;
+  text-align: center;
+  border:1px solid #dfdddd;
+  border-top:none;
+  box-shadow: 0px 0px 4px #dfdddd;
+  z-index: 999;
+  font-size: 12px;
+  color:#555;
+  line-height: 22px;
+  display: none;
+}
+.dh1_downDiv p{
+  cursor:pointer;
+}
+.dh1_downDiv p:hover{
+  color:#ff6600;
+}
+.icon1{
+  width:22px;
+  height:22px;
+  display:inline-block;
+  margin-top:6px;
+}
+.Sina_icon1{
+  /*margin-right:15px;*/
+  cursor: pointer;
+}
+.WeChat_icon1{
+  width:22px;
+  margin-right:10px;
+  position: relative;
+}
+.WeChat_icon1:hover .WeChatErWM_div{
+  display: block;
+}
+
+.downApp{
+  width:72px;
+  height:16px;
+  padding:10px 35px 10px 25px;
+  line-height: 16px;
+  position: relative;
+}
+.downApp:hover .downErWM_div{
+  display: block;
+}
+.downErWM_div,.WeChatErWM_div{
+  width:140px;
+  height:160px;
+  left:-15px;
+}
+.downErWM_div>.top_up_icon,.WeChatErWM_div>.top_up_icon{
+  left:64px;
+}
+.downErWM_div>.download2_icon,.WeChatErWM_div>.download2_icon{
+  width:126px;
+  height:126px;
+  margin:7px;
+  margin-bottom:0;
+}
+.WeChatErWM_div{
+  left:-60px;
+}
+/*顶部导航部分结束*/
+
+/*logo部分开始*/
+
+.logo1{
+  float:left;
+  width:295px;
+  height:57px;
+  margin:20px 0 30px;
+  display: inline-block;
+}
+/*banner1部分开始*/
+.banner_div1{
+  position: relative;
+  height:524px;
+  overflow: hidden;
+}
+.banner_ul1{
+  width:200%;
+  height:524px;
+  cursor: pointer;
+}
+.banner_ul1>li{
+  float:left;
+  width:1920px;
+  height:524px;
+  overflow: hidden;
+  position: relative;
+
+}
+.banner1_a{
+  width:1920px;
+  height:524px;
+  position: absolute;
+  left:50%;
+  display: block;
+  cursor: default;
+}
+.banner1_pic{
+  max-width:none;
+  height:524px;
+  display: block;
+  position: relative;
+  left:-50%;
+}
+.banner_index_ul{
+  position:absolute;
+  bottom:20px;
+  left:0;
+  width:100%;
+  height:12px;
+  text-align: center;
+  z-index: 10;
+}
+.banner_index_ul>li{
+  cursor: pointer;
+  margin:0 8px;
+  display:inline-block;
+  width:12px;
+  height:12px;
+  border:1px solid #fff;
+  border-radius:50%;
+  overflow:hidden;
+}
+/*banner1部分结束*/
+
+/*登陆框部分开始*/
+.mmEwmqh{
+  position:absolute;
+  top:0;
+  right:0;
+  width:52px;
+  height:52px;
+  background-image: url('images/styleQh_icon.png');
+  background-size:104px 104px;
+  background-position: 0px 0px;
+  -webkit-transition: background-position .2s cubic-bezier(0.25,.5,.5,.9);
+  -moz-transition: background-position .2s cubic-bezier(0.25,.5,.5,.9);
+  transition: background-position .2s cubic-bezier(0.25,.5,.5,.9);
+}
+.mmEwmqh1{
+  background-position: 52px 52px;
+}
+.loginDiv{
+  position: absolute;
+  top:55px;
+  right:50%;
+  margin-right:-600px;
+  width:305px;
+  padding:30px 40px;
+  background: #fff;
+}
+.loginStyle{
+  padding:0 15px;
+  height:18px;
+  color:#333;
+}
+.loginStyle>li{
+  float:left;
+  padding:0 18px;
+  font-size:18px;
+  line-height: 18px;
+  text-align: center;
+  border-right:1px solid #e8e8e8;
+  cursor:pointer;
+}
+.errorDiv{
+  height:0;
+  /*height:15px;*/
+  margin-top:20px;
+  overflow: hidden;
+}
+.errorTxt{
+  margin-left:10px;
+  font-size: 12px;
+  color:#fe0000;
+  line-height: 13px;
+}
+.marginT5{
+  margin-top:5px;
+}
+.marginT10{
+  margin-top:10px;
+}
+.inputDiv{
+  width:303px;
+  height:35px;
+  border:1px solid #e8e8e8;
+  position: relative;
+}
+.userNumbTip{
+  display:none;
+  position: absolute;
+  top:35px;
+  left:-1px;
+  width:303px;
+  border:1px solid #e8e8e8;
+  background:#fcfcfc;
+  font-size:14px;
+  color:#666;
+  line-height: 30px;
+  z-index: 3;
+}
+.userNumbTip>li{
+  height:30px;
+  padding:0 10px;
+  text-align: left;
+  cursor: pointer;
+}
+.userNumbTipSel{
+  background:#ffe7d9;
+}
+.userNumbTipClear{
+  padding:0 10px;
+  height:20px!important;
+  line-height: 20px;
+  font-size: 12px;
+  color:#999;
+  text-align: right!important;
+}
+.loginIcon{
+  float:left;
+  width:20px;
+  height:20px;
+  margin:7px;
+}
+.inputLogin{
+  width:245px;
+  height:14px;
+  margin-top:7px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  padding:3px 10px;
+  border-left:1px solid #e8e8e8;
+}
+.border95b9f3{
+  border:1px solid #95b9f3!important;
+}
+.userNumberClear{
+  display: none;
+  position:absolute;
+  top:9px;
+  right:10px;
+  width:18px;
+  height:18px;
+  cursor: pointer;
+}
+.numberStyle{
+  float:left;
+  width:140px;
+  height:36px;
+  border:1px solid #e8e8e8;
+  position: relative;
+  cursor: pointer;
+}
+.numberStyleTxt{
+  text-align: left;
+  line-height: 36px;
+  font-size:14px;
+  color:#333;
+  padding-left:10px;
+}
+.numberStyleUD{
+  width:14px;
+  height:7px;
+  float:right;
+  margin:15px 10px 0 0;
+}
+.numberStyleUL{
+  display:none;
+  position:absolute;
+  top:36px;
+  left:-1px;
+  width:140px;
+  background:#fcfcfc;
+  border:1px solid #e8e8e8;
+  z-index: 2;
+}
+.numberStyleUL>li{
+  width:130px;
+  padding-left:10px;
+  height:30px;
+  font-size: 14px;
+  color:#666;
+  line-height: 30px;
+}
+.areaDivs{
+  display: none;
+}
+.areaDiv{
+  float:right;
+  width:148px;
+  height:36px;
+  border:1px solid #e8e8e8;
+}
+.areaInput{
+  width:137px;
+  margin:11px 0;
+  font-size: 14px;
+  line-height: 14px;
+  height:14px;
+  padding-left:10px;
+}
+.PicYz{
+  float:right;
+  width:113px;
+  height:30px;
+  padding:2px 10px;
+}
+.sjpassword{
+  float:left;
+  width:150px;
+  border-left:none;
+  border-right:1px solid #e8e8e8;
+}
+.sjmClick{
+  display: inline-block;
+  height:35px;
+  width:130px;
+  font-size: 14px;
+  color:#ff6600;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+}
+.color666{
+  color:#666!important;
+}
+.picYzmDiv{
+  display: none;
+}
+.picYzm{
+  width:145px;
+  border-left:none;
+  border-right:1px solid #e8e8e8;
+}
+.loginSubmit{
+  margin-top:40px;
+  width:100%;
+  height:48px;
+  line-height: 48px;
+  text-align: center;
+  font-size:20px;
+  color:#fff;
+  border-radius: 4px;
+}
+.zcWm{
+  margin-top:20px;
+  height:14px;
+  font-size:14px;
+  color:#333;
+}
+.zcWm>a{
+  color:#666;
+}
+.zcWm>a:hover{
+  color:#ff6600;
+}
+.otherFg{
+  padding-top: 15px;
+  height:16px;
+  font-size:16px;
+  text-align: center;
+}
+.fgxD{
+  width:100%;
+  height:1px;
+  background:#dddddd;
+  margin-top:7px;
+}
+.otherFgTxt{
+  width:122px;
+  height:16px;
+  background:#fff;
+  margin:0 auto;
+  margin-top:-11px;
+  text-align: center;
+}
+.otherLogin{
+  margin:25px 15px 0;
+  height:30px;
+}
+.otherLogin li{
+  float:left;
+  width:30px;
+  height:30px;
+  margin:0 19px;
+  background-size: 30px 30px;
+}
+.WcChatL{
+  background:url('images/WeChatIcon.png');
+}
+.WcChatL:hover{
+  background:url('images/WeChatIconActive.png');
+}
+.QQL{
+  background:url('images/QQIcon.png');
+}
+.QQL:hover{
+  background:url('images/QQIconActive.png');
+}
+.TWL{
+  background:url('images/TWIcon.png');
+}
+.TWL:hover{
+  background:url('images/TWIconActive.png');
+}
+.SinaL{
+  background:url('images/SinaIcon.png');
+}
+.SinaL:hover{
+  background:url('images/SinaIconActive.png');
+}
+.sj{
+  display: none;
+}
+/*登陆框部分结束*/

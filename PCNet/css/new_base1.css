@@ -1,0 +1,252 @@
+*{
+  font-family: '微软雅黑';
+  margin:0;
+  padding:0;
+  outline: none;
+}
+body{
+  background: #f5f5f5;
+}
+.clr{
+  clear: both;
+}
+.clrDiv{
+  clear: both;
+  width:0;
+  height:0;
+  display: block;
+  content: '';
+}
+.cur_pointer{
+  cursor:pointer;
+}
+.line_block{
+  display: inline-block;
+}
+.width1200{
+  width:1200px;
+  min-width:1200px;
+  margin:0 auto;
+  position: relative;
+}
+.width100{
+  width:100%;
+  min-width:1200px;
+}
+.coloraaa{
+  color:#aaa;
+}
+.paddingR0{
+  padding-right:0!important;
+}
+.paddingR30{
+  padding-right:30;
+}
+.paddingL0{
+  padding-left:0!important;
+}
+.paddingR0{
+  padding-left:0!important;
+}
+.paddingL30{
+  padding-left:30px;
+}
+.paddingL15{
+  padding-left:15px!important;
+}
+.paddingR15{
+  padding-right:15px!important;
+}
+.paddingL14{
+  padding-left:14px!important;
+}
+.paddingR14{
+  padding-right:14px!important;
+}
+.marginR0{
+  margin-right:0px!important;
+}
+.borderRn{
+  border-right:none!important;
+}
+.borderBn{
+  border-bottom:none!important;
+}
+.Left0{
+  left:0!important;
+}
+.colorff6600{
+  color:#ff6600;
+}
+.colorff6600_1{
+  color:#ff6600!important;
+}
+.colorf58243{
+  color:#f58243;
+}
+.bgf97a3f{
+  background:#f97a3f;
+}
+.colorfff{
+  color:#fff;
+}
+.color333{
+  color:#333!important;
+}
+.color666{
+  color:#666;
+}
+.color999{
+  color:#999;
+}
+.bgFFF{
+  background: #fff!important;
+}
+.bgF5F5F5{
+  background:#f5f5f5!important;
+}
+.bgff6600{
+  background: #ff6600;
+}
+.bg8ed351{
+  background: #8ed351;
+}
+.borderNone{
+  border:none!important;
+}
+.floor_tit{
+  height:33px;
+  font-size:25px;
+  color:#333;
+  font-weight: bold;
+  text-align: center;
+}
+.borderF{
+  border:1px solid #fff;
+}
+.font20{
+  font-size: 20px;
+  margin:0 3px;
+}
+.traffic_div_header,.broadband_div_header,.G4_div_header,.mobileNumber_div_header{
+  padding-top:25px;
+  line-height:38px;
+}
+.floor_tit3_div,.floor_tit4_div{
+  width:100%;
+  height:24px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color:#666;
+}
+.textLeft{
+  text-align: left!important;
+}
+.textLeft{
+  text-align: left!important;
+}
+.transAni{
+  .-webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+
+/*橙色浮层样式*/
+
+.lx_jx_pro_ul>li:hover .orage_fc_div,.traffic_ul2>li:hover .orage_fc_div,
+.broadband_ul2>li:hover .orage_fc_div,.G4_ul2>li:hover .orage_fc_div,.phone_ul1_li1:hover .orage_fc_div,
+.phone_ul2_li2:hover .orage_fc_div,.InternetCard_ul>li:hover .orage_fc_div{
+  height:100px;
+}
+.orage_fc_div{
+  width:100%;
+  height:0;
+  position: absolute;
+  bottom:0;
+  left:0;
+  overflow: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.orage_fc_bg{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: #ff6600;
+  opacity: 0.8;
+}
+.collectDiv{
+  position: relative;
+  height:29px;
+  padding:0 15px;
+  border-bottom:1px solid #fda970;
+}
+.collect_icon1,.shoppingCar2{
+  height:17px;
+  margin-top:7px;
+  cursor:pointer;
+}
+.collect_icon2{
+  position: absolute;
+  bottom:5px;
+  left:15px;
+  cursor:pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+   -webkit-transition: -webkit-transform 1s;
+   transition: -webkit-transform 1s;
+   transition: transform 1s;
+   transition: transform 1s,-webkit-transform 1s;
+}
+.shoppingCar3{
+  position: absolute;
+  bottom:5px;
+  right:15px;
+  cursor:pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+   -webkit-transition: -webkit-transform 1s;
+   transition: -webkit-transform 1s;
+   transition: transform 1s;
+   transition: transform 1s,-webkit-transform 1s;
+}
+.traffic_ul1 li:hover .collect_icon2,.broadband_top:hover .collect_icon2,.G4_ul1>li:hover .collect_icon2
+,.G4_ul1>li:hover .shoppingCar3{
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.orage_fc_nr{
+  position:relative;
+  padding-top:7px;
+  padding-left:20px;
+}
+.orage_fc_nr>li{
+  height:18px;
+  line-height: 18px;
+  font-size: 12px;
+  color:#fff;
+  text-align: left;
+}
+.round2{
+  float:left;
+  display: inline-block;
+  margin:7px 10px 0 0 ;
+  width:4px;
+  height:4px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}

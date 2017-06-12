@@ -1,0 +1,279 @@
+.headmainContaner{
+    		background: #fff;
+    		margin:0 auto;
+    	}
+    	.headerContaner{
+    		background: #333333;
+    	}
+    	.header1{
+    		width: 1200px;
+    		margin:0 auto;
+    	}
+    	.body-model{
+ 			width: 1200px;
+ 			margin:0 auto;
+ 		}
+ 		.Breadcrumbs-Box{
+ 			height:42px;
+ 			width: 100%;
+ 			line-height: 0.42px;
+ 			font-size: 12px;
+ 			color: #333;
+ 		}
+ 		.Breadcrumbs-Box ul{
+ 			overflow: hidden;
+ 			height: 100%;
+ 			line-height: 42px;
+ 		}
+ 		.Breadcrumbs-Box ul li{
+ 			float: left;
+ 			height: 100%;
+ 			background: url(./images/BreadcrumbsIcon.jpg) no-repeat;
+ 			background-position: right;
+ 			padding-right: 15px;
+ 			text-align: left;
+ 			padding-left: 2px;
+ 		}
+ 		.Breadcrumbs-Box ul li:last-child{
+ 			background: none;
+ 		}
+
+ 		.bgNone{
+			background: none;
+ 		}
+
+ 		.slideBox{
+ 			width: 1200px;
+ 			margin:0 auto;
+ 			position: relative;
+ 		}
+ 		.slideBox .hd{
+ 			position: absolute;
+ 			bottom: 10px;
+ 			background: ;
+ 			
+ 			z-index: 10;
+ 			width: 100%;
+ 		}
+ 		.slideBox .hd .on{
+ 			background: #fff;
+ 		}
+ 		.slideBox .hd ul{
+ 			overflow: hidden;
+ 			text-align: center;
+ 		}
+ 		.slideBox .hd li{
+ 			border:1px solid #fff;
+ 			height: 14px;
+ 			width: 14px;
+ 			border-radius: 7px;
+ 			display: inline-block;
+
+ 		}
+ 		.mainshow-model{
+ 			background: #fff;
+ 			width: 1200px;
+ 			margin:0 auto;
+ 		}
+ 		.flowsPackgeShowBox{
+ 			font-size: 12px;
+ 			color: #666;
+ 			text-align: center;
+ 			overflow: hidden;
+ 			width: 1116px;
+ 			margin:0 auto;
+ 			border-bottom:1px solid #f5f5f5;
+ 		}
+ 		.flowsPackgeShowBox li{
+ 			float: left;
+ 			padding-top: 14px;
+ 			padding-bottom: 14px;
+ 			margin-left: 16px;
+ 		}
+ 		.flowsPackgeShowBox ul{
+ 			height: 100%;
+ 			overflow: hidden;
+ 			float: right;
+ 		}
+ 		.flowsPackgeShowBox .packageBox{
+ 			background: url(./images/circleAgle.png) no-repeat;
+ 			width: 96px;
+ 			height: 24px;
+ 			line-height:24px;
+ 		}
+ 		.flowsPackgeShowBox .packageBox img{
+ 			vertical-align: text-top;
+ 			height: 18px;
+ 			width: 16px;
+ 		}
+ 		.changeOptionBox{
+ 			width: 1116px;
+ 			margin:0 auto;
+ 		}
+ 		.typeOption .optionName{
+ 			font-size: 14px;
+ 			color: #999;
+ 			float: left;
+ 			height: 26px;
+ 			line-height: 26px;
+ 		}
+ 		.typeOption{
+ 			padding-bottom: 20px;
+ 		}
+ 		.typeOption li{
+ 			color: #333;
+ 			font-size: 14px;
+ 			padding-left: 20px;
+ 			float: left;
+ 			height: 26px;
+ 			line-height: 22px;
+ 			cursor: pointer;
+ 			position: relative;
+ 		}
+ 		.typeOption li:hover{
+ 			color: #ff5f02;
+ 		}
+ 		.typeOption li div{
+ 			padding:0 15px;
+ 		}
+ 		.typeOption li .on{
+ 			border: 1px solid #ff5f02;
+ 			border-radius: 11px;
+ 			color: #ff5f02;
+ 		}
+ 		.typeOption ul{
+ 			
+ 		}
+ 		.changeOptionBox{
+ 			padding-top: 27px;
+ 			border-bottom: 1px solid #f5f5f5;
+ 		}
+ 		.typeOption .recommendIcon{
+ 			position: absolute;
+ 			z-index:10;
+ 			right: -10px;
+    		top: -14px;
+    		width: 42px;
+    		height: 24px;
+ 		}
+ 		.detailItemOptionShow{
+ 				width: 1116px;
+ 				margin:0 auto;
+ 				padding-top: 44px;
+ 				border-bottom:1px dashed #f5f5f5;
+ 			}
+ 			.detailItemOptionShow li{
+ 				margin-right: 110px;
+ 				float: left;
+ 				margin-bottom: 43px;
+ 			}
+ 			.detailItemOptionShow li:last-child{
+ 				margin-right: 0;
+ 			}
+ 			.lyout-table{
+ 				display: table;
+ 			}
+ 			.lyout-cell{
+ 				display: table-cell;
+ 			}
+ 			.detailItemBox dl{
+ 				display: table;
+ 				width: 296px;
+ 			}
+ 			.detailItemBox dl dt h3{
+ 				font-size: 16px;
+ 				color: #333;
+ 				font-weight: bold;
+ 				position: relative;
+ 			}
+ 			.detailItemBox dl dt{
+ 				padding-left: 12px;
+ 			}
+ 			.detailItemBox dl dd img{
+ 				width: 100px;
+ 				height: 100px;
+ 			}
+ 			.detailItemBox dl dt .itemIntro{
+ 				color: #999;
+ 				font-size: 12px;
+ 				padding-top: 12px;
+ 				padding-bottom: 12px;
+ 				height: 36px;
+ 				overflow: hidden;
+ 			}
+ 			.detailItemBox dl dt .itemIntro a{
+ 				color: #ff7744;
+ 				font-size: 12px;
+ 			}
+ 			.detailItemBox dl dt .cost{
+ 				color: #ff7744;
+ 				font-size: 14px;
+ 			}
+ 			.detailItemBox dl dt .itemrecomment{
+ 				position: absolute;
+ 				right: 20px;
+    			top: -16px;
+ 			}
+ 			.pagionBox{
+ 				padding-top: 38px;
+ 				padding-bottom: 38px;
+ 				text-align: center;
+
+ 			}
+ 			.pagionBox .currentPage{
+ 				font-size: 12px;
+ 				color: #666666;
+ 				display: inline;
+ 			}
+ 			.pagionBox .currentPage span{
+ 				color: #ff5f02;
+ 			}
+ 			.pagionBox .showPageItems{
+ 				display: inline;
+
+ 			}
+ 			.pagionBox .totalPage{
+ 				font-size: 12px;
+ 				color: #666666;
+ 				display: inline;
+ 				padding-left: 15px;
+ 			}
+ 			.pagionBox .pageItems{
+ 				display: inline-block;
+ 				height: 34px;
+ 				line-height: 34px;
+ 				text-align: center;
+ 				padding-left: 25px;
+ 			}
+ 			.pagionBox .pageItems .indexPage,.lastPage{
+ 				font-size: 14px;
+ 				color: #999;
+ 				background: #efeff1;
+ 				border:1px solid #cccccc;
+ 				display: inline-block;
+ 				width: 56px;
+ 				cursor: pointer;
+ 			}
+ 			.lastPage:active{
+ 				background: #a4a4a4 !important;
+ 				color: #fff !important;
+ 			}
+
+ 			.indexPage:active{
+ 				background: #a4a4a4 !important;
+ 				color: #fff !important;
+ 			}
+ 			.pagionBox .pageItems .pageOption,.prePage,.nextPage{
+ 				font-size: 14px;
+ 				color: #999;
+ 				background: #efeff1;
+ 				border:1px solid #cccccc;
+ 				display: inline-block;
+ 				width: 34px;
+ 				cursor: pointer;
+ 			}
+ 			.onpage{
+ 				background: #ff5f02 !important;
+ 				color: #fff !important;
+ 				border:none !important;
+ 			}
