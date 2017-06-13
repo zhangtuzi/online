@@ -118,6 +118,7 @@ body{
   height:33px;
   font-size:25px;
   color:#333;
+  line-height: 33px!important;
   font-weight: bold;
   text-align: center;
 }

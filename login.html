@@ -118,78 +118,164 @@
       <!-- 登陆框部分开始 -->
       <div class="loginDiv">
         <div class="mmEwmqh"></div>
-        <ul class="loginStyle">
-          <li class="colorff6600 fwLogin">服务密码登录</li>
-          <li class="borderRn sjLogin">随机码登录</li>
-        </ul>
-        <div class="errorDiv">
-          <img src="images/login/WarnIcon.png" class="errorIcon fl">
-          <p class="errorTxt fl">请填写正确的手机密码</p>
-        </div>
-        <div class="inputDiv marginT5">
-          <img src="images/login/userIcon.png" class="loginIcon">
-          <input type="text" class="inputLogin userNumber color999" value="手机号码/邮箱/固网（无区号）">
-          <img src="images/login/delIcon.png" class="userNumberClear">
-          <ul class="userNumbTip">
-            <li class="userNumbTipSel">13387967888</li>
-            <li>13387967888</li>
-            <li>13387967888</li>
-            <li>13387967888</li>
-            <li>13387967888</li>
-            <div class="userNumbTipClear"><a href="###">清空历史记录</a></div>
+        <div class="mmLoginDiv">
+          <ul class="loginStyle">
+            <li class="colorff6600 fwLogin">服务密码登录</li>
+            <li class="borderRn sjLogin">随机码登录</li>
           </ul>
-        </div>
-        <div class="inputDiv areaDivs borderNone marginT10">
-          <div class="numberStyle">
-            <div class="numberStyleTxt">
-              <span>固话</span>
-              <img src="images/login/undownIcon.png" class="numberStyleUD">
-            </div>
-            <ul class="numberStyleUL">
-              <li class="userNumbTipSel">固话</li>
-              <li>小灵通</li>
-              <li>宽带</li>
+          <div class="errorDiv">
+            <img src="images/login/WarnIcon.png" class="errorIcon fl">
+            <p class="errorTxt fl">请填写正确的手机密码</p>
+          </div>
+          <div class="inputDiv marginT5">
+            <img src="images/login/userIcon.png" class="loginIcon">
+            <input type="text" class="inputLogin userNumber color999" value="手机号码/邮箱/固网（无区号）">
+            <img src="images/login/delIcon.png" class="userNumberClear">
+            <ul class="userNumbTip">
+              <li class="userNumbTipSel">13387967888</li>
+              <li>13387967888</li>
+              <li>13387967888</li>
+              <li>13387967888</li>
+              <li>13387967888</li>
+              <div class="userNumbTipClear"><a href="###">清空历史记录</a></div>
             </ul>
           </div>
-          <div class="areaDiv">
-            <input type="text" class="areaInput color999" value="地市（中文/拼音）">
+          <div class="inputDiv areaDivs borderNone marginT10" data-class="">
+            <div class="numberStyle">
+              <div class="numberStyleTxt">
+                <span>固话</span>
+                <img src="images/login/undownIcon.png" class="numberStyleUD">
+              </div>
+              <ul class="numberStyleUL">
+                <li class="userNumbTipSel">固话</li>
+                <li>小灵通</li>
+                <li>宽带</li>
+              </ul>
+            </div>
+            <div class="areaDiv">
+              <input type="hidden" name="arrcityWord" id="arrcityWord" value=" ">
+              <input type="hidden" id="areaCode" name="areaCode" value="">
+              <input type="text" class="areaInput color999" id="arrcity" data-value="地市（中文/拼音）" value="地市（中文/拼音）" autocomplete="off">
+            </div>
+            <div class="hotcity" id="hotCity">
+              <div class="hotcity-hotel" id="hotcity-hotel"><strong>热门</strong><label class="htc_tips">（更多城市可直接搜索）</label><span class="close-ico"><i>X</i></span></div>
+              <div class="b_hct_lst" style="display: block;">
+                <dl class="e_hct_lst">
+                  <dt></dt>
+                  <dd>
+                    <ul>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">北京</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">上海</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">广州</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">深圳</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">成都</a></li>
+                      <li class="marginR0"><a href="javascript:void(0);" class="js-hotcitylist">杭州</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">武汉</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">西安</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">重庆</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">青岛</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">长沙</a></li>
+                      <li class="marginR0"><a href="javascript:void(0);" class="js-hotcitylist">南京</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">北京</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">上海</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">广州</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">深圳</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">成都</a></li>
+                      <li class="marginR0"><a href="javascript:void(0);" class="js-hotcitylist">杭州</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">武汉</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">西安</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">重庆</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">青岛</a></li>
+                      <li><a href="javascript:void(0);" class="js-hotcitylist">长沙</a></li>
+                      <li class="marginR0"><a href="javascript:void(0);" class="js-hotcitylist">南京</a></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="suggestcity" id="suggestCity" style="display: none;">
+              <div id="scrollDiv">
+                <ul>
+                  <li class="ac" rel=" ">
+                    <a href="javascript:void();" rel="上海" id="310"><label class="inputlabel">s</label>hanghai(上海)</a>
+                  </li>
+                  <li class="ac" rel=" "><a href="javascript:void();" rel="沈阳" id="910"><label class="inputlabel">s</label>henyang(沈阳)</a></li>
+                  <li class="ac ac_over" rel=" "><a href="javascript:void();" rel="石家庄" id="188"><label class="inputlabel">s</label>hijiazhuang(石家庄)</a></li>
+                  <li class="ac" rel=" "><a href="javascript:void();" rel="朔州" id="199"><label class="inputlabel">s</label>huozhou(朔州)</a></li>
+                  <li class="ac" rel=" "><a href="javascript:void();" rel="商丘" id="768"><label class="inputlabel">s</label>hangqiu(商丘)</a></li>
+                  <li class="ac" rel=" "><a href="javascript:void();" rel="三门峡" id="772"><label class="inputlabel">s</label>anmenxia(三门峡)</a></li>
+                  <li class="ac" rel=" "><a href="javascript:void();" rel="四平" id="903"><label class="inputlabel">s</label>iping(四平)</a></li>
+                  <li class="ac" rel=" "><a href="javascript:void();" rel="松原" id="904"><label class="inputlabel">s</label>ongyuan(松原)</a></li>
+                  <li class="ac" rel=" "><a href="javascript:void();" rel="绥化" id="989"><label class="inputlabel">s</label>uihua(绥化)</a></li>
+                  <li class="ac" rel=" "><a href="javascript:void();" rel="双鸭山" id="994"><label class="inputlabel">s</label>huangyashan(双鸭山)</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <div class="inputDiv marginT10 fw">
+            <img src="images/login/passwordIcon.png" class="loginIcon">
+            <input type="text" class="inputLogin fwPassword color999" value="服务密码">
+          </div>
+          <div class="inputDiv marginT10 sjpasswordDiv sj">
+            <input type="text" class="inputLogin sjpassword color999" value="随机密码">
+            <span class="sjmClick">获取随机码</span>
+          </div>
+          <div class="inputDiv marginT10 picYzmDiv">
+            <input type="text" class="inputLogin picYzm color999" value="图片验证码">
+            <img src="images/login/PicYzIcon.png" class="PicYz">
+          </div>
+          <div class="loginSubmit bgff6600">登录</div>
+          <p class="zcWm">
+            <a href="###" class="fl">注册</a>
+            <a href="###" class="fr">忘记密码？</a>
+          </p>
+          <div class="otherFg color666">
+            <div class="fgxD"></div>
+            <div class="otherFgTxt">其他登录方式</div>
+          </div>
+          <ul class="otherLogin">
+            <a href="###"><li class="WcChatL"></li></a>
+            <a href="###"><li class="QQL"></li></a>
+            <a href="###"><li class="TWL"></li></a>
+            <a href="###"><li class="SinaL"></li></a>
+          </ul>
         </div>
-        <div class="inputDiv marginT10 fw">
-          <img src="images/login/passwordIcon.png" class="loginIcon">
-          <input type="text" class="inputLogin fwPassword color999" value="服务密码">
+        <div class="ewmLoginDiv">
+            <p class="ewmTit colorff6600">扫码登录</p>
+            <img src="images/login/smdlEWM.png" class="smdlEWM">
+            <div class="ewmPicDiv">
+              <img src="images/login/EWMIcon2.png" class="ermLPic">
+              <div class="smMC"></div>
+              <div class="smResult smFail">
+                <p class="smResultTip1 marginT40">扫码失败</p>
+                <div class="smReLoad">刷新</div>
+              </div>
+              <div class="smResult smSucced">
+                <img src="images/login/successIcon.png" class="smSucPic">
+                <p class="smResultTip1">扫码成功</p>
+              </div>
+            </div>
+            <p class="smTip">请使用联通手机客户端扫码</p>
+            <ul class="smTip2">
+              <li class="paddingR20 borderR1"><span class="ewmHelp">帮助</span></li>
+              <li class="paddingL20"><span>下载客户端</span></li>
+            </ul>
         </div>
-        <div class="inputDiv marginT10 sjpasswordDiv sj">
-          <input type="text" class="inputLogin sjpassword color999" value="随机密码">
-          <span class="sjmClick">获取随机码</span>
-        </div>
-        <div class="inputDiv marginT10 picYzmDiv fw">
-          <input type="text" class="inputLogin picYzm color999" value="图片验证码">
-          <img src="images/login/PicYzIcon.png" class="PicYz">
-        </div>
-        <div class="loginSubmit bgff6600">登录</div>
-        <p class="zcWm">
-          <a href="###" class="fl">注册</a>
-          <a href="###" class="fr">忘记密码？</a>
-        </p>
-        <div class="otherFg color666">
-          <div class="fgxD"></div>
-          <div class="otherFgTxt">其他登录方式</div>
-        </div>
-        <ul class="otherLogin">
-          <a href="###"><li class="WcChatL"></li></a>
-          <a href="###"><li class="QQL"></li></a>
-          <a href="###"><li class="TWL"></li></a>
-          <a href="###"><li class="SinaL"></li></a>
-        </ul>
       </div>
-
       <!-- 登陆框部分结束 -->
 
+
+
+      
     </div>
     <!-- banner图部分结束 -->
     <!-- js引入 -->
-    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/aircity.js"></script>
+    <script type="text/javascript" src="js/cityAutoComplete.js"></script>
+    <script type="text/javascript" src="js/suggest.js"></script>
+    <script type="text/javascript" src="js/loginmailsuggest.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
   </body>
 </html>

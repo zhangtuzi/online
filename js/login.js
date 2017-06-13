@@ -149,6 +149,31 @@ $('.userNumber').blur(function(){
   }
 })
 
+$('.loginSubmit').click(function(){
+  if(fwpassword){
+      $('.picYzmDiv').show();
+      $('.errorDiv').animate({'height':'15px'},200);
+      $('.errorTxt').text('账号或者密码输入有误');
+  }
+})
+
+$('.fwPassword,.sjpassword').focus(function(){
+    $(this).prop('type','password');
+})
+$('.fwPassword').blur(function(){
+  var this_val=$(this).val();
+  if(this_val==''||this_val=='服务密码'){
+    $(this).prop('type','text');
+  }
+})
+$('.sjpassword').blur(function(){
+  var this_val=$(this).val();
+  if(this_val==''||this_val=='随机密码'){
+    $(this).prop('type','text');
+  }
+})
+
+
 $('.userNumberClear').click(function(){
   $(this).hide();
   $('.userNumber').val('');
@@ -175,22 +200,108 @@ $('.sjmClick').click(function(){
 })
 
 $('.fwLogin').click(function(){
+  $('.errorDiv').animate({'height':'0px'},200);
+  $(this).addClass('colorff6600');
+  $('.sjLogin').removeClass('colorff6600');
   $('.fw').show();
-  $('.sj').hide();
+  $('.sj,.picYzmDiv').hide();
   fwpassword=true;
 })
 $('.sjLogin').click(function(){
+  $('.errorDiv').animate({'height':'0px'},200);
+  $(this).addClass('colorff6600');
+  $('.fwLogin').removeClass('colorff6600');
   $('.sj').show();
-  $('.fw').hide();
+  $('.fw,.picYzmDiv').hide();
   fwpassword=false;
   $('.userNumbTip').hide();
   $('.userNumber').val('手机号码/邮箱/固网（无区号）').addClass('color999');
   $('.areaDivs').slideUp(400);
 })
 $('.mmEwmqh').click(function(){
-  if($(this).hasClass('mmEwmqh1')){
+  if($(this).hasClass('mmEwmqh1')){//切换为密码登陆
     $(this).removeClass('mmEwmqh1');
-  }else{
+    $('.mmLoginDiv').show();
+    $('.ewmLoginDiv').hide();
+  }else{//切换为二维码登陆
     $(this).addClass('mmEwmqh1');
+    $('.mmLoginDiv').hide();
+    $('.ewmLoginDiv').show();
+    clearInterval(ewmSet);
+    ewmsm();
   }
 })
+
+// 二维码刷新按钮
+$('.smReLoad').click(function(){
+  $('.smFail,.smMC').hide();
+  ewmsm();
+})
+
+// 二维码定时过期
+var ewm_i=10;
+var ewmSet;
+function ewmsm(){
+  ewmSet=setInterval(function(){
+      if(ewm_i<1){
+        clearInterval(ewmSet);
+        $('.smFail,.smMC').show();
+        ewm_i=10;
+      }
+      ewm_i--;
+  },1000)
+}
+
+$('.ewmHelp').mouseover(function(){
+  $('.smdlEWM').addClass('smdlEWM1');
+}).mouseout(function(){
+  $('.smdlEWM').removeClass('smdlEWM1');
+})
+
+
+$("#arrcity").suggest(citys,{
+    hot_list:commoncitys,
+    dataContainer:'#arrcityWord',
+    attachObject:'#suggestCity',
+    hotObject:'#hotCity',
+    hintText:$("#arrcity").attr("data-value"),
+    maxItems:10,
+    hideCode:'#areaCode',
+    change:function(){
+
+    }
+  });
+
+  $("#arrcity").blur(function(){
+    var this_val=$(this).val();
+    if(this_val==''||this_val=='地市（中文/拼音）'){
+      $(this).addClass('color999');
+    }else{
+      $(this).removeClass('color999');
+    }
+
+  }).keydown(function(e){
+    var currKey=0,e=e||event; currKey=e.keyCode||e.which||e.charCode;
+    if(currKey==32){
+      return false;
+    }
+    var _this=$(this),datav=_this.attr("data-value"),val=_this.val();
+    if(val==datav)_this.val("").addClass('color999');
+  });
+    $(".js-hotcitylist").mouseover(function(){
+      $(this).addClass("htc-hover");
+    }).mouseout(function(){
+      $(this).removeClass("htc-hover");
+    }).click(function(){
+      var selectedCity = $(this).html().trim();
+      $("#arrcity").val(selectedCity);
+      $("#arrcity").removeClass('color999');
+      for(var i=0;i<citys.length;i++){
+        if (selectedCity ==citys[i][1]){
+          $("#areaCode").val(citys[i][4]);
+          $("#arrcityWord").val(citys[i][0]);
+          break;
+        }
+      }
+      $("#arrcity").focus();
+    });
