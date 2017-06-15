@@ -2446,12 +2446,12 @@
 
 /*safari浏览器兼容*/
 @media screen and (-webkit-min-device-pixel-ratio:0){
-  .suspend_nav1>li>a{
+  /*.suspend_nav1>li>a{
     padding:0 14px
   }
   .width181 .suspend_nav1>li>a{
     padding:0 15px;
-  }
+  }*/
   .suspend_nav1>li>a{
     [;padding:0 14px;]
   }
