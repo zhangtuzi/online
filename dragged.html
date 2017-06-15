@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>拖动测试</title>
+    <style media="screen">
+      h1{
+        text-align: center;
+      }
+      .mx{
+        float:left;
+        width:200px;
+        height:100px;
+        border:1px solid red;
+        margin-right:20px;
+      }
+      .div1{
+        width:100%;
+        height:50%;
+        border-bottom:1px solid #ccc;
+      }
+      .borderR{
+        border-right:1px solid #ccc;
+      }
+      .div2,.div3{
+        float:left;
+        height:50%;
+      }
+      .mx .div2{
+        width:49%;
+      }
+      .div2{
+        width:49%;
+      }
+      .mx .div3{
+        width:66px;
+      }
+      .div3{
+        width:33%;
+      }
+      .mubiao{
+        width:300px;
+        height:200px;
+        border:1px solid green;
+        position: absolute;
+        top:100px;
+        right:100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>拖动测试文件</h1>
+    <div class="mx1 mx" draggable="true">
+      <div class="div1"></div>
+      <div class="div2 borderR"></div>
+      <div class="div2"></div>
+    </div>
+    <div class="mx2 mx" draggable="true">
+      <div class="div1"></div>
+      <div class="div3 borderR"></div>
+      <div class="div3 borderR"></div>
+      <div class="div3"></div>
+    </div>
+
+
+    <div class="mubiao">
+
+    </div>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+    var dragHtml=null;
+      $('.mx').bind('dragstart',function(){
+        dragHtml=$(this).html();
+        $(this).addClass('moveMx');
+        var left1=$(this).offset().left;
+        console.log(left1)
+      }).bind('dragend',function(){
+        var left2=$(this).offset().left;
+        console.log(left2)
+      })
+
+      $('.mubiao').bind('dragenter',function(event){
+        console.log(2)
+      })
+      $('.mubiao').bind('dragover',function(event){
+        console.log(3)
+        event.preventDefault();
+      })
+      $('.mubiao').bind('drop',function(){
+        console.log(4)
+        $(this).html(dragHtml);
+        $('.moveMx').removeClass('moveMx');
+      })
+    </script>
+  </body>
+</html>
