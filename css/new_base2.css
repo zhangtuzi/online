@@ -158,11 +158,11 @@ body{
 
 /*橙色浮层样式*/
 
-.lx_jx_pro_ul>li:hover .orage_fc_div,.traffic_ul2>li:hover .orage_fc_div,
+/*.lx_jx_pro_ul>li:hover .orage_fc_div,.traffic_ul2>li:hover .orage_fc_div,
 .broadband_ul2>li:hover .orage_fc_div,.G4_ul2>li:hover .orage_fc_div,.phone_ul1_li1:hover .orage_fc_div,
 .phone_ul2_li2:hover .orage_fc_div,.InternetCard_ul>li:hover .orage_fc_div{
   height:100px;
-}
+}*/
 .orage_fc_div{
   width:100%;
   height:0;

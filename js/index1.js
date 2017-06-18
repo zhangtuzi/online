@@ -16,7 +16,7 @@ var isName = window.navigator.appName;
 var isSupport = function() {
     if (isName != "Netscape") {
         //isIEhtml
-        
+
         if (isName.indexOf("Microsoft") == 0) {
             var isIE = window.navigator.appVersion.split(";");
             var IeNumber = isIE[1].split('.')[0].toString().substr(5);
@@ -845,4 +845,21 @@ $('.shoppingCar2').click(function(){
   setTimeout(function(){
     $('.spCclick').css('margin-top','7px').removeClass('sp3click');;
   },100)
+})
+
+
+// 靓号专区城市切换
+$('.mobileNumberArea').mouseover(function(){
+    $(this).addClass('ydj');
+    $('.mobileNumberCityUl').show();
+}).mouseout(function(){
+    $(this).removeClass('ydj');
+    $('.mobileNumberCityUl').hide();
+})
+// 靓号专区城市切换选择
+$('.mobileNumberCityUl>li').click(function(){
+  var selCity=$(this).text();
+  $('.mobileNumberCity').text(selCity);
+  $('.mobileNumberCityUl').hide();
+  $('.mobileNumberArea').addClass('ydj');
 })

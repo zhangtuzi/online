@@ -1731,6 +1731,72 @@
 /*4G套餐部分结束*/
 
 /*靓号专场部分开始*/
+.mobileNumber_div_header{
+  position: relative;
+}
+.mobileNumberArea{
+  position: absolute;
+  top:32px;
+  right:50%;
+  margin-right:-150px;
+  display:inline-block;
+  width:72px;
+  height:20px;
+  padding:0 10px;
+  font-size:14px;
+  text-align: center;
+  line-height: 20px!important;
+  cursor: pointer;
+  border:1px solid #ff6600;
+  border-radius:10px;
+}
+.mobileNumberCity{
+  width:60px;
+}
+.mobileNumberArea:hover .downup4{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.downup4{
+  width:11px;
+  height:6px;
+  margin-top:8px!important;
+  transition: .5s 0s all;
+  -webkit-transition: .5s 0s all;
+  -moz-transition: .5s 0s all;
+  -ms-transition: .5s 0s all;
+  -o-transition: .5s 0s all;
+}
+.downup4_tra{
+  transform: rotate(180deg);
+}
+.mobileNumberCityUl{
+  display: none;
+  position: absolute;
+  top:20px;
+  right:0;
+  width:92px;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 10px #ddd;
+  -moz-box-shadow: 0 5px 10px #ddd;
+  -ms-box-shadow: 0 5px 10px #ddd;
+  -o-box-shadow: 0 5px 10px #ddd;
+  box-shadow: 0 5px 10px #ddd;
+}
+.mobileNumberCityUl>li{
+  padding:0 5px;
+  height:20px;
+  line-height: 20px;
+  text-align: left;
+  color:#333;
+}
+.mobileNumberCityUl>li:hover{
+  color:#ff6600;
+}
+
 .mobileNumber_div{
   width:596px;
 }
@@ -2446,12 +2512,12 @@
 
 /*safari浏览器兼容*/
 @media screen and (-webkit-min-device-pixel-ratio:0){
-  .suspend_nav1>li>a{
+  /*.suspend_nav1>li>a{
     padding:0 14px
   }
   .width181 .suspend_nav1>li>a{
     padding:0 15px;
-  }
+  }*/
   .suspend_nav1>li>a{
     [;padding:0 14px;]
   }

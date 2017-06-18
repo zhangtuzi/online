@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/new_base2.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>jqeruy UI 拖拽练习</title>
+    <!--导入jquery插件-->
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <!--导入jqueryUI插件-->
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <style media="screen">
+      .droppable{
+        width:600px;
+        height:600px;
+        position: absolute;
+        top:20px;
+        right:100px;
+        border:1px solid red;
+      }
+      .draggable{
+        width:100px;
+        height:50px;
+        border:1px solid #ccc;
+        cursor:move;
+      }
+      .mainContent{
+        display: none;
+      }
+      .droppable .mainContent1{
+        background:#ccc;
+        color:#fff;
+        border:1px dashed blue;
+      }
+      .mc{
+        width:300px;
+        height:200px;
+        background: rgba(0,0,0,0.5);
+        color:#fff;
+        position: fixed;
+        top:50%;
+        left:50%;
+        margin-top:-100px;
+        margin-left:-150px;
+        z-index: 3;
+        display:none;
+      }
+    </style>
+    <script type="text/javascript">
+    $().ready(function(e) {
+        //拖拽复制体
+        $('div[class^="draggable"]').draggable({
+   		   helper:"clone",
+   		   cursor: "move"
+   		 });
+
+       //拖拽放置
+       $('.droppable').droppable({
+         drop:function(event,ui){
+   				$(this).children().remove();
+   				var source = ui.draggable.next().clone().css('display','block');
+   				source.mouseenter(function () {
+   					$(this).find("img").show();
+   				})
+   				source.mouseleave(function () {
+   				});
+   				$(this).append(source);
+   			}
+       })
+       $('.droppable').delegate('','mouseover',function(e){
+         if($(e.target).parents().hasClass('droppable')&&$(e.target).hasClass('editeTxt')){
+           $('.mainContent1').attr('contenteditable','false').removeClass('mainContent1');
+           $(e.target).addClass('mainContent1');
+         }
+       })
+      $(window).click(function(e){
+        if(!$(e.target).hasClass('editeTxt')){
+          $('.mainContent1').attr('contenteditable','false').removeClass('mainContent1');
+        }
+      })
+      $('.droppable').delegate('','dblclick',function(e){
+        if($(e.target).parents().hasClass('droppable')&&$(e.target).hasClass('editeTxt')){
+          $(e.target).attr('contenteditable','true').focus();
+        }
+      })
+       $('.droppable').delegate('img','dblclick',function(e){
+         $('.mc').show();
+       })
+       $('.mc').bind('click',function(){
+         $(this).hide();
+       })
+     })
+    </script>
+  </head>
+  <body>
+    <div class="draggable">可拖动模块1</div>
+    <div class="mainContent">
+      <div class="mx1 mx1">
+        <div class="div1"></div>
+        <ul class="G4_ul2">
+          <li>
+            <p class="G4_ul2_message1 editeTxt">冰激凌套餐</p>
+            <p class="G4_ul2_message2 editeTxt">精心推荐，加速加量不加价</p>
+            <div class="img_div3">
+              <img src="images/phone_Card_icon2.png" class="phone_icon2">
+              <div class="img_div3s">
+                <img src="images/creamIcon1_zhl.png" class="taocan_style2">
+                <p class="img_div3_message1 editeTxt">存30得120</p>
+                <p class="img_div3_message2 editeTxt">流量通话任性用</p>
+              </div>
+            </div>
+            <div class="pro_style bgff6600">热卖</div>
+            <!-- 橙色浮层部分开始 -->
+            <div class="orage_fc_div">
+              <div class="orage_fc_bg"></div>
+              <div class="collectDiv">
+                <img src="images/collect_icon1_zhl.png" class="collect_icon1 fl">
+                <img src="images/shoppingCar2_zhl.png" class="shoppingCar2 fr">
+              </div>
+              <ul class="orage_fc_nr">
+                <li><span class="round2"></span><span>月付20元</span></li>
+                <li><span class="round2"></span><span>流量语音随便用</span></li>
+                <li><span class="round2"></span><span>超低资费，够省钱</span></li>
+              </ul>
+            </div>
+            <!-- 橙色浮层部分结束 -->
+          </li>
+          <li>
+            <p class="G4_ul2_message1 editeTxt">4G本地套餐</p>
+            <p class="G4_ul2_message2 editeTxt">流量、语音随意组合</p>
+            <div class="img_div3">
+              <img src="images/phone_Card_icon2.png" class="phone_icon2">
+              <div class="img_div3s">
+                <img src="images/local_icon.png" class="taocan_style2">
+                <p class="img_div3_message1 editeTxt">存30得120</p>
+                <p class="img_div3_message2 editeTxt">流量通话任性用</p>
+              </div>
+            </div>
+            <!-- 橙色浮层部分开始 -->
+            <div class="orage_fc_div">
+              <div class="orage_fc_bg"></div>
+              <div class="collectDiv">
+                <img src="images/collect_icon1_zhl.png" class="collect_icon1 fl">
+                <img src="images/shoppingCar2_zhl.png" class="shoppingCar2 fr">
+              </div>
+              <ul class="orage_fc_nr">
+                <li><span class="round2"></span><span>月付20元</span></li>
+                <li><span class="round2"></span><span>流量语音随便用</span></li>
+                <li><span class="round2"></span><span>超低资费，够省钱</span></li>
+              </ul>
+            </div>
+            <!-- 橙色浮层部分结束 -->
+          </li>
+          <li class="fr marginR0">
+            <p class="G4_ul2_message1 editeTxt">4G全国套餐</p>
+            <p class="G4_ul2_message2 editeTxt">全国哪儿用都一样</p>
+            <div class="img_div3">
+              <img src="images/phone_Card_icon2.png" class="phone_icon2">
+              <div class="img_div3s">
+                <img src="images/country_icon.png" class="taocan_style2">
+                <p class="img_div3_message1 editeTxt">存30得120</p>
+                <p class="img_div3_message2 editeTxt">流量通话任性用</p>
+              </div>
+            </div>
+            <!-- 橙色浮层部分开始 -->
+            <div class="orage_fc_div">
+              <div class="orage_fc_bg"></div>
+              <div class="collectDiv">
+                <img src="images/collect_icon1_zhl.png" class="collect_icon1 fl">
+                <img src="images/shoppingCar2_zhl.png" class="shoppingCar2 fr">
+              </div>
+              <ul class="orage_fc_nr">
+                <li><span class="round2"></span><span>月付20元</span></li>
+                <li><span class="round2"></span><span>流量语音随便用</span></li>
+                <li><span class="round2"></span><span>超低资费，够省钱</span></li>
+              </ul>
+            </div>
+            <!-- 橙色浮层部分结束 -->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="draggable">可拖动模块2</div>
+    <div class="mainContent">
+        <div>正式内容1</div>
+        <div>正式内容2</div>
+        <div>正式内容3</div>
+    </div>
+    <div class="draggable">可拖动模块3</div>
+    <div class="mainContent">
+        <div>正式内容4</div>
+        <div>正式内容5</div>
+        <div>正式内容6</div>
+    </div>
+    <div class="droppable">
+
+    </div>
+
+    <div class="mc">我是要进行替换图片的</div>
+  </body>
+</html>

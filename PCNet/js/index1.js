@@ -3,10 +3,20 @@ $(function(){
   Banner.XfNav(win_scTop);
 })
 
+
+// 针对Safari浏览器的单独定义的样式
+if(window.navigator.userAgent.indexOf("Safari") == 0){
+  $('.suspend_nav1>li>a').css({'padding':'0 14px'});
+  $('.width181 .suspend_nav1>li>a').css({'padding':'0 15px'});
+}
+
+
 var isName = window.navigator.appName;
+// 针对ie8以下浏览器的提示
 var isSupport = function() {
     if (isName != "Netscape") {
-        //isIE
+        //isIEhtml
+
         if (isName.indexOf("Microsoft") == 0) {
             var isIE = window.navigator.appVersion.split(";");
             var IeNumber = isIE[1].split('.')[0].toString().substr(5);
@@ -835,4 +845,21 @@ $('.shoppingCar2').click(function(){
   setTimeout(function(){
     $('.spCclick').css('margin-top','7px').removeClass('sp3click');;
   },100)
+})
+
+
+// 靓号专区城市切换
+$('.mobileNumberArea').mouseover(function(){
+    $(this).addClass('ydj');
+    $('.mobileNumberCityUl').show();
+}).mouseout(function(){
+    $(this).removeClass('ydj');
+    $('.mobileNumberCityUl').hide();
+})
+// 靓号专区城市切换选择
+$('.mobileNumberCityUl>li').click(function(){
+  var selCity=$(this).text();
+  $('.mobileNumberCity').text(selCity);
+  $('.mobileNumberCityUl').hide();
+  $('.mobileNumberArea').addClass('ydj');
 })
