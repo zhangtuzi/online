@@ -202,14 +202,13 @@ Body{
   line-height: 30px;
   color:#666;
 }
-.jcMubanDiv,.Add_MubanDiv{
+.jcMubanDiv,.Add_MubanDiv,.Add_MubanDiv1{
   margin-top:20px;
   margin-bottom:20px;
   height:150px;
   text-align: center;
-  position: relative;
 }
-.Add_MubanDiv{
+.Add_MubanDiv,.Add_MubanDiv1{
   height:230px;
 }
 .scrollDiv{
@@ -265,11 +264,11 @@ Body{
 .mukuaiStyle{
   height:175px;
   margin:0 8px;
-  display: none;
+  /*display: none;*/
 }
-.rqtjMokuai{
+/*.rqtjMokuai{
   display: block;
-}
+}*/
 .CardMbUl,.CardMbUl2{
   width:100%;
   clear:both;
@@ -332,4 +331,137 @@ Body{
   position: absolute;
   top:35px;
   left:0;
+}
+
+.moveBg{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background:#000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  /*display:none;*/
+}
+/*.moveArea .moveBg,.moveArea .moveTip1{
+  display:block;
+}*/
+.bg_bk1,.bg_bk2,.bg_bk3,.bg_bk4{
+  position:absolute;
+  width:20px;
+  height:20px;
+}
+.bg_bk1{
+  top:-6px;
+  right:-5px;
+}
+.bg_bk2{
+  bottom:-6px;
+  right:-5px;
+}
+.bg_bk3{
+  bottom:-5px;
+  left:-5px;
+}
+.bg_bk4{
+  top:-6px;
+  left:-5px;
+}
+.moveTip1,.moveTip2{
+  position: absolute;
+  top:15px;
+  left:50%;
+  margin-left:-109px;
+  text-align:center;
+  line-height: 26px;
+  font-size:14px;
+  color:#fff;
+  width:218px;
+  height:26px;
+  background:#ff6600;
+  border-radius: 13px;
+}
+.moveTip2{
+  background:#fe0000;
+}
+
+.cz_btnUl{
+  position: absolute;
+  top:0;
+  left:0;
+}
+.cz_btnUl>li{
+  float:left;
+  height:26px;
+  margin-left:10px;
+  padding:0 4px;
+  line-height: 26px;
+  font-size: 14px;
+  color:#fff;
+  text-align: center;
+  background: #535353;
+}
+.cz_btnIcon{
+  width:14px;
+  height:14px;
+  display: inline-block;
+  margin-top:6px;
+}
+.droppable .mainContent1{
+  background:#cccccc;
+  border:1px dashed #84ccc9;
+}
+
+/*灰色蒙层部分开始*/
+.mc{
+  background: rgba(0,0,0,0.5);
+  color:#fff;
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  z-index: 100;
+  /*display:none;*/
+}
+
+/*弹层部分开始*/
+.tcDiv{
+  position: fixed;
+  top:50%;
+  left:50%;
+  z-index: 150;
+}
+.linkDiv{
+  margin-left:-275px;
+  margin-top:-110px;
+  width:550px;
+  height:220px;
+  background: #fff;
+}
+.tcTop{
+  height:35px;
+  line-height: 35px;
+  font-size:13px;
+  color:#333;
+  padding:0 10px;
+  background: #e4e4e4;
+}
+.colseBtn{
+  color:#000;
+  font-weight: bold;
+  cursor: pointer;
+}
+.linkUl{
+  margin-top:25px;
+  margin-left:45px;
+}
+.linkUl>li{
+  float:left;
+  width:90px;
+  font-size:12px;
 }

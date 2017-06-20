@@ -1283,10 +1283,10 @@
 }
 .lx_jx_pro_img_divs{
   position: absolute;
-  top:0;
+  top:50px;
   left:0;
   width:100%;
-  height:100%;
+  height:40px;
 }
 .lx_jx_pro_img{
   width:140px;
@@ -1307,7 +1307,6 @@
   right:10px;
 }
 .lx_jx_pro_txt1{
-  margin-top:50px;
   font-size:14px;
   color:#333;
   font-weight: bold;
@@ -1678,10 +1677,10 @@
 }
 .img_div3s{
   position:absolute;
-  top:0;
+  top:35px;
   left:0;
   width:100%;
-  height:100%;
+  height:40px;
   text-align: center;
 }
 
@@ -1706,7 +1705,6 @@
   font-size: 14px;
   color: #333;
   font-weight: bold;
-  margin-top: 35px;
 }
 .img_div3_message2{
   margin:3px auto 0;
@@ -2355,7 +2353,6 @@
   position: absolute;
   top:50%;
   margin-top: -170px;
-  z-index: 999;
 }
 .Left_win {
   left:0px;
@@ -2410,7 +2407,6 @@
   height:224px;
   background: #fff;
   border:1px solid #dddddd;
-  z-index: 999;
 }
 
 .Right_Win>li{
