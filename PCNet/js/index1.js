@@ -3,20 +3,10 @@ $(function(){
   Banner.XfNav(win_scTop);
 })
 
-
-// 针对Safari浏览器的单独定义的样式
-if(window.navigator.userAgent.indexOf("Safari") == 0){
-  $('.suspend_nav1>li>a').css({'padding':'0 14px'});
-  $('.width181 .suspend_nav1>li>a').css({'padding':'0 15px'});
-}
-
-
 var isName = window.navigator.appName;
-// 针对ie8以下浏览器的提示
 var isSupport = function() {
     if (isName != "Netscape") {
-        //isIEhtml
-
+        //isIE
         if (isName.indexOf("Microsoft") == 0) {
             var isIE = window.navigator.appVersion.split(";");
             var IeNumber = isIE[1].split('.')[0].toString().substr(5);
@@ -49,9 +39,7 @@ var Banner={
     }
     $('.'+index_ulClass+'>li').eq(0).addClass(''+selectClass+'');//默认第一个圆点选中
   },
-  // 个人信息部分数字的变动动画
   BigSmall:function(ll_bigNumber,ll_smallNumber,ll_Class){
-    //（总数、剩余数（超出为负数）、容器class）
     var change_ll=parseInt((ll_bigNumber-ll_smallNumber)/108);
     var change_i=0;
     var changell=setInterval(function(){
@@ -70,7 +58,6 @@ var Banner={
         }
     },10)
   },
-  // 数组排序1
   ArrayPx1:function(array){
     var array2=[];
     for(var i=0;i<array.length;i++){
@@ -90,7 +77,6 @@ var Banner={
     }
     return array3;
   },
-  // 判断是否数组排序，ie9以下不进行排序
   ArrayPx:function(array){
     if (isName != "Netscape") {
         //isIE
@@ -106,8 +92,6 @@ var Banner={
       return  Banner.ArrayPx1(array);
     }
   },
-
-  // 悬浮导航定位
   XfNav:function(win_ScroTop){
     if(win_ScroTop<140){
       $('.nav_indicate_div').removeClass('nav_indicate_div_xf').css('top',163-win_ScroTop);
@@ -129,9 +113,6 @@ var Banner={
       $('.'+banner_index_ul+'>li').eq(banner_index).addClass(''+bgClass+'');
     }
     $('.'+banner_ul+'').animate({'margin-left':-banner_index*move_width},1000);
-    if(banner_index===banner_length){
-      $('.'+banner_ul+'').css({'margin-left':'0'},1000);
-    }
   },
   //轮播图构造方法
   bannerGz:function(bannerstyle,bannerUl,banner_indexUL){
@@ -183,16 +164,12 @@ function search_lbF(){
 }
 
 
-setTimeout(function(){
-  $('.search_input_div').click(function(){
+$('.search_input_div').click(function(){
   clearInterval(inputse);
   $(this).hide();
   $('.search_input').val('').focus();
 })
-},0)
-
-setTimeout(function(){
-  $('.search_input').blur(function(){
+$('.search_input').blur(function(){
   var this_val=$(this).val();
   if(this_val==''){
     input_s_i=0;
@@ -202,7 +179,7 @@ setTimeout(function(){
     $('.search_input_div').show();
   }
 });
-},0)
+
 
 var win_width=$(window).width();
 // $('.nav_indicate_div').width(win_width);
@@ -352,19 +329,16 @@ function lt_jx_SFun(lt_jx_S_i){
     switch(lt_jx_S_i){
       case 0 :
       $('.jx_rqtjLi').show();
-      $('.jx_cnxhLi,.jx_tszqLi,.jx_xsgLi').hide();
+      $('.jx_cnxhLi,.jx_tszqLi').hide();
       break;
       case 1 :
       $('.jx_tszqLi').show();
-      $('.jx_rqtjLi,.jx_cnxhLi,.jx_xsgLi').hide();
+      $('.jx_rqtjLi,.jx_cnxhLi').hide();
       break;
       case 2 :
       $('.jx_cnxhLi').show();
-      $('.jx_rqtjLi,.jx_tszqLi,.jx_xsgLi').hide();
+      $('.jx_rqtjLi,.jx_tszqLi').hide();
       break;
-      default:
-      $('.jx_xsgLi').show();
-      $('.jx_rqtjLi,.jx_tszqLi,.jx_cnxhLi').hide();
     }
     $('.lx_jx_sx_ul>li').eq(lt_jx_S_i).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
   },5000)
@@ -378,28 +352,18 @@ $('.lx_jx_sx_ul>li').mouseover(function(){
   switch(this_index){
     case 0 :
     $('.jx_rqtjLi').show();
-    $('.jx_cnxhLi,.jx_tszqLi,.jx_xsgLi').hide();
+    $('.jx_cnxhLi,.jx_tszqLi').hide();
     break;
     case 1 :
     $('.jx_tszqLi').show();
-    $('.jx_rqtjLi,.jx_cnxhLi,.jx_xsgLi').hide();
+    $('.jx_rqtjLi,.jx_cnxhLi').hide();
     break;
     case 2 :
     $('.jx_cnxhLi').show();
-    $('.jx_rqtjLi,.jx_tszqLi,.jx_xsgLi').hide();
+    $('.jx_rqtjLi,.jx_tszqLi').hide();
     break;
-    default:
-    $('.jx_xsgLi').show();
-    $('.jx_rqtjLi,.jx_tszqLi,.jx_cnxhLi').hide();
   }
   $(this).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
-}).mouseout(function(){
-  lt_jx_SFun(lt_jx_S_i);
-})
-
-
-$('.lx_jx_pro_ul>li').mouseover(function(){
-  clearInterval(lt_jx_S);
 }).mouseout(function(){
   lt_jx_SFun(lt_jx_S_i);
 })
@@ -438,18 +402,18 @@ function tsMove(tsIndex,tsLiLength,banner_ul,banner_index_ul){
 function srMove(srIndex,srLiLength,banner_ul,banner_index_ul){
   //生日靓号轮播下标，生日靓号轮播长度、生日靓号轮播ul的class，圆点控制的ul的class
   sr_setI=setInterval(function(){
-    // console.log(srLiLength+'.....1')
+    console.log(srLiLength+'.....1')
     if(srIndex<srLiLength){
       srIndex==srIndex;
     }else{
       srIndex=0;
-      $('.srNumber').css('margin-left','0');
+      $('.tsNumber').css('margin-left','0');
     }
-    srIndex++
+    srIndex++;
+    console.log(srIndex+'.....2')
     Banner.banner_move(srIndex,srLiLength,Lh_width,banner_ul,banner_index_ul,'bgff6600');
       //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
       //下方圆点控制的ul的class，下方圆点控制变化的class
-
   },5000)
 }
 function jnrMove(jnrIndex,jnrLiLength,banner_ul,banner_index_ul){
@@ -491,24 +455,6 @@ $('.tsNumber_indexUl>li').mouseover(function(){
   },5000)
 })
 
-// 特色靓号区域鼠标移入暂停，移出继续
-$('.tsNumber').mouseover(function(){
-  $('.mobileNumber_ul2').stop(true,true);
-  clearInterval(ts_setI);
-}).mouseout(function(){
-  ts_setI=setInterval(function(){
-    if(tsIndex<tsLiLength){
-      tsIndex==tsIndex;
-    }else{
-      tsIndex=0;
-      $('.tsNumber').css('margin-left','0');
-    }
-    tsIndex++;
-    Banner.banner_move(tsIndex,tsLiLength,Lh_width,'tsNumber','tsNumber_indexUl','bgff6600')
-      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
-      //下方圆点控制的ul的class，下方圆点控制变化的class
-  },5000)
-})
 // 生日靓号圆点控制
 $('.srNumber_indexUl>li').mouseover(function(){
   $('.mobileNumber_ul2').stop(true,true);
@@ -532,25 +478,6 @@ $('.srNumber_indexUl>li').mouseover(function(){
   },5000)
 })
 
-// 生日靓号区域鼠标移入暂停，移出继续
-$('.tsNumber').mouseover(function(){
-  $('.mobileNumber_ul2').stop(true,true);
-  clearInterval(sr_setI);
-}).mouseout(function(){
-  sr_setI=setInterval(function(){
-    if(srIndex<srLiLength){
-      srIndex==srIndex;
-    }else{
-      srIndex=0;
-      $('.srNumber').css('margin-left','0');
-    }
-    srIndex++;
-    Banner.banner_move(srIndex,srLiLength,Lh_width,'srNumber','srNumber_indexUl','bgff6600')
-      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
-      //下方圆点控制的ul的class，下方圆点控制变化的class
-  },5000)
-})
-
 // 纪念日靓号圆点控制
 $('.jnrNumber_indexUl>li').mouseover(function(){
   $('.mobileNumber_ul2').stop(true,true);
@@ -559,25 +486,6 @@ $('.jnrNumber_indexUl>li').mouseover(function(){
   $('.jnrNumber_indexUl>li').removeClass('bgff6600');
   $('.jnrNumber_indexUl>li').eq(jnrIndex).addClass('bgff6600');
   $('.jnrNumber').animate({'margin-left':-jnrIndex*Lh_width},1000);
-}).mouseout(function(){
-  jnr_setI=setInterval(function(){
-    if(jnrIndex<jnrLiLength){
-      jnrIndex==jnrIndex;
-    }else{
-      jnrIndex=0;
-      $('.jnrNumber').css('margin-left','0');
-    }
-    srIndex++;
-    Banner.banner_move(jnrIndex,jnrLiLength,Lh_width,'jnrNumber','jnrNumber_indexUl','bgff6600')
-      //banner的下标，bannerli的长度，每次运动的长度，bannerul的class，
-      //下方圆点控制的ul的class，下方圆点控制变化的class
-  },5000)
-})
-
-// 纪念日靓号区域鼠标移入暂停，移出继续
-$('.tsNumber').mouseover(function(){
-  $('.mobileNumber_ul2').stop(true,true);
-  clearInterval(jnr_setI);
 }).mouseout(function(){
   jnr_setI=setInterval(function(){
     if(jnrIndex<jnrLiLength){
@@ -817,49 +725,4 @@ $(window).scroll(function(){
     $('.Left_Wul>li>a').removeClass('colorff6600');
     $('.'+TopArray2[4].class1+'').find('a').addClass('colorff6600');
   }
-})
-
-
-// 收藏按钮事件
-$('.collect_icon1,.collect_icon2').click(function(){
-  if($(this).hasClass('ysc')){
-    $(this).removeClass('ysc');
-    $(this).attr('src','images/collect_icon1_zhl.png');
-  }else{
-    $(this).addClass('ysc');
-    $(this).attr('src','images/collect_icon2_zhl.png');
-  }
-})
-
-// 购物车点击跳动事件
-$('.shoppingCar3').click(function(){
-  $(this).addClass('spCclick');
-  $(this).css('bottom','7px');
-  setTimeout(function(){
-    $('.spCclick').css('bottom','5px').removeClass('sp3click');;
-  },100)
-})
-$('.shoppingCar2').click(function(){
-  $(this).addClass('spCclick');
-  $(this).css('margin-top','5px');
-  setTimeout(function(){
-    $('.spCclick').css('margin-top','7px').removeClass('sp3click');;
-  },100)
-})
-
-
-// 靓号专区城市切换
-$('.mobileNumberArea').mouseover(function(){
-    $(this).addClass('ydj');
-    $('.mobileNumberCityUl').show();
-}).mouseout(function(){
-    $(this).removeClass('ydj');
-    $('.mobileNumberCityUl').hide();
-})
-// 靓号专区城市切换选择
-$('.mobileNumberCityUl>li').click(function(){
-  var selCity=$(this).text();
-  $('.mobileNumberCity').text(selCity);
-  $('.mobileNumberCityUl').hide();
-  $('.mobileNumberArea').addClass('ydj');
 })

@@ -3,6 +3,11 @@ jsScroll(document.getElementById('jcMubanDiv'), 5, 'divScrollBar');
 jsScroll(document.getElementById('Add_MubanDiv'), 5, 'divScrollBar1');
 jsScroll(document.getElementById('Add_MubanDiv1'), 5, 'divScrollBar2');
 $('#Add_MubanDiv1,.divScrollBar2').css('display','none');
+// 左侧导航切换
+$('.LeftNavul>li').click(function(){
+  var this_index=$(this).index();
+})
+
 // 联通精选--广告选择模板最右侧一列去掉右边距
 $('.CardMbUl>li,.CardMbUl2>li').each(function(){
   if(($(this).index()+1)%3==0){
@@ -111,9 +116,38 @@ $('.droppable').delegate('img','dblclick',function(e){
   $('.mc').show();
 })
 
+// 编辑链接--链接方式选择
+$('#ProLink').click(function(){
+  $('.linkPro').hide();
+})
+$('#ProSel').click(function(){
+  $('.linkPro').show();
+})
+//清空链接
+$('.linkInputClear').click(function(){
+  $('.linkInput').val('');
+})
 
-
-
+$('.colseBtn').click(function(){
+  $('.tcDiv,.mc').hide();
+})
+//链接弹层关闭
+$('.linkDiv_saveBtn,.linkDiv_cancelBtn').click(function(){
+  $('.linkDiv,.mc').hide();
+})
+$('.linkLi').click(function(){
+  $('.linkDiv,.mc').show();
+})
+//宣传语弹层关闭
+$('.PropagandaDiv_saveBtn,.PropagandaDiv_cancelBtn').click(function(){
+  $('.PropagandaDiv,.mc').hide();
+})
+$('.xuanchuanyuLi').click(function(){
+  $('.PropagandaDiv,.mc').show();
+})
+$('.PropagandaInputClear').click(function(){
+  $('.PropagandaInput').val('');
+})
 
 
 //联通精选部分切换按钮

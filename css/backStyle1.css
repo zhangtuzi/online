@@ -401,6 +401,7 @@ Body{
   color:#fff;
   text-align: center;
   background: #535353;
+  cursor: pointer;
 }
 .cz_btnIcon{
   width:14px;
@@ -426,7 +427,7 @@ Body{
   opacity: 0.6;
   filter: alpha(opacity=60);
   z-index: 100;
-  /*display:none;*/
+  display:none;
 }
 
 /*弹层部分开始*/
@@ -435,13 +436,14 @@ Body{
   top:50%;
   left:50%;
   z-index: 150;
+  background: #fff;
+  display: none;
 }
 .linkDiv{
   margin-left:-275px;
   margin-top:-110px;
   width:550px;
   height:220px;
-  background: #fff;
 }
 .tcTop{
   height:35px;
@@ -457,11 +459,71 @@ Body{
   cursor: pointer;
 }
 .linkUl{
-  margin-top:25px;
+  margin-top:20px;
   margin-left:45px;
+  height:16px;
 }
 .linkUl>li{
   float:left;
   width:90px;
   font-size:12px;
+}
+.linkUl>li label{
+  cursor: pointer;
+}
+.linkinput{
+  margin-top:-2px;
+}
+.linkinputDiv{
+  margin-top:17px;
+  margin-left:60px;
+}
+.linkInput{
+  width:337px;
+  height:24px;
+  border:1px solid #797979;
+}
+.linkPro,.linkInputClear,.clearTXT{
+  margin-left:5px;
+  font-size: 12px;
+  line-height: 26px;
+  color:#0000ff;
+  text-decoration:underline;
+  cursor: pointer;
+}
+.linkPro{
+  display: none;
+}
+.tcbtnDiv{
+  margin:30px 35px 0;
+  padding-top:30px;
+  border-top:1px dashed #ccc;
+  text-align: center;
+}
+.tcBtn{
+  width:68px;
+  height:25px;
+  line-height: 25px;
+  text-align: center;
+  background: #ededed;
+  border:1px solid #333;
+  border-radius: 4px;
+  margin:0 7px;
+  cursor:pointer;
+}
+
+.PropagandaDiv{
+  width:550px;
+  height:270px;
+  margin-top:-135px;
+  margin-left:-275px;
+  font-size:12px;
+  display: none;
+}
+.PropagandaInput{
+  width:337px;
+  height:88px;
+  line-height: 18px;
+  border:1px solid #797979;
+  resize: none;
 }

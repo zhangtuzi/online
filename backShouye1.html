@@ -6,7 +6,7 @@
     <title>联通网上营业厅</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/new_base2.css" />
-    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/backStyle2.css" />
     <link rel="stylesheet" href="css/backStyle1.css" />
   </head>
   <body id="Body">
@@ -1285,19 +1285,19 @@
           <!-- 人气推荐部分结束 -->
           <li class="jx_rqtjLi droppable rqtjMove">
             <ul class="cz_btnUl">
-                <li>
+                <li class="xuanchuanyuLi">
                   <img src="images/backStage/xuanchuan1_icon.png" class="xuanchuanIcon cz_btnIcon">
                   <span>宣传语</span>
                 </li>
-                <li>
+                <li class="linkLi">
                   <img src="images/backStage/href1_icon.png" class="xuanchuanIcon cz_btnIcon">
                   <span>链接</span>
                 </li>
-                <li>
+                <li class="areaLi">
                   <img src="images/backStage/dingwei1_icon.png" class="xuanchuanIcon cz_btnIcon">
                   <span>选区域</span>
                 </li>
-                <li>
+                <li class="delLi">
                   <img src="images/backStage/del1_icon.png" class="xuanchuanIcon cz_btnIcon">
                   <span>删除</span>
                 </li>
@@ -1329,19 +1329,19 @@
           </li>
           <li class="jx_rqtjLi droppable">
             <ul class="cz_btnUl">
-                <li>
+                <li class="xuanchuanyuLi">
                   <img src="images/backStage/xuanchuan1_icon.png" class="xuanchuanIcon cz_btnIcon">
                   <span>宣传语</span>
                 </li>
-                <li>
+                <li class="linkLi">
                   <img src="images/backStage/href1_icon.png" class="xuanchuanIcon cz_btnIcon">
                   <span>链接</span>
                 </li>
-                <li>
+                <li class="areaLi">
                   <img src="images/backStage/dingwei1_icon.png" class="xuanchuanIcon cz_btnIcon">
                   <span>选区域</span>
                 </li>
-                <li>
+                <li class="delLi">
                   <img src="images/backStage/del1_icon.png" class="xuanchuanIcon cz_btnIcon">
                   <span>删除</span>
                 </li>
@@ -3261,7 +3261,7 @@
       </div>
       <ul class="linkUl">
         <li>
-          <input type="radio" name="linkStyle" id="ProLink" class="linkinput">
+          <input type="radio" name="linkStyle" id="ProLink" checked="checked" class="linkinput">
           <label for="ProLink">输入链接</label>
         </li>
         <li>
@@ -3269,15 +3269,62 @@
           <label for="ProSel">选择商品</label>
         </li>
       </ul>
+      <div class="linkinputDiv">
+        <input type="text" class="linkInput">
+        <span class="linkPro">选择商品</span>
+        <span class="linkInputClear">清空</span>
+      </div>
+      <div class="tcbtnDiv">
+          <input type="button" class="linkDiv_saveBtn tcBtn" value="保存">
+          <input type="button" class="linkDiv_cancelBtn tcBtn" value="取消">
+      </div>
     </div>
 
     <!-- 编辑链接弹层部分结束 -->
+
+    <!-- 编辑宣传语部分开始 -->
+    <div class="tcDiv PropagandaDiv">
+      <div class="tcTop">
+        <span class="fl">编辑宣传语</span>
+        <span class="colseBtn fr">X</span>
+      </div>
+      <div class="linkinputDiv">
+        <span class="fl">宣传语：</span>
+        <textarea name="name" rows="3"class="PropagandaInput fl"></textarea>
+        <span class="PropagandaInputClear clearTXT fl">清空</span>
+        <div class="clrDiv"></div>
+      </div>
+      <div class="tcbtnDiv">
+          <input type="button" class="PropagandaDiv_saveBtn tcBtn" value="保存">
+          <input type="button" class="PropagandaDiv_cancelBtn tcBtn" value="取消">
+      </div>
+    </div>
+    <!-- 编辑宣传语部分结束 -->
+
+    <!-- 替换图标-套餐部分开始 -->
+    <div class="tcDiv PropagandaDiv">
+      <div class="tcTop">
+        <span class="fl">替换图标-套餐</span>
+        <span class="colseBtn fr">X</span>
+      </div>
+      <div class="linkinputDiv">
+        <span class="fl">选择图标：</span>
+        <textarea name="name" rows="3"class="PropagandaInput fl"></textarea>
+        <span class="PropagandaInputClear clearTXT fl">清空</span>
+        <div class="clrDiv"></div>
+      </div>
+      <div class="tcbtnDiv">
+          <input type="button" class="PropagandaDiv_saveBtn tcBtn" value="保存">
+          <input type="button" class="PropagandaDiv_cancelBtn tcBtn" value="取消">
+      </div>
+    </div>
+    <!-- 替换图标-套餐部分结束 -->
 
     <!-- js引入 -->
     <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="js/jsScroll.js"></script>
-    <script type="text/javascript" src="js/index2.js"></script>
+    <script type="text/javascript" src="js/backIndex2.js"></script>
     <script type="text/javascript">
     $(function(){
 

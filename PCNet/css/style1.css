@@ -542,7 +542,7 @@
   color:#666;
   border-right:1px solid #eeeeee;
   text-align: left;
-  padding:0 30px;
+  padding:0 20px;
 }
 .Two_nav_ul2{
   margin-top:30px;
@@ -1335,7 +1335,7 @@
 
 .floor_tit3_fg{
   display: inline-block;
-  margin:0 20px;
+  margin:0 12px;
 }
 .floor_tit3_div span:hover{
   color:#ff6600;
@@ -2404,7 +2404,7 @@
 }
 .Left_win1{
   width:74px;
-  height:300px;
+  height:360px;
   background: #fff;
   box-shadow: 0 2px 2px #eeeeee;
 }
@@ -2543,4 +2543,22 @@
   *::-ms-backdrop,.lx_jx_sx_ul>li{
     line-height:20px;
   }
+}
+
+.listBox_header-list3 li{
+float: left;
+width: 50%;
+padding-bottom: 6px;
+}
+.listBox_header-list3>li>a:hover{
+color: #ff6600!important;
+
+cursor: pointer;
+}
+.listBox_header-list3>li>a{
+background: #fcfcfc!important;
+color: #555!important;
+line-height: normal;
+display: block;
+padding-right: 5px;
 }
