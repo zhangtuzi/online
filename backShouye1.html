@@ -1306,7 +1306,7 @@
             <p class="jx_tit2 editeTxt" title="双击可编辑">合约享半价</p>
             <div class="lx_jx_pro_img_div">
               <img src="images/cream_icon1_zhl.jpg" class="lx_jx_pro_img">
-              <img src="images/creamIcon1_zhl.png" class="creamIcon1">
+              <img src="images/creamIcon1_zhl.png" class="creamIcon1 taocanStyleName" title="双击可以编辑">
               <div class="lx_jx_pro_img_divs">
                 <p class="lx_jx_pro_txt1 editeTxt" title="双击可编辑">存30得120</p>
                 <p class="lx_jx_pro_txt2 editeTxt" title="双击可编辑">流量通话任性用</p>
@@ -1350,7 +1350,7 @@
             <p class="jx_tit2 editeTxt" title="双击可编辑">合约享半价</p>
             <div class="lx_jx_pro_img_div">
               <img src="images/llyb_icon1_zhl.jpg" class="lx_jx_pro_img">
-              <img src="images/yb_icon_zhl.png" class="yb_icon1">
+              <img src="images/yb_icon_zhl.png" class="yb_icon1 FlowStyle" title="双击可以编辑">
             </div>
             <div class="orage_fc_div">
               <div class="orage_fc_bg"></div>
@@ -1495,7 +1495,7 @@
             <div class="lx_jx_pro_img_div">
               <img src="images/cream_icon1_zhl.jpg" class="lx_jx_pro_img">
               <div class="lx_jx_pro_img_divs">
-                <img src="images/creamIcon1_zhl.png" class="creamIcon1">
+                <img src="images/creamIcon1_zhl.png" class="creamIcon1 taocanStyleName" title="双击可以编辑">
                 <p class="lx_jx_pro_txt1">存30得120</p>
                 <p class="lx_jx_pro_txt2">流量通话任性用</p>
               </div>
@@ -1519,7 +1519,7 @@
             <p class="jx_tit2">合约享半价</p>
             <div class="lx_jx_pro_img_div">
               <img src="images/llyb_icon1_zhl.jpg" class="lx_jx_pro_img">
-              <img src="images/yb_icon_zhl.png" class="yb_icon1">
+              <img src="images/yb_icon_zhl.png" class="yb_icon1 FlowStyle" title="双击可以编辑">
             </div>
             <div class="orage_fc_div">
               <div class="orage_fc_bg"></div>
@@ -3292,9 +3292,10 @@
         <span class="fl">宣传语：</span>
         <textarea name="name" rows="3"class="PropagandaInput fl"></textarea>
         <span class="PropagandaInputClear clearTXT fl">清空</span>
+        <p class="PropagandaTip1">50字以内。前台用户，鼠标聚焦产品位时，可查阅“宣传语”</p>
         <div class="clrDiv"></div>
       </div>
-      <div class="tcbtnDiv">
+      <div class="tcbtnDiv marginT15">
           <input type="button" class="PropagandaDiv_saveBtn tcBtn" value="保存">
           <input type="button" class="PropagandaDiv_cancelBtn tcBtn" value="取消">
       </div>
@@ -3302,34 +3303,125 @@
     <!-- 编辑宣传语部分结束 -->
 
     <!-- 替换图标-套餐部分开始 -->
-    <div class="tcDiv PropagandaDiv">
+    <div class="tcDiv TariffDiv">
       <div class="tcTop">
         <span class="fl">替换图标-套餐</span>
         <span class="colseBtn fr">X</span>
       </div>
-      <div class="linkinputDiv">
+      <div class="tcPicDiv">
         <span class="fl">选择图标：</span>
-        <textarea name="name" rows="3"class="PropagandaInput fl"></textarea>
-        <span class="PropagandaInputClear clearTXT fl">清空</span>
+        <ul class="picUl fl">
+          <li>
+            <img src="images/creamIcon1_zhl.png" class="taocanPic fl">
+            <span class="taocanName fl">（冰激凌套餐）</span>
+            <img src="images/backStage/selected2.png" class="taocanSelect">
+          </li>
+          <li>
+            <img src="images/creamIcon1_zhl.png" class="taocanPic fl">
+            <span class="taocanName fl">（自由组合套餐）</span>
+          </li>
+          <li>
+            <img src="images/creamIcon1_zhl.png" class="taocanPic fl">
+            <span class="taocanName fl">（全国套餐）</span>
+          </li>
+          <li>
+            <img src="images/creamIcon1_zhl.png" class="taocanPic fl">
+            <span class="taocanName fl">（校园套餐）</span>
+          </li>
+          <li>
+            <img src="images/creamIcon1_zhl.png" class="taocanPic fl">
+            <span class="taocanName fl">（全国组合套餐）</span>
+          </li>
+          <li>
+            <img src="images/creamIcon1_zhl.png" class="taocanPic fl">
+            <span class="taocanName fl">（共享组合套餐）</span>
+          </li>
+          <li>
+            <img src="images/creamIcon1_zhl.png" class="taocanPic fl">
+            <span class="taocanName fl">（本地套餐）</span>
+          </li>
+          <li>
+            <div class="taocanPic fl zdyDiv">
+              <span class="zdyPicState">上传</span>
+              <input type="file" class="zdyInput">
+              <img src="images/backStage/delIcon2.png" class="zdyPicDel">
+            </div>
+            <span class="taocanName fl">（自定义图标）</span>
+          </li>
+          <div class="zdyTips">
+            <p>icon设计规范：</p>
+            <p>1、尺寸：30*30；</p>
+            <p>2、大小：小于2KB；</p>
+          </div>
+        </ul>
         <div class="clrDiv"></div>
+
       </div>
       <div class="tcbtnDiv">
-          <input type="button" class="PropagandaDiv_saveBtn tcBtn" value="保存">
-          <input type="button" class="PropagandaDiv_cancelBtn tcBtn" value="取消">
+          <input type="button" class="TariffDiv_saveBtn tcBtn" value="保存">
+          <input type="button" class="TariffDiv_cancelBtn tcBtn" value="取消">
       </div>
     </div>
     <!-- 替换图标-套餐部分结束 -->
+
+    <!-- 替换图标-流量包部分开始 -->
+    <div class="tcDiv FlowDiv">
+      <div class="tcTop">
+        <span class="fl">替换图标-流量包</span>
+        <span class="colseBtn fr">X</span>
+      </div>
+      <div class="tcPicDiv">
+        <span class="fl">选择图标：</span>
+        <ul class="picUl fl">
+          <li>
+            <img src="images/Day_icon.png" class="taocanPic fl">
+            <span class="taocanName fl">（日包）</span>
+            <img src="images/backStage/selected2.png" class="taocanSelect">
+          </li>
+          <li>
+            <img src="images/Day_icon.png" class="taocanPic fl">
+            <span class="taocanName fl">（月包）</span>
+          </li>
+          <li>
+            <img src="images/Day_icon.png" class="taocanPic fl">
+            <span class="taocanName fl">（半年包）</span>
+          </li>
+          <li>
+            <img src="images/Day_icon.png" class="taocanPic fl">
+            <span class="taocanName fl">（视频包）</span>
+          </li>
+          <li>
+            <img src="images/Day_icon.png" class="taocanPic fl">
+            <span class="taocanName fl">（加油包）</span>
+          </li>
+          <li>
+            <div class="taocanPic fl zdyDiv">
+              <span class="zdyPicState">上传</span>
+              <input type="file" class="zdyInput">
+              <img src="images/backStage/delIcon2.png" class="zdyPicDel">
+            </div>
+            <span class="taocanName fl">（自定义图标）</span>
+          </li>
+          <div class="zdyTips">
+            <p>icon设计规范：</p>
+            <p>1、尺寸：30*30；</p>
+            <p>2、大小：小于2KB；</p>
+          </div>
+        </ul>
+        <div class="clrDiv"></div>
+
+      </div>
+      <div class="tcbtnDiv">
+          <input type="button" class="FlowDiv_saveBtn tcBtn" value="保存">
+          <input type="button" class="FlowDiv_cancelBtn tcBtn" value="取消">
+      </div>
+    </div>
+    <!-- 替换图标-流量包部分结束 -->
 
     <!-- js引入 -->
     <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="js/jsScroll.js"></script>
     <script type="text/javascript" src="js/backIndex2.js"></script>
-    <script type="text/javascript">
-    $(function(){
-
-    })
-    </script>
-
   </body>
 </html>

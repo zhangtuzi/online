@@ -112,8 +112,8 @@ $('.droppable').delegate('','dblclick',function(e){
  }
 })
 $('.droppable').delegate('img','dblclick',function(e){
-  console.log($(e.target))
-  $('.mc').show();
+  // console.log($(e.target))
+  // $('.mc').show();
 })
 
 // 编辑链接--链接方式选择
@@ -145,10 +145,39 @@ $('.PropagandaDiv_saveBtn,.PropagandaDiv_cancelBtn').click(function(){
 $('.xuanchuanyuLi').click(function(){
   $('.PropagandaDiv,.mc').show();
 })
+// 宣传语清空
 $('.PropagandaInputClear').click(function(){
   $('.PropagandaInput').val('');
 })
 
+// 定义套餐选择图片
+var taocanSelectImg='<img src="images/backStage/selected2.png" class="taocanSelect">';
+// 套餐选择/流量包类型选择
+$('.picUl>li').click(function(){
+  $(this).parent().children().find('.taocanSelect').remove();
+  $(this).append(taocanSelectImg);
+})
+// 套餐弹层关闭
+$('.TariffDiv_saveBtn,.TariffDiv_cancelBtn').click(function(){
+  $('.TariffDiv,.mc').hide();
+})
+
+$('.droppable').delegate('img','dblclick',function(e){
+  if($(e.target).hasClass('taocanStyleName')){
+    $('.TariffDiv,.mc').show();
+  }
+})
+
+// 流量包弹层关闭
+$('.FlowDiv_saveBtn,.FlowDiv_cancelBtn').click(function(){
+  $('.FlowDiv,.mc').hide();
+})
+
+$('.droppable').delegate('img','dblclick',function(e){
+  if($(e.target).hasClass('FlowStyle')){
+    $('.FlowDiv,.mc').show();
+  }
+})
 
 //联通精选部分切换按钮
 $('.lx_jx_sx_ul>li').click(function(){
