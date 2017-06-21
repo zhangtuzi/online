@@ -188,7 +188,7 @@ Body{
   -o-box-shadow:15px 0px 25px #e4e4e4;
 }
 .llmbLeft{
-  /*z-index: 3;*/
+  z-index: 1;
 }
 .LeftTip1{
   font-size:12px;
@@ -306,11 +306,10 @@ Body{
   line-height: 43px;
   border:1px solid #d9d9d9;
 }
-
-.mubanMove{
-  position: relative;
-  z-index: 999;
+.mubanTrue{
+  display:none;
 }
+
 /*备份小图标*/
 .beifenDiv{
   width:160px;

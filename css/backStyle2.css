@@ -1090,6 +1090,10 @@
 
 .lx_jx_pro_ul{
   height:208px;
+  display: none;
+}
+.lx_jx_pro_ul:first-child{
+  display: block;
 }
 .lx_jx_pro_ul>li{
   position: relative;
@@ -1107,13 +1111,11 @@
   -o-transition: all .2s linear;
   transition: all .2s linear;
 }
-.lx_jx_pro_ul>li:nth-child(4),.lx_jx_pro_ul>li:nth-child(8),.lx_jx_pro_ul>li:nth-child(12){
+.lx_jx_pro_ul>li:nth-child(4){
   float:right;
   margin-right:0;
 }
-.jx_cnxhLi,.jx_tszqLi{
-  display: none;
-}
+
 
 /*.lx_jx_pro_ul>li:hover{
   -webkit-box-shadow: 0 15px 30px #ddd;
@@ -1130,7 +1132,6 @@
 
 
 .lx_jx_pro_ul>.jx_xsgLi{
-  display: none;
   float:left;
   width:299px;
   height:208px;
