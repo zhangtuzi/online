@@ -178,6 +178,7 @@ Body{
   position: fixed;
   top:50%;
   left:95px;
+  z-index: 2;
   margin-top:-245px;
   background:#fff;
   box-shadow:15px 0px 25px e4e4e4;
@@ -185,6 +186,9 @@ Body{
   -moz-box-shadow:15px 0px 25px #e4e4e4;
   -ms-box-shadow:15px 0px 25px #e4e4e4;
   -o-box-shadow:15px 0px 25px #e4e4e4;
+}
+.llmbLeft{
+  /*z-index: 3;*/
 }
 .LeftTip1{
   font-size:12px;
@@ -215,8 +219,11 @@ Body{
   position: relative;
   width:255px;
 }
-.divScrollBar,.divScrollBar1,.divScrollBar2{position:absolute;top:0!important;right:0;right:0!important;}
-.divScrollBar div,.divScrollBar1 div,.divScrollBar2 div{background-color:#cecece; position:absolute; left:0px; top:0px;border-radius:5px;}
+.divScrollBar,.divScrollBar1,.divScrollBar2,.divScrollBar3,.divScrollBar4,.divScrollBar5,.divScrollBar6
+{position:absolute;top:0!important;right:0;right:0!important;}
+.divScrollBar div,.divScrollBar1 div,.divScrollBar2 div,.divScrollBar3 div,.divScrollBar4 div,.divScrollBar5 div
+,.divScrollBar6 div
+{background-color:#cecece; position:absolute; left:0px; top:0px;border-radius:5px;}
 
 .ltjx_jcmb{
   width:221px;
@@ -245,7 +252,9 @@ Body{
   border:1px solid #d9d9d9;
   cursor: pointer;
 }
-
+.mukuaiUl2>li{
+  width:76px;
+}
 .AdStyle{
   margin-top:10px;
 }

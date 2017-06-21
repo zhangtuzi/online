@@ -1258,7 +1258,7 @@
       <!-- 用户信息下面：查询、办理、交费、客服部分结束 -->
     </div>
     <!-- 用户信息部分结束 -->
-    <div class="width1200">
+    <div class="width1200 droppable">
           <!-- 联通精选部分开始 -->
         <div class="beifenDiv ltjxBeifen">
             <div class="beifenBtn">
@@ -1271,12 +1271,12 @@
             </div>
         </div>
         <div class="lx_jx_header">
-            <p class="floor_tit">联通精选</p>
+            <p class="floor_tit"><span class="editeTxt">联通精选</span></p>
             <ul class="lx_jx_sx_ul colorff6600">
-              <li class="lx_jx_sx_select">人气推荐</li>
-              <li>特色专区</li>
-              <li>猜你喜欢</li>
-              <li>限时抢购</li>
+              <li class="lx_jx_sx_select"><span class="editeTxt">人气推荐</span></li>
+              <li><span class="editeTxt">特色专区</span></li>
+              <li><span class="editeTxt">猜你喜欢</span></li>
+              <li><span class="editeTxt">限时抢购</span></li>
             </ul>
         </div>
 
@@ -3108,7 +3108,197 @@
       </ul>
     </div>
 
-    <div class="LeftMuban">
+    <!-- 联通精选左侧模板部分开始 -->
+    <div class="LeftMuban ltjxLeft">
+      <p class="LeftTip1">选择所需模板,并拖动至相应位置。 </p>
+      <div class="MubanTop">基础模板</div>
+      <div class="scrollDiv">
+        <div class="jcMubanDiv movePar" id="jcMubanDiv1">
+          <img src="images/backStage/muban/ltjx_jcmb1.png" class="ltjx_jcmb mubanMove">
+          <p class="jcMubanName">单品推荐</p>
+          <img src="images/backStage/muban/ltjx_jcmb2.png" class="ltjx_jcmb mubanMove">
+          <p class="jcMubanName">特色专区</p>
+          <img src="images/backStage/muban/ltjx_jcmb2.png" class="ltjx_jcmb mubanMove">
+          <p class="jcMubanName">限时抢购</p>
+          <img src="images/backStage/muban/ltjx_jcmb2.png" class="ltjx_jcmb mubanMove">
+          <p class="jcMubanName">单品推荐</p>
+          <img src="images/backStage/muban/ltjx_jcmb2.png" class="ltjx_jcmb mubanMove">
+          <p class="jcMubanName">特色专区</p>
+          <img src="images/backStage/muban/ltjx_jcmb2.png" class="ltjx_jcmb mubanMove">
+          <p class="jcMubanName">限时抢购</p>
+        </div>
+      </div>
+
+      <div class="MubanTop">广告模板</div>
+      <div class="Add_MubanDiv">
+        <ul class="mukuaiUl mukuaiUl2">
+          <li class="mukuaiLiSele borderRn">人气推荐</li>
+          <li>特色专区</li>
+          <li>限时抢购</li>
+        </ul>
+        <ul class="AdStyle">
+          <li class="AdLiSele">套餐</li>
+          <li>号码</li>
+          <li>流量包</li>
+          <li>手机</li>
+          <li>宽带</li>
+          <li class="borderF1">上网卡</li>
+        </ul>
+        <div class="scrollDiv">
+          <div class="rqtjMokuai mukuaiStyle movePar"  id="Add_MubanDiv2">
+              <ul class="CardMbUl">
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板一</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板二</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板三</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板一</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板二</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板三</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板一</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板二</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板三</p>
+                </li>
+                <li>
+                    <div class="zdyMuban mubanMove">自定义模板</div>
+                    <p class="CardStyleName">自定义</p>
+                </li>
+                <div class="clrDiv"></div>
+              </ul>
+          </div>
+        </div>
+        <div class="scrollDiv">
+          <div class="tszqMokuai mukuaiStyle movePar"  id="Add_MubanDiv3">
+              <ul class="CardMbUl2">
+                <li>
+                    <img src="images/backStage/muban/backYellow.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">黄色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backGreen.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">绿色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backBlue.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">蓝色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backYellow.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">黄色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backGreen.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">绿色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backBlue.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">蓝色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backYellow.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">黄色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backGreen.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">绿色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backBlue.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">蓝色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backYellow.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">黄色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backGreen.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">绿色背景</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/backBlue.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">蓝色背景</p>
+                </li>
+                <div class="clrDiv"></div>
+              </ul>
+          </div>
+        </div>
+        <div class="scrollDiv">
+          <div class="rqtjMokuai mukuaiStyle movePar"  id="Add_MubanDiv4">
+              <ul class="CardMbUl">
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板一</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板二</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板三</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板一</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板二</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板三</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板一</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板二</p>
+                </li>
+                <li>
+                    <img src="images/backStage/muban/cardsMuban.png" class="CardStyle mubanMove">
+                    <p class="CardStyleName">模板三</p>
+                </li>
+                <li>
+                    <div class="zdyMuban mubanMove">自定义模板</div>
+                    <p class="CardStyleName">自定义</p>
+                </li>
+                <div class="clrDiv"></div>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 联通精选左侧模板部分结束 -->
+
+    <!-- 流量专区左侧模板部分开始 -->
+    <div class="LeftMuban llmbLeft">
       <p class="LeftTip1">选择所需模板,并拖动至相应位置。 </p>
       <div class="MubanTop">基础模板</div>
       <div class="scrollDiv">
@@ -3246,6 +3436,8 @@
         </div>
       </div>
     </div>
+    <!-- 流量专区左侧模板部分结束 -->
+
     <!-- 后台左侧导航部分结束 -->
 
     <!-- 灰色蒙层部分开始 -->

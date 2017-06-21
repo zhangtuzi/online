@@ -585,7 +585,7 @@
                                 <li><a href='#'>购机送费</a></li>
                                 <li><a href='#'>招联信用0利息0手续费</a></li>
                                 <li><a href='#'>裸机热卖</a></li>
-                                
+
                                 <li><a href='#'>老用户0元购</a></li>
                               </ul>
                           </li>
@@ -597,7 +597,7 @@
                             <img src="images/phone_td_icon.png" class="kdTwoN_icon fl">
                             <span>特点</span>
                           </li>
-                         
+
                          <li>
                              <ul class='listBox_header-list3'>
                                 <li><a href='#'>4G手机</a></li>
@@ -2972,7 +2972,7 @@
       <img src="images/wo_icon_zhl.png" class="wo_icon1">
       <div class="Left_win1">
         <ul class="Left_Wul">
-          <li class="jx_div_box"><a href="javascript:FloorGo('jx_box');">联通精选</a></li>
+          <li class="jx_box_f"><a href="javascript:FloorGo('jx_box');">联通精选</a></li>
 
           <li class="traffic_div_f"><a href="javascript:FloorGo('traffic_div');">流量/宽带</a></li>
 
@@ -3017,64 +3017,5 @@
     <script type="text/javascript" src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="js/index1.js"></script>
     <script type="text/javascript" src="js/time.js"></script>
-    <script type="text/javascript">
-                        window.onload = function(){
-                            loadInitalHeadList();
-                        }
-                        function equilthight(arr){
-                            var arrItem1 = arr[0].height();
-                            var arrItem2 = arr[1].height();
-                            maxHeight = Math.max(arrItem1,arrItem2);
-                            arr[0].height(maxHeight);
-                            arr[1].height(maxHeight);
-                        }
-                        function loadInitalHeadList(){
-                            $('.nav_indicate_div').css('visibility','hidden');
-                            $('.nav_indicate_div').css('display','block');
-                            putallListIn();
-                            adShowCheck();
-                            $('.nav_indicate_div').removeAttr('style');
-
-                        }
-                        function setheaderListHight(item){
-                            var targetList = item.find('li');
-                            var arr = [];
-                            for(var i =0,j = 0; i < targetList.length; i++){
-                                if(i == (targetList.length -1)){
-                                    console.log('it is last-->');
-                                    break;
-                                }else{
-                                    j++;
-                                    if(j >= 2){
-                                      arr.push(targetList.eq(i));
-                                      equilthight(arr);
-                                      j = 0;
-                                      arr = [];
-                                    }else{
-                                      arr.push(targetList.eq(i));
-                                    }
-                                }
-                            }
-                        }
-                        function putallListIn(){
-                            $('.listBox_header-list3').each(function(index,item){
-                                console.log('itemForeach--->');
-                                var target = $(item);
-                                setheaderListHight(target);
-                            })
-                        }
-
-
-                        function adShowCheck(){
-                            $('.Two_nav_ul1').each(function(index,item){
-                                var itemwidth = $(item).width();
-                                if(itemwidth > 836){
-                                    $(item).find('.recommendPic').parent('li').addClass('dn');
-                                    $(item).siblings('.recommendTC_div').addClass('dn');
-                                }
-                            })
-                        }
-                        //setheaderListHight();
-                    </script>
   </body>
 </html>

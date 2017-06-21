@@ -2,7 +2,15 @@
 jsScroll(document.getElementById('jcMubanDiv'), 5, 'divScrollBar');
 jsScroll(document.getElementById('Add_MubanDiv'), 5, 'divScrollBar1');
 jsScroll(document.getElementById('Add_MubanDiv1'), 5, 'divScrollBar2');
-$('#Add_MubanDiv1,.divScrollBar2').css('display','none');
+jsScroll(document.getElementById('jcMubanDiv1'), 5, 'divScrollBar3');
+jsScroll(document.getElementById('Add_MubanDiv2'), 5, 'divScrollBar4');
+jsScroll(document.getElementById('Add_MubanDiv3'), 5, 'divScrollBar5');
+jsScroll(document.getElementById('Add_MubanDiv4'), 5, 'divScrollBar6');
+// $('#Add_MubanDiv1,.divScrollBar2').css('display','none');
+// $('#Add_MubanDiv3,.divScrollBar5').css('display','none');
+$('.LeftMuban').each(function(){
+  $(this).children().find('.scrollDiv').css('display','none').eq(0).css('display','block');
+})
 // 左侧导航切换
 $('.LeftNavul>li').click(function(){
   var this_index=$(this).index();
@@ -18,18 +26,18 @@ $('.CardMbUl>li,.CardMbUl2>li').each(function(){
 // 模块选择
 $('.mukuaiUl>li').click(function(){
   var this_index=$(this).index();
-  $('.mukuaiUl>li').removeClass('mukuaiLiSele');
+  $(this).siblings().removeClass('mukuaiLiSele');
   $(this).addClass('mukuaiLiSele');
-  $('.mukuaiStyle').css('display','none').eq(this_index).css('display','block');
-  switch (this_index) {
-    case 0:
-      $('#Add_MubanDiv,.divScrollBar1').css('display','block');
-      $('#Add_MubanDiv1,.divScrollBar2').css('display','none');
-      break;
-    default:
-      $('#Add_MubanDiv,.divScrollBar1').css('display','none');
-      $('#Add_MubanDiv1,.divScrollBar2').css('display','block');
-  }
+  $(this).parents('.LeftMuban').children().find('.scrollDiv').css('display','none').eq(this_index).css('display','block');
+  // switch (this_index) {
+  //   case 0:
+  //     // $('#Add_MubanDiv,.divScrollBar1').css('display','block');
+  //     // $('#Add_MubanDiv1,.divScrollBar2').css('display','none');
+  //     break;
+  //   default:
+  //     // $('#Add_MubanDiv,.divScrollBar1').css('display','none');
+  //     // $('#Add_MubanDiv1,.divScrollBar2').css('display','block');
+  // }
 
 })
 
@@ -63,6 +71,7 @@ var Bg2='<div class="moveBg"><img src="images/backStage/bg_bk1.png" class="bg_bk
 var moveFlag=true;//定义是否可以放置变量
 $('.droppable').droppable({
   hoverClass: 'moveArea',//拖拽模块移入放置区域时添加样式
+  greedy:true,//禁止父级接收拖拽目标
   //拖拽模块移入放置区域时选择提示语
   over:function(event,ui){
     var source = ui.draggable.clone();
