@@ -29,16 +29,6 @@ $('.mukuaiUl>li').click(function(){
   $(this).siblings().removeClass('mukuaiLiSele');
   $(this).addClass('mukuaiLiSele');
   $(this).parents('.LeftMuban').children().find('.scrollDiv').css('display','none').eq(this_index).css('display','block');
-  // switch (this_index) {
-  //   case 0:
-  //     // $('#Add_MubanDiv,.divScrollBar1').css('display','block');
-  //     // $('#Add_MubanDiv1,.divScrollBar2').css('display','none');
-  //     break;
-  //   default:
-  //     // $('#Add_MubanDiv,.divScrollBar1').css('display','none');
-  //     // $('#Add_MubanDiv1,.divScrollBar2').css('display','block');
-  // }
-
 })
 
 // 广告类型选择
@@ -47,6 +37,7 @@ $('.AdStyle>li').click(function(){
   $(this).addClass('AdLiSele');
 })
 
+$('.jx_tit,.jx_tit2,.xsgProTit,.floor_tit3_div>span').addClass('editeTxt').attr('title','双击可编辑');
 
 //对于放置区域里面的元素进行代理
 $('.droppable').delegate('','mouseover',function(e){
@@ -55,6 +46,12 @@ $('.droppable').delegate('','mouseover',function(e){
     $('.mainContent1').attr('contenteditable','false').removeClass('mainContent1');
     $(e.target).addClass('mainContent1');
   }
+})
+$('.editeTxt').mouseover(function(){
+  $('.editeTxt').removeClass('mainContent1');
+  $(this).addClass('mainContent1');
+}).dblclick(function(){
+  $(this).attr('contenteditable','true').focus();
 })
 $(window).click(function(e){
  if(!$(e.target).hasClass('editeTxt')){
