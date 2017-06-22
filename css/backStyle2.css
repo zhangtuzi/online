@@ -1009,14 +1009,14 @@
   width:25%;
 }
 .user_iperate_img{
-  width:100px;
-  height:100px;
-  margin-top:7px;
+  width:58px;
+  height:58px;
+  margin:26px 21px 0;
   text-align: center;
+  position: relative;
 }
 .user_iperate_img>img{
   display:inline-block;
-  margin:19px auto;
   transition: all 0.25s 0.05s;
 }
 /*.user_iperate_img>img:hover{
@@ -1029,7 +1029,7 @@
   font-size:14px;
   color:#000;
   line-height: 24px;
-  padding-top:20px;
+  margin-top:20px;
 }
 .user_iperate_xm_ul{
   width:200px;
@@ -1039,6 +1039,7 @@
   margin-right:15px;
   line-height: 22px;
   cursor: pointer;
+  position: relative;
 }
 /*.user_iperate_xm_ul>li:hover{
   color:#ff6600;
@@ -1055,14 +1056,13 @@
   line-height: 25px;
 }
 .lx_jx_sx_ul{
-  width:464px;
+  width:500px;
   height:24px;
   margin:15px auto 15px;
   font-size:14px;
-
 }
 .lx_jx_sx_ul>li{
-  float:left;
+  display: inline-block;
   width:98px;
   height:22px;
   color:#ff6600;
@@ -1079,6 +1079,7 @@
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
+
 /*.lx_jx_sx_ul>li:hover{
   background: #ff6600;
   color:#fff;

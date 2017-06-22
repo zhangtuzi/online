@@ -32,6 +32,7 @@ body{
 .width100{
   width:100%;
   min-width:1200px;
+  position: relative;
 }
 .coloraaa{
   color:#aaa;
@@ -65,6 +66,9 @@ body{
 }
 .marginR0{
   margin-right:0px!important;
+}
+.marginT0{
+  margin-top:0px!important;
 }
 .borderRn{
   border-right:none!important;
@@ -121,6 +125,10 @@ body{
   line-height: 33px!important;
   font-weight: bold;
   text-align: center;
+}
+.floor_tit span{
+  width:200px;
+  display: inline-block;
 }
 .borderF{
   border:1px solid #fff;
@@ -250,4 +258,84 @@ body{
   border-radius: 50%;
   overflow: hidden;
   background: #fff;
+}
+
+/*后台装修模块鼠标移入效果*/
+.topADd:hover .topAdPro,.topADd:hover .ProMc,.logo1:hover .logo1AdPro,.logo1:hover .ProMc
+,.user_iperate_img:hover .ProMc,.user_iperate_img:hover .AdPro
+,.user_iperate_xm_ul>li:hover .ProMc,.user_iperate_xm_ul>li:hover .AdPro
+,.lx_jx_pro_ul>li:hover .ProMc,.lx_jx_pro_ul>li:hover .AdPro{
+  display: block;
+}
+.topAdPro,.ProMc,.logo1AdPro,.AdPro{
+  display: none;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  color:#fff;
+  font-size:12px;
+  border:1px dashed #84ccc9;
+  z-index: 3;
+}
+
+.ProMc{
+  background: #333;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.pro1,.pro2{
+  display: inline-block;
+}
+.czIcon1{
+  margin-top:3px;
+  width:12px;
+  height:12px;
+  display: inline-block;
+}
+.bjDiv,.bjDiv1{
+  width:50px;
+  height:18px;
+  position: absolute;
+  left:50%;
+  line-height: 18px;
+  text-align: center;
+  margin-left:-25px;
+  background:#666;
+  cursor: pointer;
+}
+.bfFbDiv1{
+  width:220px;
+  height:18px;
+  position: absolute;
+  left:50%;
+  margin-left:-110px;
+  bottom:-18px;
+}
+.czDiv{
+  height:18px;
+  padding:0 5px;
+  line-height: 18px;
+  text-align: center;
+  background:#666;
+  margin-left:10px;
+  cursor: pointer;
+}
+
+
+/*后台灰色蒙层部分开始*/
+.mc{
+  background: rgba(0,0,0,0.5);
+  color:#fff;
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  z-index: 100;
+  display:none;
 }

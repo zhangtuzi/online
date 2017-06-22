@@ -37,7 +37,7 @@ $('.AdStyle>li').click(function(){
   $(this).addClass('AdLiSele');
 })
 
-$('.jx_tit,.jx_tit2,.xsgProTit,.floor_tit3_div>span').addClass('editeTxt').attr('title','双击可编辑');
+$('.jx_tit,.jx_tit2,.xsgProTit,.floor_tit span,.floor_tit3_div span,.lx_jx_sx_ul>li,.user_iperate_title').addClass('editeTxt').attr('title','双击可编辑');
 
 //对于放置区域里面的元素进行代理
 $('.droppable').delegate('','mouseover',function(e){
@@ -47,12 +47,15 @@ $('.droppable').delegate('','mouseover',function(e){
     $(e.target).addClass('mainContent1');
   }
 })
-$('.editeTxt').mouseover(function(){
-  $('.editeTxt').removeClass('mainContent1');
-  $(this).addClass('mainContent1');
-}).dblclick(function(){
-  $(this).attr('contenteditable','true').focus();
-})
+function editeTxtFun(){
+  $('.editeTxt').mouseover(function(){
+    $('.editeTxt').removeClass('mainContent1');
+    $(this).addClass('mainContent1');
+  }).dblclick(function(){
+    $(this).attr('contenteditable','true').focus();
+  })
+}
+editeTxtFun();
 $(window).click(function(e){
  if(!$(e.target).hasClass('editeTxt')){
    $('.mainContent1').attr('contenteditable','false').removeClass('mainContent1');
@@ -69,18 +72,7 @@ $('.droppable').delegate('img','dblclick',function(e){
   // $('.mc').show();
 })
 
-// 编辑链接--链接方式选择
-$('#ProLink').click(function(){
-  $('.linkPro').hide();
-})
-$('#ProSel').click(function(){
-  $('.linkPro').show();
-})
-//清空链接
-$('.linkInputClear').click(function(){
-  $('.linkInput').val('');
-})
-
+// 弹层右上角关闭按钮事件，关闭当前显示的弹层和蒙层
 $('.colseBtn').click(function(){
   $('.tcDiv,.mc').hide();
 })
@@ -133,9 +125,102 @@ $('.droppable').delegate('img','dblclick',function(e){
 })
 
 //联通精选部分切换按钮
-$('.lx_jx_sx_ul>li').click(function(){
-  var this_index=$(this).index();
-  $('.lx_jx_pro_ul').hide();
-  $('.lx_jx_pro_ul').eq(this_index).show();
-  $(this).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
+function ltjxNavqih(){
+  $('.lx_jx_sx_ul>li').click(function(){
+    var this_index=$(this).index();
+    $('.lx_jx_pro_ul').hide();
+    $('.lx_jx_pro_ul').eq(this_index).show();
+    $(this).addClass('lx_jx_sx_select').siblings().removeClass('lx_jx_sx_select');
+  })
+}
+ltjxNavqih();
+
+// 顶部广告编辑
+$('.bjDiv').click(function(){
+  var tc_tit=$(this).attr('data-id');
+  $('.tc_tit').text(tc_tit);
+  $('.menmeiDiv,.mc').show();
+})
+
+$('.menmenDiv_saveBtn,.menmenDiv_cancelBtn').click(function(){
+  $('.menmeiDiv,.mc').hide();
+})
+// 选择商品按钮隐藏
+$('.ProLink').click(function(){
+  $(this).parents('.linkUl').next().children().eq(1).hide();
+})
+// 选择商品按钮显示
+$('.ProSel').click(function(){
+  $(this).parents('.linkUl').next().children().eq(1).show();
+})
+$('.linkInputClear').click(function(){
+  $(this).siblings().first().val('');
+})
+
+//清空本弹层内的数据
+$('.clearMenmeiAll').click(function(){
+  $(this).parents('.tcDiv').children().find('.ADTit,.linkInput').val('');
+  // $('.ADTit,.linkInput').val('');
+  $(this).parents('.tcDiv').children().find('#menmeiDingS,#menmeiArea,#menmeiLoak').removeAttr('checked');
+})
+
+//快捷导航弹层出现.
+$('.bjDiv1').click(function(){
+  $('.fastNavDiv,.mc').show();
+})
+//快捷导航弹层关闭
+$('.fastNavDiv_saveBtn,.fastNavDiv_cancelBtn').click(function(){
+  $('.fastNavDiv,.mc').hide();
+})
+$('.closeLi1').click(function(){
+  $(this).parent().parent().remove();
+})
+
+// 联通精选二级导航添加按钮
+$('.lxjxNavAddDiv').click(function(){
+  $(this).parent().append('<li>二级标题</li>');
+  $('.lx_jx_sx_ul').delegate('li','mouseover',function(){
+    $(this).addClass('editeTxt').attr('title','双击可编辑');
+    editeTxtFun();
+    ltjxNavqih()
+  })
+  $(this).remove();
+})
+
+
+// 联通精选li的操作按钮浮层
+var ltjxCz='';
+ltjxCz+='<div class="ProMc"></div><div class="AdPro"><ul class="cz_btnUl">';
+ltjxCz+='<li class="bjDiv2"><img src="images/backStage/bjIcon.png" class="cz_btnIcon">';
+ltjxCz+='<span>编辑</span></li><li class="delLi">';
+ltjxCz+='<img src="images/backStage/delIcon4.png" class="xuanchuanIcon cz_btnIcon">';
+ltjxCz+='<span>删除</span></li></ul></div>';
+
+// 浮层加到li上
+$('.lx_jx_pro_ul>li').each(function(){
+  $(this).prepend(ltjxCz);
+})
+
+//联通精选编辑按钮事件
+$('.bjDiv2').click(function(){
+  alert(1);
+})
+
+
+// 各个区域的备份、发布按钮
+var bffbObj='';
+bffbObj+='<div class="bfFbDiv4"><div class="bfDiv fl czDiv">';
+bffbObj+='<img src="images/backStage/beifen1_icon.png" class="czIcon1"><span>备份</span></div>';
+bffbObj+='<div class="bfjlDiv fl czDiv"><img src="images/backStage/beifenjilu1_icon.png" class="czIcon1">';
+bffbObj+='<span>备份记录</span></div></div><div class="bfFbDiv3"><div class="fbDiv fl czDiv">';
+bffbObj+='<img src="images/backStage/fabuIcon.png" class="czIcon1"><span>发布</span></div>';
+bffbObj+='<div class="bfDiv fl czDiv"><img src="images/backStage/delIcon4.png" class="czIcon1">';
+bffbObj+='<span>删除</span></div></div>';
+
+$('.ltjxWarp,.mobileNumber_div,.G4_div,.broadband_div,.traffic_div,.phoneAccessories,#InternetCard,#lifeService').each(function(){
+  $(this).prepend(bffbObj);
+})
+$('.phoneAccessories,#InternetCard,#lifeService').each(function(){
+  $(this).children().eq(0).css('top','0px');
+  $(this).children().eq(1).css('top','0px');
 })
