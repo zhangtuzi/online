@@ -37,7 +37,7 @@ $('.AdStyle>li').click(function(){
   $(this).addClass('AdLiSele');
 })
 
-$('.jx_tit,.jx_tit2,.xsgProTit,.floor_tit span,.floor_tit3_div div,.lx_jx_sx_ul>li,.user_iperate_title').addClass('editeTxt').attr('title','双击可编辑');
+$('.jx_tit,.jx_tit2,.xsgProTit,.floor_tit span,.floor_tit3_div div,.floor_tit4_div span,.lx_jx_sx_ul>li,.user_iperate_title').addClass('editeTxt').attr('title','双击可编辑');
 
 //对于放置区域里面的元素进行代理
 $('.droppable').delegate('','mouseover',function(e){
@@ -47,6 +47,8 @@ $('.droppable').delegate('','mouseover',function(e){
     $(e.target).addClass('mainContent1');
   }
 })
+
+//双击可以编辑的对象事件
 function editeTxtFun(){
   $('.editeTxt').mouseover(function(){
     $('.editeTxt').removeClass('mainContent1');
@@ -226,21 +228,72 @@ $('.phoneAccessories,#InternetCard,#lifeService').each(function(){
 })
 
 
-$('.floor_tit3_div div').click(function(){
+// 区域模块添加新的副标题按钮
+$('.floor_tit3_div').append('<img src="images/backStage/userFastAdds.png" class="floorTitAdd">');
+var floorTitNew='';
+floorTitNew+='<i class="floor_tit3_fg floorTitNewA">/</i><div class="editeTxt mainContent1 floorTitNewA newSubtitle"';
+floorTitNew+=' title="双击可编辑">新的标题<span class="close2">X</span></div>';
 
-  if($(this).next().hasClass('floor_tit3_fg')){
-    $(this).next().remove();
-  }else{
-    $(this).prev().remove();
-  }
+$('.floorTitAdd').click(function(){
+  $(this).parent().addClass('floorAddTit');
+  $(this).prev().after(floorTitNew);
+  $('.SubtitleDiv').children().find('input[type="text"]').val('');
+  $('.SubtitleDiv,.mc').show();
+})
 
-  var widthF=0;
-  for(var fi=0;fi<$(this).siblings().length;fi++){
-    var this_width=$(this).siblings().eq(fi).width();
+
+//区域模块各个副标题添加删除按钮，点击删除
+$('.floor_tit3_div div').each(function(){
+  $(this).append('<span class="close2">X</span>');
+})
+close2Fun();
+function close2Fun(){
+  $('.close2').bind('click',function(){
+    if($(this).parent().next().hasClass('floor_tit3_fg')){
+      $(this).parent().next().remove();
+    }else{
+      $(this).parent().prev().remove();
+    }
+    $(this).parent().remove();
+  })
+}
+
+
+// 副标题弹层保存关闭
+$('.SubtitleDiv_saveBtn').click(function(){
+  var newTit=$('.navTitt').val();
+  $('.newSubtitle').html(newTit+'<span class="close2">X</span>');
+  editeTxtFun();
+  var widthAll=$('.floorAddTit').width();//副标题区域的宽度
+  var cz_floor=$('.floorAddTit');
+  var widthF=0;//所有副标题的宽度
+  for(var fi=0;fi<cz_floor.children().length-1;fi++){
+    var this_width=cz_floor.children().eq(fi).width();
     widthF+=this_width;
   }
-  widthF+=($(this).siblings().length+1)*20-10;
-  $(this).remove();
+  widthF+=(cz_floor.children().length)*20-10;
+  console.log(widthF)
+  if(widthAll-widthF<190){//如果副标题的整体宽度和副标题区域的宽度差小于190，则新的副标题添加失败
+    $('.floorTitNewA').remove();
+  }else{//否则副标题添加成功，去掉新添加标识
+    $('.floorTitNewA').removeClass('floorTitNewA');
+    $('.newSubtitle').removeClass('newSubtitle');
+    close2Fun();
+  }
+  $('.SubtitleDiv,.mc').hide();
+})
+// 副标题弹层取消关闭
+$('.SubtitleDiv_cancelBtn').click(function(){
+  $('.SubtitleDiv,.mc').hide();
+  $('.floorTitNewA').remove();
+})
 
-  alert(widthF);
+// 副标题弹层选择类型
+$('.subtitleNav').click(function(){
+  $('.subtitleXcyLi').hide();
+  $('.subtitleNavLi').show();
+})
+$('.subtitleXcy').click(function(){
+  $('.subtitleXcyLi').show();
+  $('.subtitleNavLi').hide();
 })

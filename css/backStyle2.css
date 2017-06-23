@@ -1333,7 +1333,7 @@
 }
 .floor_tit3_fg{
   display: inline-block;
-  margin:0 5px;
+  /*margin:0 5px;*/
 }
 
 /*流量专区部分开始*/
@@ -1761,7 +1761,7 @@
   border-radius:5px;
 }
 .mobileNumberCity{
-  width:60px;
+  width:60px!important;
 }
 /*.mobileNumberArea:hover .downup4{
   transform: rotate(180deg);

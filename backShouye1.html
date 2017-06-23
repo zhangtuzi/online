@@ -2904,7 +2904,7 @@
     <!-- 上网卡部分开始 -->
     <div class="width1200" id="InternetCard">
       <div class="InternetCard_div_header">
-        <p class="floor_tit">上网卡</p>
+        <p class="floor_tit"><span>上网卡</span></p>
         <div class="floor_tit3_div">
           <div>单 卡</div>
           <i class="floor_tit3_fg">/</i>
@@ -3032,7 +3032,7 @@
     <!-- 生活服务部分开始 -->
     <div class="width1200" id="lifeService">
       <div class="lifeService_div_header">
-        <p class="floor_tit">生活服务</p>
+        <p class="floor_tit"><span>生活服务</span></p>
         <div class="floor_tit4_div">
           <span>专业专注新联通，尽善尽美新服务</span>
         </div>
@@ -3962,10 +3962,76 @@
     <!-- 快捷导航广告弹层部分结束 -->
 
 
+    <!-- 副标题配置弹层部分开始 -->
+    <div class="tcDiv SubtitleDiv">
+      <div class="tcTop">
+        <span class="fl">配置副标题</span>
+        <span class="colseBtn fr SubtitleDiv_cancelBtn">X</span>
+      </div>
+      <ul class="tcContent">
+        <li>
+          <div class="fl tcItemTit">副标题类型：</div>
+          <div class="fl tcItemContent">
+            <ul class="SubtitleStyle">
+              <li>
+                <input type="radio" name="subtitleN" id="subtitleNav" checked="checked" class="linkinput subtitleNav">
+                <label for="subtitleNav">配置导航</label>
+              </li>
+              <li>
+                <input type="radio" name="subtitleN" id="subtitleXcy" class="linkinput subtitleXcy">
+                <label for="subtitleXcy">配置宣传文案</label>
+              </li>
+            </ul>
+          </div>
+          <div class="clrDiv"></div>
+        </li>
+        <li class="subtitleNavLi">
+          <div class="fl tcItemTit"><span class="redS">*</span>导航名称：</div>
+          <div class="fl tcItemContent">
+            <input type="text" maxlength="5" class="ADTit navTitt">
+            <span class="tcTip1">5字以内</span>
+          </div>
+          <div class="clrDiv"></div>
+        </li>
+        <li class="subtitleNavLi">
+          <div class="fl tcItemTit"><span class="redS">*</span>链接：</div>
+          <div class="fl tcItemContent">
+            <div class="linkinputDiv margin0">
+              <input type="text" class="linkInput">
+              <span></span>
+              <span class="linkInputClear">清空</span>
+            </div>
+          </div>
+          <div class="clrDiv"></div>
+        </li>
+        <li class="subtitleXcyLi">
+          <div class="fl tcItemTit"><span class="redS">*</span>宣传文案：</div>
+          <div class="fl tcItemContent">
+            <div class="linkinputDiv margin0">
+              <textarea name="name" rows="3" maxLength="20" class="subtitleXcyText"></textarea>
+              <span></span>
+              <span class="linkInputClear">清空</span>
+            </div>
+            <p class="clr color999">20字以内</p>
+          </div>
+          <div class="clrDiv"></div>
+        </li>
+      </ul>
+      <div class="space30"></div>
+      <!-- <div class="clearAllDiv">
+        <div class="fr clearMenmeiAll">
+            <img src="images/backStage/delIcon3.png" class="delIcon3">
+            <span>清空数据</span>
+        </div>
+      </div> -->
+      <div class="tcbtnDiv tcbtnDiv">
+          <input type="button" class="SubtitleDiv_saveBtn tcBtn" value="保存">
+          <input type="button" class="SubtitleDiv_cancelBtn tcBtn" value="取消">
+      </div>
+    </div>
 
 
-
-
+    <!-- 副标题配置弹层部分结束 -->
 
     <!-- js引入 -->
     <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>

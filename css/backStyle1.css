@@ -729,7 +729,6 @@ Body{
 .lxjxNavAddDiv>img{
   width:20px;
   height:20px;
-  margin-top:2px;
   cursor: pointer;
 }
 .bfFbDiv3{
@@ -774,4 +773,56 @@ Body{
 /*各个区域模块定位*/
 .mobileNumber_div,.G4_div,.broadband_div,.traffic_div,.phoneAccessories,#InternetCard,#lifeService{
   position: relative;
+}
+
+.close2{
+  display: none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height: 12px!important;
+  cursor: pointer;
+}
+.editeTxt:hover .close2{
+  display: block;
+}
+.floorTitAdd{
+  width:20px;
+  height:20px;
+  cursor: pointer;
+}
+.floor_tit4_div span{
+  display: inline-block;
+  padding:0 15px;
+}
+
+/*副标题配置弹层*/
+.SubtitleDiv{
+  width:550px;
+  height:320px;
+  margin-top:-160px;
+  margin-left:-275px;
+}
+/*.mc{
+  display: block;
+}*/
+.redS{
+  color:#ff6600;
+}
+.SubtitleStyle>li{
+  float:left;
+  margin-right:35px;
+}
+.subtitleXcyText{
+  float:left;
+  width: 337px;
+  height: 44px;
+  border: 1px solid #797979;
+  resize:none;
+}
+.clr{
+  clear:both;
+}
+.subtitleXcyLi{
+  display: none;
 }
