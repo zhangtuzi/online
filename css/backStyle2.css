@@ -1326,6 +1326,15 @@
   background:url('images/orageBG.png') no-repeat;
 }
 /*联通精选部分结束*/
+.floor_tit3_div div{
+  display: inline-block;
+  padding:0 15px;
+  position: relative;
+}
+.floor_tit3_fg{
+  display: inline-block;
+  margin:0 5px;
+}
 
 /*流量专区部分开始*/
 .H1042{
@@ -1337,10 +1346,7 @@
   height:520px;
 }
 
-.floor_tit3_fg{
-  display: inline-block;
-  margin:0 20px;
-}
+
 /*.floor_tit3_div span:hover{
   color:#ff6600;
   cursor:pointer;

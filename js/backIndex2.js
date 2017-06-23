@@ -37,7 +37,7 @@ $('.AdStyle>li').click(function(){
   $(this).addClass('AdLiSele');
 })
 
-$('.jx_tit,.jx_tit2,.xsgProTit,.floor_tit span,.floor_tit3_div span,.lx_jx_sx_ul>li,.user_iperate_title').addClass('editeTxt').attr('title','双击可编辑');
+$('.jx_tit,.jx_tit2,.xsgProTit,.floor_tit span,.floor_tit3_div div,.lx_jx_sx_ul>li,.user_iperate_title').addClass('editeTxt').attr('title','双击可编辑');
 
 //对于放置区域里面的元素进行代理
 $('.droppable').delegate('','mouseover',function(e){
@@ -223,4 +223,24 @@ $('.ltjxWarp,.mobileNumber_div,.G4_div,.broadband_div,.traffic_div,.phoneAccesso
 $('.phoneAccessories,#InternetCard,#lifeService').each(function(){
   $(this).children().eq(0).css('top','0px');
   $(this).children().eq(1).css('top','0px');
+})
+
+
+$('.floor_tit3_div div').click(function(){
+
+  if($(this).next().hasClass('floor_tit3_fg')){
+    $(this).next().remove();
+  }else{
+    $(this).prev().remove();
+  }
+
+  var widthF=0;
+  for(var fi=0;fi<$(this).siblings().length;fi++){
+    var this_width=$(this).siblings().eq(fi).width();
+    widthF+=this_width;
+  }
+  widthF+=($(this).siblings().length+1)*20-10;
+  $(this).remove();
+
+  alert(widthF);
 })
